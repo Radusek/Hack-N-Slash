@@ -63,6 +63,6 @@ public class PlayerController : MonoBehaviour
         newVelocity.y = rb.velocity.y;
         newVelocity.z = movementSpeed * movementInput.y;
 
-        rb.velocity = newVelocity;
+        rb.velocity = Vector3.Lerp(rb.velocity, newVelocity, movementSpeed * 2 * Time.deltaTime);
     }
 }
