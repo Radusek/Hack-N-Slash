@@ -9,8 +9,6 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
 
     [SerializeField]
-    private GameObject playerGraphicsObject;
-    [SerializeField]
     private Camera camera;
     [SerializeField]
     private LayerMask raycastMask;
@@ -47,8 +45,8 @@ public class PlayerController : MonoBehaviour
 
     private void Rotate()
     {
-        lookingPosition.y = playerGraphicsObject.transform.position.y;
-        playerGraphicsObject.transform.LookAt(lookingPosition);
+        lookingPosition.y = transform.position.y;
+        transform.LookAt(lookingPosition);
     }
 
     private void FixedUpdate()

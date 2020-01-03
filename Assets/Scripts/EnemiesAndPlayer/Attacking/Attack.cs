@@ -25,9 +25,14 @@ public class Attack : MonoBehaviour
     private float attackRange = 0.5f;
 
     [SerializeField]
-    private bool isPlayer = false;
+    protected bool isPlayer = false;
 
     private void Awake()
+    {
+        Initialize();
+    }
+
+    protected void Initialize()
     {
         lastAttackTime = Time.time;
     }
@@ -52,18 +57,21 @@ public class Attack : MonoBehaviour
             return;
 
         Collider[] colliders = Physics.OverlapSphere(firePoint.position, attackRange, targetLayers);
-        AttackTarget(colliders);
-        lastAttackTime = Time.time;
+        if (AttackTarget(colliders))
+            lastAttackTime = Time.time;
     }
 
-    protected virtual void AttackTarget(Collider[] colliders)
+    // returns true if the attack could be successfully done
+    protected virtual bool AttackTarget(Collider[] colliders)
     {
         Debug.Log("Override me");
+        return false;
     }
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.DrawWireSphere(firePoint.position, attackRange);
+        if (firePoint != null)
+            Gizmos.DrawWireSphere(firePoint.position, attackRange);
     }
 }
 

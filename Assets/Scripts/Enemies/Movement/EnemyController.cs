@@ -58,8 +58,10 @@ public class EnemyController : MonoBehaviour
         if (target == null)
         {
             Collider[] colliders = Physics.OverlapSphere(transform.position, sightRange, layersToTarget);
-            if (colliders.Length > 0)
+            if (colliders.Length > 0 && colliders[0].gameObject != gameObject)
                 target = colliders[0].transform;
+            else if (colliders.Length > 1)
+                target = colliders[1].transform;
         }
     }
 

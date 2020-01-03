@@ -188,11 +188,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 856de86fb2ef59847b437f411295ff91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerGraphicsObject: {fileID: 3859773803555679498}
   camera: {fileID: 0}
   raycastMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 2147483648
   movementSpeed: 5
 --- !u!114 &3493525128274659496
 MonoBehaviour:
@@ -243,7 +242,6 @@ GameObject:
   - component: {fileID: 3859773805502755659}
   - component: {fileID: 3859773805502755660}
   - component: {fileID: 3859773805502755661}
-  - component: {fileID: 3859773805502755658}
   m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
@@ -311,16 +309,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &3859773805502755658
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3859773805502755656}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
