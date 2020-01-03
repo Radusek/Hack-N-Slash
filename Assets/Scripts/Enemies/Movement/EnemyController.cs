@@ -23,8 +23,11 @@ public class EnemyController : MonoBehaviour
 
     public TransformEvent onTargetChanged;
 
+    private Coroutine idleCoroutine;
+
     private void Awake()
     {
+        idleCoroutine = null;
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -36,9 +39,22 @@ public class EnemyController : MonoBehaviour
     private void FixedUpdate()
     {
         if (target != null)
+        {
+            if (idleCoroutine != null)
+            {
+                StopCoroutine(idleCoroutine);
+                idleCoroutine = null;
+            }
+
             InteractWithTarget();
+        }
         else
+        {
+            if (idleCoroutine != null)
+                return;
+
             Idle();
+        }
     }
 
     private IEnumerator LookForTargetCoroutine()
@@ -76,8 +92,23 @@ public class EnemyController : MonoBehaviour
 
     protected virtual void Idle()
     {
-        agent.destination = transform.position;
-        // some kind of slow random walking around to add later
+        idleCoroutine = StartCoroutine(IdleCoroutine());
+    }
+
+    private IEnumerator IdleCoroutine()
+    {
+        float waitingTime = Random.value + 1f;
+        var delay = new WaitForSeconds(waitingTime);
+        float travellingRange = 4f;
+        while(true)
+        {
+            Vector2 newDestination = travellingRange * Random.insideUnitCircle;
+            agent.destination = transform.position + new Vector3(newDestination.x, 0f, newDestination.y);
+            yield return delay;
+
+            agent.destination = transform.position;
+            yield return delay;
+        }
     }
 }
 

@@ -57,7 +57,7 @@ public class RangedProjectileAttack : Attack
 
         GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
         projectile.GetComponent<Projectile>().Initialize(gameObject, damage, targetLayers, attackType);
-        Vector3 resultVelocity = (projectileSpeed - rb.velocity.z) * direction;
+        Vector3 resultVelocity = (projectileSpeed + Vector3.Dot(transform.forward, rb.velocity)) * direction;
         projectile.GetComponent<Rigidbody>().velocity = resultVelocity;
     }
 }
