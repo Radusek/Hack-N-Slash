@@ -122,6 +122,8 @@ GameObject:
   - component: {fileID: 3859773805247681151}
   - component: {fileID: 3859773805247681137}
   - component: {fileID: 6232663948843207398}
+  - component: {fileID: 3493525128274659496}
+  - component: {fileID: 4698901947556332994}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -192,6 +194,44 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   movementSpeed: 5
+--- !u!114 &3493525128274659496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3859773805247681148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 976c392a4485e294e95c22b731bae776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 60
+  destroyOnDeath: 0
+  OnHpChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4698901947556332994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3859773805247681148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5403ff6721ada5d408edfa9bdc5f8bf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackType: 0
+  damage: 6
+  recastInterval: 0.2
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  firePoint: {fileID: 3859773805502755659}
+  attackRange: 0.5
+  isPlayer: 1
 --- !u!1 &3859773805502755656
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,8 +259,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3859773805502755656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.45, z: 0.1}
-  m_LocalScale: {x: 0.1, y: 0.2, z: 1}
+  m_LocalPosition: {x: 0, y: 0.45, z: 0.5}
+  m_LocalScale: {x: 0.1, y: 0.2, z: 0.1}
   m_Children: []
   m_Father: {fileID: 3859773803555679501}
   m_RootOrder: 1
