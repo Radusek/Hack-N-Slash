@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using System.Linq;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyController : MonoBehaviour
@@ -62,10 +63,9 @@ public class EnemyController : MonoBehaviour
         if (target == null)
         {
             Collider[] colliders = Physics.OverlapSphere(transform.position, sightRange, layersToTarget);
-            if (colliders.Length > 0 && colliders[0].gameObject != gameObject)
-                target = colliders[0].transform;
-            else if (colliders.Length > 1)
-                target = colliders[1].transform;
+            Collider[] collidersFiltered = colliders.Where(col => col.enabled && col.gameObject != gameObject).ToArray();
+            if (collidersFiltered.Length > 0)
+                target = collidersFiltered[0].transform;
         }
 
         if (target != oldTarget)

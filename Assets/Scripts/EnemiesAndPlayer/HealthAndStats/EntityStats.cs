@@ -16,6 +16,7 @@ public class EntityStats : MonoBehaviour
     // some resistances stats and other cool things to add
 
     public UnityEvent OnHpChanged;
+    public UnityEvent OnDeath;
 
     private void Awake()
     {
@@ -44,6 +45,8 @@ public class EntityStats : MonoBehaviour
         // take different amount of damage based on the attackType to add
         currentHealth -= amount;
         OnHpChanged?.Invoke();
+        if (currentHealth <= 0)
+            OnDeath?.Invoke();
         Debug.Log($"{gameObject.name}'s health is now {currentHealth}.");
 
         return currentHealth <= 0;
@@ -54,6 +57,10 @@ public class EntityStats : MonoBehaviour
         if (destroyOnDeath)
             Destroy(gameObject);
         else
-            gameObject.SetActive(false);
+        {
+            GetComponent<PlayerController>().enabled = false;
+            GetComponent<Collider>().enabled = false;
+            GetComponent<Rigidbody>().isKinematic = true;
+        }
     }
 }

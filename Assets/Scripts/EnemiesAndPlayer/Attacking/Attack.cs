@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Attack : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class Attack : MonoBehaviour
 
     [SerializeField]
     protected bool isPlayer = false;
+
+    public UnityEvent OnAttacked;
 
     private void Awake()
     {
@@ -58,12 +61,16 @@ public class Attack : MonoBehaviour
 
         Collider[] colliders = Physics.OverlapSphere(firePoint.position, attackRange, targetLayers);
         if (AttackTarget(colliders))
+        {
             lastAttackTime = Time.time;
+            OnAttacked?.Invoke();
+        }
     }
 
     // returns true if the attack could be successfully done
     protected virtual bool AttackTarget(Collider[] colliders)
     {
+        OnAttacked?.Invoke();
         Debug.Log("Override me");
         return false;
     }
