@@ -35,6 +35,11 @@ public class Attack : MonoBehaviour
         Initialize();
     }
 
+    private void OnEnable()
+    {
+        Initialize();
+    }
+
     protected void Initialize()
     {
         lastAttackTime = Time.time;
