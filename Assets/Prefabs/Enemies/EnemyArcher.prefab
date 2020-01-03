@@ -94,6 +94,8 @@ GameObject:
   - component: {fileID: 8439176225099780599}
   - component: {fileID: 7523097806946245381}
   - component: {fileID: 445231393993457128}
+  - component: {fileID: 7867032241443879736}
+  - component: {fileID: 3465026405988271750}
   - component: {fileID: 3862238060138275954}
   m_Layer: 9
   m_Name: EnemyArcher
@@ -232,6 +234,20 @@ MonoBehaviour:
     m_Bits: 256
   sightRange: 9
   playerCheckInterval: 0.5
+  onTargetChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7867032241443879736}
+        m_MethodName: SetTargetTransform
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &445231393993457128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,6 +265,45 @@ MonoBehaviour:
   OnHpChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7867032241443879736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8595985637026579923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef312c2acedaa44ca6fcd6a1480fe5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapons:
+  - {fileID: 3465026405988271750}
+  - {fileID: 3862238060138275954}
+  weaponDistanceTreshold:
+  - 3
+  - 6
+--- !u!114 &3465026405988271750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8595985637026579923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5403ff6721ada5d408edfa9bdc5f8bf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackType: 0
+  damage: 1
+  recastInterval: 0.25
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  firePoint: {fileID: 6348348421610981626}
+  attackRange: 0.65
+  isPlayer: 0
 --- !u!114 &3862238060138275954
 MonoBehaviour:
   m_ObjectHideFlags: 0

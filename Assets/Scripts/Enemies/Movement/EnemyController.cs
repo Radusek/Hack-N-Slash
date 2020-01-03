@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class EnemyController : MonoBehaviour
@@ -18,6 +19,8 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField]
     private float playerCheckInterval = 0.5f;
+
+    public TransformEvent onTargetChanged;
 
     private void Awake()
     {
@@ -49,6 +52,7 @@ public class EnemyController : MonoBehaviour
 
     private void CheckForTarget()
     {
+        Transform oldTarget = target;
         if (target != null)
         {
             if (!target.gameObject.activeSelf || (target.position - transform.position).sqrMagnitude > sightRange * sightRange)
@@ -63,6 +67,9 @@ public class EnemyController : MonoBehaviour
             else if (colliders.Length > 1)
                 target = colliders[1].transform;
         }
+
+        if (target != oldTarget)
+            onTargetChanged?.Invoke(target);
     }
 
     protected virtual void InteractWithTarget(){}
@@ -73,3 +80,6 @@ public class EnemyController : MonoBehaviour
         // some kind of slow random walking around to add later
     }
 }
+
+[System.Serializable]
+public class TransformEvent: UnityEvent<Transform> { }

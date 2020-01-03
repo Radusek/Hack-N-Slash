@@ -123,7 +123,9 @@ GameObject:
   - component: {fileID: 3859773805247681137}
   - component: {fileID: 6232663948843207398}
   - component: {fileID: 3493525128274659496}
+  - component: {fileID: 4969526370019623260}
   - component: {fileID: 4698901947556332994}
+  - component: {fileID: 2565850295564168017}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -210,6 +212,21 @@ MonoBehaviour:
   OnHpChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4969526370019623260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3859773805247681148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef312c2acedaa44ca6fcd6a1480fe5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attacks:
+  - {fileID: 4698901947556332994}
+  - {fileID: 2565850295564168017}
 --- !u!114 &4698901947556332994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +248,31 @@ MonoBehaviour:
   firePoint: {fileID: 3859773805502755659}
   attackRange: 0.5
   isPlayer: 1
+--- !u!114 &2565850295564168017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3859773805247681148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5527b3db2c51534fa379fb86503c34f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackType: 1
+  damage: 5
+  recastInterval: 0.25
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  firePoint: {fileID: 3859773805502755659}
+  attackRange: 0.5
+  isPlayer: 1
+  projectilePrefab: {fileID: 6053647093871153789, guid: 6ad7ff55ad6fc934d84b7a8c90ea2d36,
+    type: 3}
+  projectileSpeed: 20
+  degreesTolerance: 10
 --- !u!1 &3859773805502755656
 GameObject:
   m_ObjectHideFlags: 0

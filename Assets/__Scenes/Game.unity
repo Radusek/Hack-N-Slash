@@ -120,12 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 1e73164ce42f7914aa09af95100e26e5, type: 2}
---- !u!4 &5245799 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3859773805502755659, guid: c460c360247f850429e8b484a905c8a7,
-    type: 3}
-  m_PrefabInstance: {fileID: 3859773804137170569}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &312534239
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,6 +665,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8595985637026579923, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: m_Name
+      value: Ramsey - Traitor Archer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595985637026579923, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: degreesTolerance
@@ -695,11 +699,6 @@ PrefabInstance:
         type: 3}
       propertyPath: damage
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8595985637026579923, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
-        type: 3}
-      propertyPath: m_Name
-      value: Ramsey - Traitor Archer
       objectReference: {fileID: 0}
     - target: {fileID: 8595985637026579919, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
@@ -770,6 +769,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99658a91c1955eb47bbcbcf71afeb0d1, type: 3}
@@ -963,37 +967,30 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3859773804137170569}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1341272365 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3859773805247681148, guid: c460c360247f850429e8b484a905c8a7,
+--- !u!114 &1341272367 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4698901947556332994, guid: c460c360247f850429e8b484a905c8a7,
     type: 3}
   m_PrefabInstance: {fileID: 3859773804137170569}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1341272366
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5403ff6721ada5d408edfa9bdc5f8bf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1341272373 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2565850295564168017, guid: c460c360247f850429e8b484a905c8a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 3859773804137170569}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1341272365}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5527b3db2c51534fa379fb86503c34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 1
-  damage: 5
-  recastInterval: 0.25
-  targetLayers:
-    serializedVersion: 2
-    m_Bits: 512
-  firePoint: {fileID: 5245799}
-  attackRange: 0.5
-  isPlayer: 1
-  projectilePrefab: {fileID: 6053647093871153789, guid: 6ad7ff55ad6fc934d84b7a8c90ea2d36,
-    type: 3}
-  projectileSpeed: 15
-  degreesTolerance: 10
 --- !u!1 &1527901068
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,15 +1125,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
-        type: 3}
-      propertyPath: degreesTolerance
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 8595985637026579923, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: m_Name
       value: Philip - Archer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: degreesTolerance
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8595985637026579919, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
@@ -1292,6 +1289,21 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 4969526370019623260, guid: c460c360247f850429e8b484a905c8a7,
+        type: 3}
+      propertyPath: weapons.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4969526370019623260, guid: c460c360247f850429e8b484a905c8a7,
+        type: 3}
+      propertyPath: weapons.Array.data[0]
+      value: 
+      objectReference: {fileID: 1341272367}
+    - target: {fileID: 4969526370019623260, guid: c460c360247f850429e8b484a905c8a7,
+        type: 3}
+      propertyPath: weapons.Array.data[1]
+      value: 
+      objectReference: {fileID: 1341272373}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c460c360247f850429e8b484a905c8a7, type: 3}
 --- !u!1001 &8595985637040247039
