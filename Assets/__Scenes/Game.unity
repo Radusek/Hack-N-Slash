@@ -750,6 +750,16 @@ PrefabInstance:
       propertyPath: targetLayers.m_Bits
       value: 768
       objectReference: {fileID: 0}
+    - target: {fileID: 4827889207363371271, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4827889207363371271, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!1001 &1065600383
@@ -868,6 +878,16 @@ PrefabInstance:
         type: 3}
       propertyPath: targetLayers.m_Bits
       value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683992356715671035, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683992356715671035, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99658a91c1955eb47bbcbcf71afeb0d1, type: 3}
@@ -1580,6 +1600,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683992356715671035, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683992356715671035, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99658a91c1955eb47bbcbcf71afeb0d1, type: 3}

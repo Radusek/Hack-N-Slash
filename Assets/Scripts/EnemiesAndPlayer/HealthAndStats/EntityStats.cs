@@ -58,9 +58,18 @@ public class EntityStats : MonoBehaviour
             Destroy(gameObject);
         else
         {
-            GetComponent<PlayerController>().enabled = false;
-            GetComponent<Collider>().enabled = false;
-            GetComponent<Rigidbody>().isKinematic = true;
+            if (gameObject.layer == (int)Layer.Player)
+                DisablePlayer();
         }
+    }
+
+    private void DisablePlayer()
+    {
+        Attack[] attacks = GetComponents<Attack>();
+        foreach (var attack in attacks)
+            attack.enabled = false;
+        GetComponent<PlayerController>().enabled = false;
+        GetComponent<Collider>().enabled = false;
+        GetComponent<Rigidbody>().isKinematic = true;
     }
 }
