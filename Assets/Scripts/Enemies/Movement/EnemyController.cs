@@ -97,16 +97,16 @@ public class EnemyController : MonoBehaviour
 
     private IEnumerator IdleCoroutine()
     {
-        float waitingTime = Random.value + 1f;
+        float waitingTime = Random.value + 0.75f;
         var delay = new WaitForSeconds(waitingTime);
         float travellingRange = 4f;
         while(true)
         {
-            Vector2 newDestination = travellingRange * Random.insideUnitCircle;
-            agent.destination = transform.position + new Vector3(newDestination.x, 0f, newDestination.y);
+            agent.destination = transform.position;
             yield return delay;
 
-            agent.destination = transform.position;
+            Vector2 newDestination = travellingRange * Random.insideUnitCircle;
+            agent.destination = transform.position + new Vector3(newDestination.x, 0f, newDestination.y);
             yield return delay;
         }
     }
