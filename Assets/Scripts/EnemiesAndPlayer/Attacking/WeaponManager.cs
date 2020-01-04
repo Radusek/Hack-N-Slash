@@ -72,6 +72,11 @@ public class WeaponManager : MonoBehaviour
         currentWeapon = id;
         weapons[currentWeapon].enabled = true;
     }
+
+    public float GetReloadingTimeLeftFraction()
+    {
+        return weapons[currentWeapon].GetReloadingTimeLeftFraction();
+    }
 }
 
 public enum Layer

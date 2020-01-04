@@ -16,6 +16,9 @@ public class EntityStats : MonoBehaviour
     [SerializeField]
     private float fadingDepth = 1.2f;
 
+    [SerializeField]
+    private GameObject minimapMark;
+
     public UnityEvent OnHpChanged;
     public UnityEvent OnDeath;
 
@@ -81,6 +84,7 @@ public class EntityStats : MonoBehaviour
     {
         GetComponent<NavMeshAgent>().enabled = false;
         Destroy(GetComponent<EnemyController>());
+        minimapMark.SetActive(false);
     }
 
     private void DisablePlayer()

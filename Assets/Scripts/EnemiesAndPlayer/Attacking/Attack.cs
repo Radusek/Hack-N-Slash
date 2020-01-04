@@ -80,6 +80,11 @@ public class Attack : MonoBehaviour
         return false;
     }
 
+    public float GetReloadingTimeLeftFraction()
+    {
+        return 1f - (Time.time - lastAttackTime)/recastInterval;
+    }
+
     private void OnDrawGizmosSelected()
     {
         if (firePoint != null)
