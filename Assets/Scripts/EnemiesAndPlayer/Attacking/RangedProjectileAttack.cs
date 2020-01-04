@@ -42,6 +42,7 @@ public class RangedProjectileAttack : Attack
             relativeTargetPosition.y = 0f;
             float cosine = Vector3.Dot(transform.forward, relativeTargetPosition.normalized);
             float deltaDegrees = Mathf.Acos(cosine) * Mathf.Rad2Deg;
+            Debug.Log(deltaDegrees);
             if (deltaDegrees <= degreesTolerance)
             {
                 LaunchProjectile(relativeTargetPosition.normalized);
@@ -54,8 +55,8 @@ public class RangedProjectileAttack : Attack
     private void LaunchProjectile(Vector3 direction)
     {
         direction.y = 0f;
-
-        GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        Debug.Log(direction);
+        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
         projectile.GetComponent<Projectile>().Initialize(gameObject, damage, targetLayers, attackType);
         Vector3 resultVelocity = (projectileSpeed + Vector3.Dot(transform.forward, rb.velocity)) * direction;
         projectile.GetComponent<Rigidbody>().velocity = resultVelocity;
