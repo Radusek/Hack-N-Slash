@@ -1187,6 +1187,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PurpleMob 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 22a0ec4c96ef1a14bbd3bb1ebf779c03,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: fc621929fa48beb49b146a9373b0f941, type: 2}
     - target: {fileID: -4216859302048453862, guid: 22a0ec4c96ef1a14bbd3bb1ebf779c03,
         type: 3}
       propertyPath: m_LocalPosition.x
