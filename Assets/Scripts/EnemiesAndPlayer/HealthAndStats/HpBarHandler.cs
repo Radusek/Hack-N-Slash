@@ -26,7 +26,7 @@ public class HpBarHandler : MonoBehaviour
     public void UpdateHpBar()
     {
         hpBar.value = entityStats.GetHpFraction();
-        bool sliderIsVisible = showWhenFull && hpBar.value > 0f || hpBar.value < 1f; 
+        bool sliderIsVisible = hpBar.value > 0f && (showWhenFull || hpBar.value < 1f); 
         hpBar.gameObject.SetActive(sliderIsVisible);
     }
 }

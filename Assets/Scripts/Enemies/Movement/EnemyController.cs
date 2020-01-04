@@ -72,7 +72,7 @@ public class EnemyController : MonoBehaviour
         Transform oldTarget = target;
         if (target != null)
         {
-            if (!target.gameObject.activeSelf || (target.position - transform.position).sqrMagnitude > sightRange * sightRange)
+            if (target.gameObject.layer == (int)Layer.Dead || (target.position - transform.position).sqrMagnitude > sightRange * sightRange)
                 target = null;
         }
 

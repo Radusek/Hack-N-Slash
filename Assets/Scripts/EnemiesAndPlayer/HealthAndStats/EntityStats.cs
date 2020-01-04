@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Events;
 
 public class EntityStats : MonoBehaviour
@@ -60,16 +61,34 @@ public class EntityStats : MonoBehaviour
         {
             if (gameObject.layer == (int)Layer.Player)
                 DisablePlayer();
+            else
+                DisableEnemy();
         }
+    }
+
+    private void DisableEnemy()
+    {
+        GetComponent<NavMeshAgent>().enabled = false;
+        Destroy(GetComponent<EnemyController>());
+        Attack[] attacks = GetComponents<Attack>();
+        foreach (var attack in attacks)
+            attack.enabled = false;
+        WeaponManager wm = GetComponent<WeaponManager>();
+        if (wm != null)
+            wm.enabled = false;
+        GetComponent<Collider>().enabled = false;
+        gameObject.layer = (int)Layer.Dead;
     }
 
     private void DisablePlayer()
     {
+        GetComponent<PlayerController>().enabled = false;
         Attack[] attacks = GetComponents<Attack>();
         foreach (var attack in attacks)
             attack.enabled = false;
-        GetComponent<PlayerController>().enabled = false;
+        GetComponent<WeaponManager>().enabled = false;
         GetComponent<Collider>().enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
+        gameObject.layer = (int)Layer.Dead;
     }
 }

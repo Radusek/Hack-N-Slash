@@ -1,22 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class PlayerAnimationHandler : MonoBehaviour
+public class EntityAnimationHandler : MonoBehaviour
 {
     private Animator animator;
 
     private Rigidbody rb;
 
+    [SerializeField]
+    private bool usesNavMeshAgent = true;
+
+    private NavMeshAgent agent;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        rb = transform.parent.transform.parent.GetComponent<Rigidbody>();
+        rb = transform.parent.GetComponent<Rigidbody>();
+        if (usesNavMeshAgent)
+            agent = transform.parent.GetComponent<NavMeshAgent>();
     }
 
     void Update()
     {
-        animator.SetFloat("Velocity", rb.velocity.magnitude);
+        if (usesNavMeshAgent)
+            animator.SetFloat("Velocity", agent.velocity.magnitude);
+        else
+            animator.SetFloat("Velocity", rb.velocity.magnitude);
     }
 
     public void SetHurtTrigger()

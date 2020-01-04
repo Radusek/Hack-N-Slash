@@ -119,7 +119,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180298973117066907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.841, z: -0.452}
+  m_LocalPosition: {x: 0, y: 1.841, z: -0.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5098623493573905601}
@@ -344,37 +344,6 @@ Transform:
   m_Father: {fileID: 1805985153965317947}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3859773803555679498
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3859773803555679501}
-  m_Layer: 8
-  m_Name: Graphics
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3859773803555679501
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3859773803555679498}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: -1.2}
-  m_Children:
-  - {fileID: 5098623493573905601}
-  m_Father: {fileID: 3859773805247681150}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3859773805247681148
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,7 +378,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3859773803555679501}
+  - {fileID: 5098623493573905601}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -530,12 +499,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackType: 0
   damage: 6
-  recastInterval: 0.2
+  recastInterval: 0.3
   targetLayers:
     serializedVersion: 2
     m_Bits: 512
   firePoint: {fileID: 5938938359286130002}
-  attackRange: 0.5
+  attackRange: 0.7
   isPlayer: 1
   OnAttacked:
     m_PersistentCalls:
@@ -565,12 +534,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackType: 1
   damage: 5
-  recastInterval: 0.25
+  recastInterval: 0.3
   targetLayers:
     serializedVersion: 2
     m_Bits: 512
   firePoint: {fileID: 5938938359286130002}
-  attackRange: 0.5
+  attackRange: 1
   isPlayer: 1
   OnAttacked:
     m_PersistentCalls:
@@ -1548,15 +1517,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8113985511245872850}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.65, y: 0.65, z: 0.65}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: -0.65, y: 0.65, z: -0.78000003}
   m_Children:
   - {fileID: 8822544710767675215}
   - {fileID: 5685353185319111266}
   - {fileID: 7224687558079728654}
   - {fileID: 5938938359286130002}
-  m_Father: {fileID: 3859773803555679501}
+  m_Father: {fileID: 3859773805247681150}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2903679145613173179
@@ -1590,6 +1559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc3e8727b8c2c6248a97f38ea16ddeee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  usesNavMeshAgent: 0
 --- !u!1 &8255458962251103749
 GameObject:
   m_ObjectHideFlags: 0
