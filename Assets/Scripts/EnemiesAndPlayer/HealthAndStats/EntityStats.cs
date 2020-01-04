@@ -11,6 +11,9 @@ public class EntityStats : MonoBehaviour
     protected int maxHealth = 50;
     protected int currentHealth;
 
+    private int experiencePoints = 0;
+    private int level = 1;
+
     // some resistances stats and other cool things to add
 
     [SerializeField]
@@ -22,6 +25,11 @@ public class EntityStats : MonoBehaviour
     public UnityEvent OnHpChanged;
     public UnityEvent OnDeath;
 
+    public UnityEvent OnExpGained;
+    public UnityEvent OnLevelUp;
+
+    private int expPerLevel = 1000;
+
     private void Awake()
     {
         Initialize();
@@ -32,16 +40,56 @@ public class EntityStats : MonoBehaviour
         currentHealth = maxHealth;
     }
 
+    public int GetLevel()
+    {
+        return (experiencePoints / expPerLevel) + 1;
+    }
+
+    public void AddExperience(int amount)
+    {
+        if (amount <= 0)
+            return;
+
+        experiencePoints += amount;
+
+        int updatedLevel = GetLevel();
+        if (updatedLevel > level)
+        {
+            level = updatedLevel;
+            OnLevelUp?.Invoke();
+        }
+
+        OnExpGained?.Invoke();
+    }
+
     public float GetHpFraction()
     {
         return (float)currentHealth / maxHealth;
     }
 
-    public virtual void TakeDamage(int amount, AttackType attackType)
+    public float GetExpFraction()
+    {
+        return (float)(experiencePoints - (level - 1) * expPerLevel) / expPerLevel;
+    }
+
+    public virtual void TakeDamage(int amount, AttackType attackType, GameObject attacker)
     {
         bool shouldDie = SubtractHpAndCheckIfShouldDie(amount, attackType);
         if (shouldDie)
+        {
+            RewardAttacker(attacker);
             Die();
+        }
+    }
+
+    private void RewardAttacker(GameObject attacker)
+    {
+        EntityStats attackerStats = attacker.GetComponent<EntityStats>();
+        int attackerLevel = attackerStats.GetLevel();
+        int baseExp = 240;
+        float levelDiffNerf = 0.15f;
+        int finalExp = (int)(baseExp * Mathf.Clamp01(1f - (attackerLevel - level) * levelDiffNerf));
+        attackerStats.AddExperience(finalExp);
     }
 
     protected bool SubtractHpAndCheckIfShouldDie(int amount, AttackType attackType)

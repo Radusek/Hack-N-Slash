@@ -363,7 +363,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 16}
+  m_SizeDelta: {x: 120, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6525636815766394590
 MonoBehaviour:
@@ -389,7 +389,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -403,11 +403,11 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 6565635305750616955}
   m_FillRect: {fileID: 4344662966193356019}
   m_HandleRect: {fileID: 0}
-  m_Direction: 0
+  m_Direction: 1
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
@@ -652,11 +652,10 @@ GameObject:
   - component: {fileID: 3859773805247681137}
   - component: {fileID: 6232663948843207398}
   - component: {fileID: 3493525128274659496}
-  - component: {fileID: 6033545006586650688}
   - component: {fileID: 4969526370019623260}
   - component: {fileID: 4698901947556332994}
   - component: {fileID: 2565850295564168017}
-  - component: {fileID: 4211167458236854637}
+  - component: {fileID: 1225155052658214612}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -727,7 +726,7 @@ MonoBehaviour:
   raycastMask:
     serializedVersion: 2
     m_Bits: 2147483648
-  movementSpeed: 5
+  movementSpeed: 6
 --- !u!114 &3493525128274659496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -757,6 +756,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: UpdateHpBar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDeath:
     m_PersistentCalls:
       m_Calls:
@@ -771,20 +781,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6033545006586650688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3859773805247681148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f7fbbee91aef0744bd390fd239d7bec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hpBar: {fileID: 0}
-  showWhenFull: 1
+  OnExpGained:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: UpdateExpBar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnLevelUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &4969526370019623260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -797,7 +810,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aef312c2acedaa44ca6fcd6a1480fe5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapons: []
+  weapons:
+  - {fileID: 4698901947556332994}
+  - {fileID: 2565850295564168017}
   weaponDistanceTreshold: []
 --- !u!114 &4698901947556332994
 MonoBehaviour:
@@ -813,7 +828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackType: 0
   damage: 6
-  recastInterval: 0.4
+  recastInterval: 0.3
   targetLayers:
     serializedVersion: 2
     m_Bits: 512
@@ -869,11 +884,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  projectilePrefab: {fileID: 6053647093871153789, guid: 6ad7ff55ad6fc934d84b7a8c90ea2d36,
+  projectilePrefab: {fileID: 6053647093871153789, guid: 62ce6556f6dbc014fa9fbae565788ae5,
     type: 3}
   projectileSpeed: 20
   degreesTolerance: 10
---- !u!114 &4211167458236854637
+--- !u!114 &1225155052658214612
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1430,8 +1445,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.1750474, b: 1, a: 0.78431374}
-  m_RaycastTarget: 1
+  m_Color: {r: 0, g: 0.1750474, b: 1, a: 1}
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []

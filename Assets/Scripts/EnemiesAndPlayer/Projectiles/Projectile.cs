@@ -62,6 +62,6 @@ public class Projectile : MonoBehaviour
 
     protected virtual void InteractWithTarget(Collider other)
     {
-        other.GetComponent<EntityStats>().TakeDamage(damage, attackType);
+        other.GetComponent<EntityStats>().TakeDamage(damage, attackType, projectileCaster);
     }
 }
