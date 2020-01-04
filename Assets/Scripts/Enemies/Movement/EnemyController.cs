@@ -76,12 +76,23 @@ public class EnemyController : MonoBehaviour
                 target = null;
         }
 
-        if (target == null)
+        Collider[] colliders = Physics.OverlapSphere(transform.position, sightRange, layersToTarget);
+        Collider[] collidersFiltered = colliders.Where(col => col.enabled && col.gameObject != gameObject).ToArray();
+        if (collidersFiltered.Length > 0)
         {
-            Collider[] colliders = Physics.OverlapSphere(transform.position, sightRange, layersToTarget);
-            Collider[] collidersFiltered = colliders.Where(col => col.enabled && col.gameObject != gameObject).ToArray();
-            if (collidersFiltered.Length > 0)
-                target = collidersFiltered[0].transform;
+            float distance = float.MaxValue;
+            Collider finalTarget = null;
+            foreach (var col in collidersFiltered)
+            {
+                float currentDistance = (col.transform.position - transform.position).sqrMagnitude;
+                if (currentDistance < distance)
+                {
+                    distance = currentDistance;
+                    finalTarget = col;
+                }
+            }
+
+            target = finalTarget.transform;
         }
 
         if (target != oldTarget)

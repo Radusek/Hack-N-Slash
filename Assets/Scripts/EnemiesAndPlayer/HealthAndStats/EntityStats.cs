@@ -48,7 +48,6 @@ public class EntityStats : MonoBehaviour
         OnHpChanged?.Invoke();
         if (currentHealth <= 0)
             OnDeath?.Invoke();
-        Debug.Log($"{gameObject.name}'s health is now {currentHealth}.");
 
         return currentHealth <= 0;
     }
@@ -59,7 +58,7 @@ public class EntityStats : MonoBehaviour
             Destroy(gameObject);
         else
         {
-            if (gameObject.layer == (int)Layer.Player)
+            if (gameObject.GetComponent<PlayerController>() != null)
                 DisablePlayer();
             else
                 DisableEnemy();

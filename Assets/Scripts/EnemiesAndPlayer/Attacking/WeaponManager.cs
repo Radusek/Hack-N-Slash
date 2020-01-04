@@ -69,7 +69,6 @@ public class WeaponManager : MonoBehaviour
         else
             id %= weapons.Length;
 
-        Debug.Log($"New weapon used: {id}");
         currentWeapon = id;
         weapons[currentWeapon].enabled = true;
     }
