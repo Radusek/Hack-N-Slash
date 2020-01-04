@@ -35,9 +35,13 @@ public class Projectile : MonoBehaviour
             return;
 
         if (other.gameObject.layer.IsInLayerMask(targetLayers))
+        {
             InteractWithTarget(other);
+            Destroy(gameObject);
+        }
 
-        Destroy(gameObject);
+        if (other.gameObject.layer == (int)Layer.Default)
+            Destroy(gameObject);
     }
 
     protected virtual void InteractWithTarget(Collider other)

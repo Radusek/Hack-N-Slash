@@ -35,8 +35,6 @@ public class RangedProjectileAttack : Attack
         if (colliders.Length == 0)
             return false;
 
-        //colliders.OrderBy(col => (col.transform.position - transform.position).sqrMagnitude);
-
         foreach(var target in colliders)
         {
             if (target.gameObject == gameObject)

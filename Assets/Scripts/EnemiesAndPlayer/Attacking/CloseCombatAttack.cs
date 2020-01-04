@@ -15,6 +15,6 @@ public class CloseCombatAttack : Attack
                 attacked = true;
             }
         }
-        return attacked || gameObject.layer == (int)Layer.Player;
+        return attacked || isPlayer;
     }
 }

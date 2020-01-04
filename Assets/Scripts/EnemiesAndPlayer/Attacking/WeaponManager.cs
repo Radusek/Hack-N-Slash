@@ -76,6 +76,7 @@ public class WeaponManager : MonoBehaviour
 
 public enum Layer
 {
+    Default = 0,
     Player = 8,
     Dead = 30
 }

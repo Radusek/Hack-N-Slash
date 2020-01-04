@@ -11,10 +11,10 @@ public class EntityStats : MonoBehaviour
     protected int maxHealth = 50;
     protected int currentHealth;
 
-    [SerializeField]
-    private bool destroyOnDeath = true;
-
     // some resistances stats and other cool things to add
+
+    [SerializeField]
+    private float fadingDepth = 1.2f;
 
     public UnityEvent OnHpChanged;
     public UnityEvent OnDeath;
@@ -54,21 +54,20 @@ public class EntityStats : MonoBehaviour
 
     protected void Die()
     {
-        if (destroyOnDeath)
-            Destroy(gameObject);
+        PrepareDisabling();
+
+        if (gameObject.GetComponent<PlayerController>() != null)
+            DisablePlayer();
         else
         {
-            if (gameObject.GetComponent<PlayerController>() != null)
-                DisablePlayer();
-            else
-                DisableEnemy();
+            DisableEnemy();
+            StartCoroutine(FadeAndDestroyCoroutine());
         }
     }
 
-    private void DisableEnemy()
+    private void PrepareDisabling()
     {
-        GetComponent<NavMeshAgent>().enabled = false;
-        Destroy(GetComponent<EnemyController>());
+        gameObject.layer = (int)Layer.Dead;
         Attack[] attacks = GetComponents<Attack>();
         foreach (var attack in attacks)
             attack.enabled = false;
@@ -76,18 +75,31 @@ public class EntityStats : MonoBehaviour
         if (wm != null)
             wm.enabled = false;
         GetComponent<Collider>().enabled = false;
-        gameObject.layer = (int)Layer.Dead;
+    }
+
+    private void DisableEnemy()
+    {
+        GetComponent<NavMeshAgent>().enabled = false;
+        Destroy(GetComponent<EnemyController>());
     }
 
     private void DisablePlayer()
     {
         GetComponent<PlayerController>().enabled = false;
-        Attack[] attacks = GetComponents<Attack>();
-        foreach (var attack in attacks)
-            attack.enabled = false;
-        GetComponent<WeaponManager>().enabled = false;
-        GetComponent<Collider>().enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
-        gameObject.layer = (int)Layer.Dead;
+    }
+
+    private IEnumerator FadeAndDestroyCoroutine()
+    {
+        yield return new WaitForSeconds(5f);
+
+        float fadingTime = 4f * fadingDepth;
+        float startTime = Time.time;
+        while (Time.time < startTime + fadingTime)
+        {
+            transform.position = transform.position + fadingDepth * Vector3.down / fadingTime * Time.deltaTime;
+            yield return null;
+        }
+        Destroy(gameObject);
     }
 }
