@@ -14,6 +14,12 @@ public class Projectile : MonoBehaviour
     [SerializeField]
     private bool gravityAffected;
 
+    [SerializeField]
+    [Range(0f, 1f)]
+    private float gravityScale = 0.5f;
+
+    private Rigidbody rb;
+
     private int CasterToProjectileLayer(int casterLayer)
     {
         return casterLayer + 2;
@@ -21,12 +27,22 @@ public class Projectile : MonoBehaviour
 
     public void Initialize(GameObject caster, int dmg, LayerMask layers, AttackType type)
     {
+        rb = GetComponent<Rigidbody>();
+        rb.useGravity = gravityAffected;
         projectileCaster = caster;
         gameObject.layer = CasterToProjectileLayer(projectileCaster.layer);
-        GetComponent<Rigidbody>().useGravity = gravityAffected;
         damage = dmg;
         targetLayers = layers;
         attackType = type;
+    }
+
+    private void FixedUpdate()
+    {
+        if (gravityAffected)
+        {
+            rb.AddForce(-(1f - gravityScale) * Physics.gravity, ForceMode.Acceleration);
+            transform.LookAt(transform.position + rb.velocity);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
