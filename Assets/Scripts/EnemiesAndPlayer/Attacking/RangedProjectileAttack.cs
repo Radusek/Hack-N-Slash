@@ -14,7 +14,7 @@ public class RangedProjectileAttack : Attack
 
     [SerializeField]
     [Range(10f, 180f)]
-    private float degreesTolerance = 10f;
+    private float degreesTolerance = 15f;
 
     private Rigidbody rb;
 

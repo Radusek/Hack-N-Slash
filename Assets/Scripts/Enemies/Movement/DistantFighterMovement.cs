@@ -23,9 +23,7 @@ public class DistantFighterMovement : EnemyController
     {
         if (target != null)
         {
-            if (!isOutOfRangedAttackRange)
-                agent.gameObject.transform.LookAt(target.position);
-            else if (isInCloseCombatRange)
+            if (!isOutOfRangedAttackRange || isInCloseCombatRange)
                 RotateTowardsTarget();
         }     
     }
