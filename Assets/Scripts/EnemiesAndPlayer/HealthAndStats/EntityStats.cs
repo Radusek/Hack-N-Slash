@@ -14,6 +14,9 @@ public class EntityStats : MonoBehaviour
     private int experiencePoints = 0;
     private int level = 1;
 
+    [SerializeField]
+    private int startingLevel = 1;
+
     // some resistances stats and other cool things to add
 
     [SerializeField]
@@ -35,9 +38,20 @@ public class EntityStats : MonoBehaviour
         Initialize();
     }
 
+    private void Start()
+    {
+        experiencePoints = (startingLevel - 1) * expPerLevel;
+        level = startingLevel;
+    }
+
     protected void Initialize()
     {
         currentHealth = maxHealth;
+    }
+
+    public void SetStartingLevel(int number)
+    {
+        startingLevel = number;
     }
 
     public int GetLevel()
@@ -67,6 +81,11 @@ public class EntityStats : MonoBehaviour
         return (float)currentHealth / maxHealth;
     }
 
+    public Vector2Int GetHpValues()
+    {
+        return new Vector2Int(currentHealth, maxHealth);
+    }
+
     public float GetExpFraction()
     {
         return (float)(experiencePoints - (level - 1) * expPerLevel) / expPerLevel;
@@ -86,7 +105,7 @@ public class EntityStats : MonoBehaviour
     {
         EntityStats attackerStats = attacker.GetComponent<EntityStats>();
         int attackerLevel = attackerStats.GetLevel();
-        int baseExp = 240;
+        int baseExp = 230;
         float levelDiffNerf = 0.15f;
         int finalExp = (int)(baseExp * Mathf.Clamp01(1f - (attackerLevel - level) * levelDiffNerf));
         attackerStats.AddExperience(finalExp);

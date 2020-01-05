@@ -9683,6 +9683,58 @@ PrefabInstance:
       propertyPath: playerStats
       value: 
       objectReference: {fileID: 1798258326}
+    - target: {fileID: 2834139568189804020, guid: 5e86681838f379246a63f6be34a71e89,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7faf904655cf0574cbc29ea1b588208f,
+        type: 2}
+    - target: {fileID: 2834139568189804020, guid: 5e86681838f379246a63f6be34a71e89,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4693547087295170876, guid: 7faf904655cf0574cbc29ea1b588208f,
+        type: 2}
+    - target: {fileID: 9131914339015675345, guid: 5e86681838f379246a63f6be34a71e89,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131914339015675345, guid: 5e86681838f379246a63f6be34a71e89,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131914339015675345, guid: 5e86681838f379246a63f6be34a71e89,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131914339015675345, guid: 5e86681838f379246a63f6be34a71e89,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847850172098131624, guid: 5e86681838f379246a63f6be34a71e89,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847850172098131624, guid: 5e86681838f379246a63f6be34a71e89,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847850172098131624, guid: 5e86681838f379246a63f6be34a71e89,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847850172098131624, guid: 5e86681838f379246a63f6be34a71e89,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e86681838f379246a63f6be34a71e89, type: 3}
 --- !u!1001 &3859773804137170569
@@ -9759,6 +9811,11 @@ PrefabInstance:
       objectReference: {fileID: 963194227}
     - target: {fileID: 3493525128274659496, guid: c460c360247f850429e8b484a905c8a7,
         type: 3}
+      propertyPath: OnLevelUp.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3493525128274659496, guid: c460c360247f850429e8b484a905c8a7,
+        type: 3}
       propertyPath: OnHpChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1738836055}
@@ -9767,6 +9824,31 @@ PrefabInstance:
       propertyPath: OnExpGained.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1738836055}
+    - target: {fileID: 3493525128274659496, guid: c460c360247f850429e8b484a905c8a7,
+        type: 3}
+      propertyPath: OnLevelUp.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3493525128274659496, guid: c460c360247f850429e8b484a905c8a7,
+        type: 3}
+      propertyPath: OnLevelUp.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3493525128274659496, guid: c460c360247f850429e8b484a905c8a7,
+        type: 3}
+      propertyPath: OnLevelUp.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1738836055}
+    - target: {fileID: 3493525128274659496, guid: c460c360247f850429e8b484a905c8a7,
+        type: 3}
+      propertyPath: OnLevelUp.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateLevelText
+      objectReference: {fileID: 0}
+    - target: {fileID: 3493525128274659496, guid: c460c360247f850429e8b484a905c8a7,
+        type: 3}
+      propertyPath: OnLevelUp.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4344662966193356019, guid: c460c360247f850429e8b484a905c8a7,
         type: 3}
       propertyPath: m_AnchorMax.x
