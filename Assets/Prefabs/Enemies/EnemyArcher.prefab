@@ -577,7 +577,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   sightRange: 11
-  closeCombatRange: 2
+  closeCombatRange: 1.75
   onTargetChanged:
     m_PersistentCalls:
       m_Calls:
@@ -760,6 +760,20 @@ MonoBehaviour:
     type: 3}
   projectileSpeed: 8
   degreesTolerance: 15
+  OnTargetVisibilityChange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 179540311924967512}
+        m_MethodName: SetTargetVisibility
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &9116390879653700089
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,7 +981,7 @@ PrefabInstance:
     - target: {fileID: 6988805627488545391, guid: e2be571dd323dbb4bb9029a39d6254ca,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6988805627488545391, guid: e2be571dd323dbb4bb9029a39d6254ca,
         type: 3}

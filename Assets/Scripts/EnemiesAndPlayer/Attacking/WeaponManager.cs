@@ -83,5 +83,6 @@ public enum Layer
 {
     Default = 0,
     Player = 8,
+    Environment = 28,
     Dead = 30
 }

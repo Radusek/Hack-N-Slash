@@ -605,11 +605,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   sightRange: 9
-  playerCheckInterval: 0.5
+  closeCombatRange: 2.5
   onTargetChanged:
     m_PersistentCalls:
       m_Calls: []
-  closeCombatRange: 2.5
 --- !u!114 &445231393993457128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -740,7 +739,7 @@ PrefabInstance:
     - target: {fileID: 6988805627488545391, guid: e2be571dd323dbb4bb9029a39d6254ca,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6988805627488545391, guid: e2be571dd323dbb4bb9029a39d6254ca,
         type: 3}

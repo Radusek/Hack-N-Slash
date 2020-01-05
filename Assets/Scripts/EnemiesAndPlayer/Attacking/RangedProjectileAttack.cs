@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody))]
 public class RangedProjectileAttack : Attack
@@ -15,6 +16,9 @@ public class RangedProjectileAttack : Attack
     [SerializeField]
     [Range(10f, 180f)]
     private float degreesTolerance = 15f;
+
+    private bool targetIsVisible;
+    public BoolEvent OnTargetVisibilityChange;
 
     private Rigidbody rb;
 
@@ -41,9 +45,21 @@ public class RangedProjectileAttack : Attack
                 continue;
             Vector3 relativeTargetPosition = target.transform.position - transform.position;
             relativeTargetPosition.y = 0f;
+
+            RaycastHit hit;
+            if (Physics.Raycast(firePoint.position, relativeTargetPosition, out hit, attackRange))
+            {
+                bool oldVisibilty = targetIsVisible;
+                targetIsVisible = hit.collider.gameObject.layer.IsInLayerMask(targetLayers);
+                if (targetIsVisible != oldVisibilty)
+                    OnTargetVisibilityChange?.Invoke(targetIsVisible);
+            }
+
+            if (!targetIsVisible)
+                return false;
+
             float cosine = Vector3.Dot(transform.forward, relativeTargetPosition.normalized);
             float deltaDegrees = Mathf.Acos(cosine) * Mathf.Rad2Deg;
-
             if (deltaDegrees <= degreesTolerance)
             {
                 LaunchProjectile(relativeTargetPosition.normalized);
@@ -63,3 +79,6 @@ public class RangedProjectileAttack : Attack
         projectile.transform.LookAt(firePoint.position + direction);
     }
 }
+
+[System.Serializable]
+public class BoolEvent : UnityEvent<bool> { }

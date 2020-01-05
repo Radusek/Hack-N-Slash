@@ -184,7 +184,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 250299316337714067}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 8, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 3859773805247681150}
@@ -740,6 +740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 60
+  startingLevel: 1
   fadingDepth: 1.2
   minimapMark: {fileID: 250299316337714067}
   OnHpChanged:
@@ -888,6 +889,9 @@ MonoBehaviour:
     type: 3}
   projectileSpeed: 20
   degreesTolerance: 10
+  OnTargetVisibilityChange:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1225155052658214612
 MonoBehaviour:
   m_ObjectHideFlags: 0

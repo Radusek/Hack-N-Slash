@@ -23,7 +23,7 @@ public class Attack : MonoBehaviour
     protected Transform firePoint;
 
     [SerializeField]
-    private float attackRange = 0.5f;
+    protected float attackRange = 0.5f;
 
     [SerializeField]
     protected bool isPlayer = false;

@@ -56,7 +56,7 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (other.gameObject.layer == (int)Layer.Default)
+        if (other.gameObject.layer == (int)Layer.Default || other.gameObject.layer == (int)Layer.Environment)
             Destroy(gameObject);
     }
 

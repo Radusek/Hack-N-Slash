@@ -9,21 +9,28 @@ public class DistantFighterMovement : EnemyController
 
     private bool isOutOfRangedAttackRange = true;
 
+    private bool targetIsVisible;
+
     protected override void InteractWithTarget()
     {
         isOutOfRangedAttackRange = isInCloseCombatRange || targetDistanceSquared > rangedAttackRange * rangedAttackRange;
 
-        if (isOutOfRangedAttackRange)
-            agent.destination = target.position;
-        else
+        if (!isOutOfRangedAttackRange && targetIsVisible)
             agent.destination = transform.position;
+        else
+            agent.destination = target.position;
+    }
+
+    public void SetTargetVisibility(bool visibility)
+    {
+        targetIsVisible = visibility;
     }
 
     private void LateUpdate()
     {
         if (target != null)
         {
-            if (!isOutOfRangedAttackRange || isInCloseCombatRange)
+            if ((!isOutOfRangedAttackRange && targetIsVisible) || isInCloseCombatRange)
                 RotateTowardsTarget();
         }     
     }
