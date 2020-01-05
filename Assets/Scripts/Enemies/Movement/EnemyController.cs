@@ -18,8 +18,13 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private float sightRange = 3f;
 
-    [SerializeField]
     private float playerCheckInterval = 0.5f;
+
+    [SerializeField]
+    private float closeCombatRange = 2f;
+
+    protected float targetDistanceSquared;
+    protected bool isInCloseCombatRange = false;
 
     public TransformEvent onTargetChanged;
 
@@ -46,6 +51,9 @@ public class EnemyController : MonoBehaviour
                 idleCoroutine = null;
             }
 
+            targetDistanceSquared = (target.position - transform.position).sqrMagnitude;
+            isInCloseCombatRange = targetDistanceSquared <= closeCombatRange * closeCombatRange;
+
             InteractWithTarget();
         }
         else
@@ -55,6 +63,12 @@ public class EnemyController : MonoBehaviour
 
             Idle();
         }
+    }
+
+    private void LateUpdate()
+    {
+        if (target != null && isInCloseCombatRange)
+            RotateTowardsTarget();
     }
 
     private IEnumerator LookForTargetCoroutine()
@@ -120,6 +134,17 @@ public class EnemyController : MonoBehaviour
             agent.destination = transform.position + new Vector3(newDestination.x, 0f, newDestination.y);
             yield return delay;
         }
+    }
+
+    protected void RotateTowardsTarget()
+    {
+        Vector3 targetDirection = target.position - transform.position;
+        targetDirection.y = 0f;
+        targetDirection.Normalize();
+
+        float rotationSpeed = 5f;
+        float rotation = rotationSpeed * Vector3.Cross(transform.forward, targetDirection).y * Time.deltaTime;
+        transform.RotateAround(Vector3.up, rotation);
     }
 }
 

@@ -35,6 +35,8 @@ public class HUDManager : MonoBehaviour
     {
         hpBar.value = playerStats.GetHpFraction();
         Vector2Int hpValues = playerStats.GetHpValues();
+        if (hpValues.x < 0)
+            hpValues.x = 0;
         hpText.text = hpValues.x.ToString() + "/" + hpValues.y.ToString();
     }
 

@@ -6,7 +6,6 @@ public class ChaserEnemyMovement : EnemyController
 {
     protected override void InteractWithTarget()
     {
-        if (agent.enabled)
-            agent.destination = target.position;
+        agent.destination = target.position;
     }
 }
