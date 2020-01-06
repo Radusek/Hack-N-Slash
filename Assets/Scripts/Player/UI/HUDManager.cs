@@ -51,4 +51,9 @@ public class HUDManager : MonoBehaviour
     {
         levelText.text = playerStats.GetLevel().ToString();
     }
+
+    public void SetPlayer(EntityStats player)
+    {
+        playerStats = player;
+    }
 }

@@ -96,7 +96,8 @@ public class EntityStats : MonoBehaviour
         bool shouldDie = SubtractHpAndCheckIfShouldDie(amount, attackType);
         if (shouldDie)
         {
-            RewardAttacker(attacker);
+            if (attacker != null)
+                RewardAttacker(attacker);
             Die();
         }
     }

@@ -50,4 +50,9 @@ public class CameraController : MonoBehaviour
 
         transform.position += deltaPos + positionOffset;
     }
+
+    public void SetObjectToFollow(Transform target)
+    {
+        objectToFollow = target;
+    }
 }
