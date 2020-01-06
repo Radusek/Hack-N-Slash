@@ -26,6 +26,7 @@ public class EntityStats : MonoBehaviour
     private GameObject minimapMark;
 
     public UnityEvent OnHpChanged;
+    public IntEvent OnDamageAmountTaken;
     public UnityEvent OnDeath;
 
     public UnityEvent OnExpGained;
@@ -116,6 +117,7 @@ public class EntityStats : MonoBehaviour
     {
         // take different amount of damage based on the attackType to add
         currentHealth -= amount;
+        OnDamageAmountTaken?.Invoke(amount);
         OnHpChanged?.Invoke();
         if (currentHealth <= 0)
             OnDeath?.Invoke();
@@ -175,3 +177,6 @@ public class EntityStats : MonoBehaviour
         Destroy(gameObject);
     }
 }
+
+[System.Serializable]
+public class IntEvent : UnityEvent<int> { }
