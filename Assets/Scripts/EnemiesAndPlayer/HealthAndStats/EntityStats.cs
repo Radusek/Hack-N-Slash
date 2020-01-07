@@ -41,13 +41,18 @@ public class EntityStats : MonoBehaviour
 
     private void Start()
     {
-        experiencePoints = (startingLevel - 1) * expPerLevel;
-        level = startingLevel;
+        InitializeStart();
     }
 
     protected void Initialize()
     {
         currentHealth = maxHealth;
+    }
+
+    protected void InitializeStart()
+    {
+        experiencePoints = (startingLevel - 1) * expPerLevel;
+        level = startingLevel;
     }
 
     public void SetStartingLevel(int number)
@@ -92,15 +97,29 @@ public class EntityStats : MonoBehaviour
         return (float)(experiencePoints - (level - 1) * expPerLevel) / expPerLevel;
     }
 
-    public virtual void TakeDamage(int amount, AttackType attackType, GameObject attacker)
+    public void TakeDamage(int amount, AttackType attackType, GameObject attacker)
     {
-        bool shouldDie = SubtractHpAndCheckIfShouldDie(amount, attackType);
-        if (shouldDie)
+        int oldCurrentHp = currentHealth;
+        SubtractHp(amount, attackType);
+
+        if (currentHealth != oldCurrentHp)
+        {
+            OnHpChanged?.Invoke();
+            OnDamageAmountTaken?.Invoke(oldCurrentHp - currentHealth);
+        }
+
+        if (currentHealth <= 0)
         {
             if (attacker != null)
                 RewardAttacker(attacker);
             Die();
         }
+    }
+
+    protected virtual void SubtractHp(int amount, AttackType attackType)
+    {
+        // take different amount of damage based on the attackType to add
+        currentHealth -= amount;
     }
 
     private void RewardAttacker(GameObject attacker)
@@ -113,20 +132,10 @@ public class EntityStats : MonoBehaviour
         attackerStats.AddExperience(finalExp);
     }
 
-    protected bool SubtractHpAndCheckIfShouldDie(int amount, AttackType attackType)
-    {
-        // take different amount of damage based on the attackType to add
-        currentHealth -= amount;
-        OnDamageAmountTaken?.Invoke(amount);
-        OnHpChanged?.Invoke();
-        if (currentHealth <= 0)
-            OnDeath?.Invoke();
-
-        return currentHealth <= 0;
-    }
-
     protected void Die()
     {
+        OnDeath?.Invoke();
+
         PrepareDisabling();
 
         if (gameObject.GetComponent<PlayerController>() != null)
@@ -157,7 +166,7 @@ public class EntityStats : MonoBehaviour
         minimapMark.SetActive(false);
     }
 
-    private void DisablePlayer()
+    protected virtual void DisablePlayer()
     {
         GetComponent<PlayerController>().enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;

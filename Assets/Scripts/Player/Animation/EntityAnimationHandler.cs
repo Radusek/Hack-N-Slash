@@ -44,4 +44,9 @@ public class EntityAnimationHandler : MonoBehaviour
     {
         animator.SetTrigger("Attack");
     }
+
+    public void SetShieldingBool(bool value)
+    {
+        animator.SetBool("Shielding", value);
+    }
 }

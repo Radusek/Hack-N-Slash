@@ -25,8 +25,7 @@ public class Attack : MonoBehaviour
     [SerializeField]
     protected float attackRange = 0.5f;
 
-    [SerializeField]
-    protected bool isPlayer = false;
+    protected bool isPlayer;
 
     public UnityEvent OnAttacked;
 
@@ -45,21 +44,12 @@ public class Attack : MonoBehaviour
         lastAttackTime = Time.time;
     }
 
-    private void Update()
+    public void SetIsPlayer(bool itIsPlayer)
     {
-        if (EntityShouldAttack())
-            TryToAttackTarget();
+        isPlayer = itIsPlayer;
     }
 
-    protected virtual bool EntityShouldAttack()
-    {
-        if (isPlayer)
-            return Input.GetButtonDown("Fire1");
-
-        return true;
-    }
-
-    private void TryToAttackTarget()
+    public void TryToAttackTarget()
     {
         if (Time.time < lastAttackTime + recastInterval)
             return;
@@ -83,6 +73,11 @@ public class Attack : MonoBehaviour
     public float GetReloadingTimeLeftFraction()
     {
         return 1f - (Time.time - lastAttackTime)/recastInterval;
+    }
+
+    public float GetLastAttackTime()
+    {
+        return lastAttackTime;
     }
 
     private void OnDrawGizmosSelected()

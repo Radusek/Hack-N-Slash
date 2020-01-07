@@ -20,17 +20,12 @@ public class Projectile : MonoBehaviour
 
     private Rigidbody rb;
 
-    private int CasterToProjectileLayer(int casterLayer)
-    {
-        return casterLayer + 2;
-    }
 
     public void Initialize(GameObject caster, int dmg, LayerMask layers, AttackType type)
     {
         rb = GetComponent<Rigidbody>();
         rb.useGravity = gravityAffected;
         projectileCaster = caster;
-        gameObject.layer = CasterToProjectileLayer(projectileCaster.layer);
         damage = dmg;
         targetLayers = layers;
         attackType = type;

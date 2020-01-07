@@ -14,10 +14,19 @@ public class WeaponManager : MonoBehaviour
 
     private Transform target;
 
+    [SerializeField]
+    private bool isPlayer;
+
+    private bool canAttack = true;
+
+
     private void Start()
     {
         foreach (var weapon in weapons)
+        {
+            weapon.SetIsPlayer(isPlayer);
             weapon.enabled = false;
+        }
 
         currentWeapon = 0;
         weapons[currentWeapon].enabled = true;
@@ -25,7 +34,10 @@ public class WeaponManager : MonoBehaviour
 
     void Update()
     {
-        if (gameObject.layer == (int)Layer.Player)
+        if (EntityShouldAttack())
+            weapons[currentWeapon].TryToAttackTarget();
+
+        if (isPlayer)
         {
             if (Input.GetKeyDown(KeyCode.Q))
                 PickWeapon(currentWeapon + 1);
@@ -36,6 +48,17 @@ public class WeaponManager : MonoBehaviour
             return;
 
         PickWeaponForEnemy();
+    }
+
+    protected virtual bool EntityShouldAttack()
+    {
+        if (!canAttack)
+            return false;
+
+        if (isPlayer)
+            return Input.GetButtonDown("Fire1");
+
+        return true;
     }
 
     private void PickWeaponForEnemy()
@@ -76,6 +99,16 @@ public class WeaponManager : MonoBehaviour
     public float GetReloadingTimeLeftFraction()
     {
         return weapons[currentWeapon].GetReloadingTimeLeftFraction();
+    }
+
+    public float GetLastWeaponUsageTime()
+    {
+        return weapons[currentWeapon].GetLastAttackTime();
+    }
+
+    public void SetCanAttack(bool itCanAttack)
+    {
+        canAttack = itCanAttack;
     }
 }
 

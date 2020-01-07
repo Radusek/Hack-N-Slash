@@ -63,4 +63,14 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = Vector3.Lerp(rb.velocity, newVelocity, movementSpeed * 2 * Time.deltaTime);
     }
+
+    public float GetMovementSpeed()
+    {
+        return movementSpeed;
+    }
+
+    public void AddMovementSpeed(float speed)
+    {
+        movementSpeed += speed;
+    }
 }
