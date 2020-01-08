@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 lookingPosition;
 
+    public DirectionEvent OnMovementDirectionChanged;
+    private Direction lastDirection = Direction.None;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -62,6 +65,35 @@ public class PlayerController : MonoBehaviour
         newVelocity.z = movementSpeed * movementInput.y;
 
         rb.velocity = Vector3.Lerp(rb.velocity, newVelocity, movementSpeed * 2 * Time.deltaTime);
+
+        Direction currentDirection = GetDirection();
+        if (currentDirection != lastDirection)
+        {
+            OnMovementDirectionChanged?.Invoke(currentDirection);
+            lastDirection = currentDirection;
+        }
+    }
+
+    private Direction GetDirection()
+    {
+        Vector3 velocity = rb.velocity;
+
+        if (velocity.sqrMagnitude < 0.01f)
+            return Direction.None;
+
+        float cosine = Vector3.Dot(transform.forward, velocity.normalized);
+        float deltaDegrees = Mathf.Acos(cosine) * Mathf.Rad2Deg;
+
+        if (deltaDegrees <= 45f)
+            return Direction.Forward;
+        else if (deltaDegrees < 135f)
+        {
+            if (Vector3.Cross(transform.forward, velocity).y < 0f)
+                return Direction.Left;
+            else
+                return Direction.Right;
+        }
+        else return Direction.Back;
     }
 
     public float GetMovementSpeed()

@@ -12,7 +12,7 @@ AvatarMask:
   - m_Path: 
     m_Weight: 1
   - m_Path: Knight
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Knight/Bone.001
     m_Weight: 1
   - m_Path: Knight/Bone.001/HandController.L
@@ -78,37 +78,37 @@ AvatarMask:
   - m_Path: Knight/Bone.001/HipControl/Hip/Chest/Shoulder.R/HandPointer.R/HandPointer.R_end
     m_Weight: 1
   - m_Path: Knight/Bone.001/HipControl/Hip/Leg.L
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Knight/Bone.001/HipControl/Hip/Leg.L/Thigh.L
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Knight/Bone.001/HipControl/Hip/Leg.L/Thigh.L/Knee.L
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Knight/Bone.001/HipControl/Hip/Leg.L/Thigh.L/Knee.L/Foot.L
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Knight/Bone.001/HipControl/Hip/Leg.L/Thigh.L/Knee.L/Foot.L/Foot.L_end
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Knight/Bone.001/HipControl/Hip/Leg.R
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Knight/Bone.001/HipControl/Hip/Leg.R/Thigh.R
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Knight/Bone.001/HipControl/Hip/Leg.R/Thigh.R/Knee.R
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Knight/Bone.001/HipControl/Hip/Leg.R/Thigh.R/Knee.R/Foot.R
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Knight/Bone.001/HipControl/Hip/Leg.R/Thigh.R/Knee.R/Foot.R/Foot.R_end
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Knight/Bone.001/LegController.L
     m_Weight: 0
   - m_Path: Knight/Bone.001/LegController.L/LegPointer.L
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Knight/Bone.001/LegController.L/LegPointer.L/LegPointer.L_end
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Knight/Bone.001/LegController.R
     m_Weight: 0
   - m_Path: Knight/Bone.001/LegController.R/LegPointer.R
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Knight/Bone.001/LegController.R/LegPointer.R/LegPointer.R_end
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Shield
     m_Weight: 1
   - m_Path: Sword
