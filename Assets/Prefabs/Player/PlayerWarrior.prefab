@@ -1159,7 +1159,7 @@ MonoBehaviour:
   recastInterval: 0.3
   targetLayers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1536
   firePoint: {fileID: 8290965060825078558}
   attackRange: 0.55
   OnAttacked:
@@ -1193,7 +1193,7 @@ MonoBehaviour:
   recastInterval: 0.6
   targetLayers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1536
   firePoint: {fileID: 8290965060825078558}
   attackRange: 0
   OnAttacked:

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1341423153627366816}
   - component: {fileID: 1002742600260535763}
   - component: {fileID: 8522747934328169978}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7808068079529898915}
   - component: {fileID: 3620516714319036769}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 1238416470330045760}
   - component: {fileID: 7709976829361142644}
   - component: {fileID: 9025272939792811124}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SpikeProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,3 +300,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityAffected: 0
+  gravityScale: 0.5

@@ -106,13 +106,13 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.3
-    agentHeight: 0.8
+    agentRadius: 0.2
+    agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
-    minRegionArea: 3
+    minRegionArea: 5
     manualCellSize: 1
     cellSize: 0.08
     manualTileSize: 0
@@ -203,15 +203,20 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -308,10 +313,15 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -321,7 +331,7 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -408,10 +418,15 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -421,7 +436,7 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -516,32 +531,37 @@ PrefabInstance:
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: rangedAttackRange
-      value: 14
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: attackRange
-      value: 16
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: maxHealth
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: weaponDistanceTreshold.Array.data[1]
-      value: 16
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99658a91c1955eb47bbcbcf71afeb0d1, type: 3}
@@ -633,15 +653,20 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -743,15 +768,20 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -853,15 +883,20 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -966,32 +1001,37 @@ PrefabInstance:
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: rangedAttackRange
-      value: 14
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: attackRange
-      value: 16
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: maxHealth
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: weaponDistanceTreshold.Array.data[1]
-      value: 16
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99658a91c1955eb47bbcbcf71afeb0d1, type: 3}
@@ -1078,10 +1118,15 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -1091,7 +1136,7 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -1340,15 +1385,20 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -1563,12 +1613,12 @@ PrefabInstance:
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: rangedAttackRange
-      value: 14
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
@@ -1578,22 +1628,27 @@ PrefabInstance:
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: attackRange
-      value: 16
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: maxHealth
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: weaponDistanceTreshold.Array.data[1]
-      value: 16
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99658a91c1955eb47bbcbcf71afeb0d1, type: 3}
@@ -1680,10 +1735,15 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -1693,7 +1753,7 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -2139,15 +2199,20 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -2341,15 +2406,20 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -2471,12 +2541,12 @@ PrefabInstance:
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: rangedAttackRange
-      value: 14
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
@@ -2486,22 +2556,27 @@ PrefabInstance:
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: attackRange
-      value: 16
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: maxHealth
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: weaponDistanceTreshold.Array.data[1]
-      value: 16
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99658a91c1955eb47bbcbcf71afeb0d1, type: 3}
@@ -2601,12 +2676,12 @@ PrefabInstance:
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: rangedAttackRange
-      value: 14
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
@@ -2616,17 +2691,22 @@ PrefabInstance:
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: attackRange
-      value: 16
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: maxHealth
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: weaponDistanceTreshold.Array.data[1]
-      value: 16
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2330807594481922517, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
@@ -2641,7 +2721,7 @@ PrefabInstance:
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 6105768309231865382, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
@@ -2796,12 +2876,12 @@ PrefabInstance:
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: rangedAttackRange
-      value: 14
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
@@ -2811,22 +2891,27 @@ PrefabInstance:
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: attackRange
-      value: 16
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: maxHealth
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: weaponDistanceTreshold.Array.data[1]
-      value: 16
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99658a91c1955eb47bbcbcf71afeb0d1, type: 3}
@@ -3023,15 +3108,20 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -3141,12 +3231,12 @@ PrefabInstance:
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: rangedAttackRange
-      value: 14
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
@@ -3156,17 +3246,27 @@ PrefabInstance:
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: attackRange
-      value: 16
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: maxHealth
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: weaponDistanceTreshold.Array.data[1]
-      value: 16
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99658a91c1955eb47bbcbcf71afeb0d1, type: 3}
@@ -3255,32 +3355,37 @@ PrefabInstance:
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: rangedAttackRange
-      value: 14
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: attackRange
-      value: 16
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: maxHealth
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: weaponDistanceTreshold.Array.data[1]
-      value: 16
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99658a91c1955eb47bbcbcf71afeb0d1, type: 3}
@@ -3466,15 +3571,20 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -3571,10 +3681,15 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -3584,7 +3699,7 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -3762,10 +3877,15 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -3775,7 +3895,7 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -3962,32 +4082,37 @@ PrefabInstance:
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: rangedAttackRange
-      value: 14
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: attackRange
-      value: 16
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: maxHealth
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: weaponDistanceTreshold.Array.data[1]
-      value: 16
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99658a91c1955eb47bbcbcf71afeb0d1, type: 3}
@@ -4361,15 +4486,20 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -4466,10 +4596,15 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -4479,7 +4614,7 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -4572,10 +4707,15 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -4585,7 +4725,7 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -4841,10 +4981,15 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -4854,7 +4999,7 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -4941,10 +5086,15 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -4954,7 +5104,7 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -5419,32 +5569,37 @@ PrefabInstance:
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: rangedAttackRange
-      value: 14
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: attackRange
-      value: 16
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: maxHealth
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: weaponDistanceTreshold.Array.data[1]
-      value: 16
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99658a91c1955eb47bbcbcf71afeb0d1, type: 3}
@@ -5536,15 +5691,20 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -5641,10 +5801,15 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -5654,7 +5819,7 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -5688,7 +5853,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1225348948}
   m_LocalRotation: {x: 0, y: 0.004886923, z: 0, w: 0.9999881}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 22.11, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1256783829}
@@ -5791,10 +5956,15 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -5804,7 +5974,7 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -5894,12 +6064,12 @@ PrefabInstance:
     - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: maxHealth
-      value: 20
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -5909,7 +6079,7 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -6059,32 +6229,37 @@ PrefabInstance:
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: rangedAttackRange
-      value: 14
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: attackRange
-      value: 16
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: maxHealth
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: weaponDistanceTreshold.Array.data[1]
-      value: 16
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99658a91c1955eb47bbcbcf71afeb0d1, type: 3}
@@ -6673,15 +6848,20 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -6992,12 +7172,12 @@ PrefabInstance:
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: rangedAttackRange
-      value: 14
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 179540311924967512, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
@@ -7007,22 +7187,27 @@ PrefabInstance:
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 3862238060138275954, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: attackRange
-      value: 16
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: maxHealth
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: weaponDistanceTreshold.Array.data[1]
-      value: 16
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99658a91c1955eb47bbcbcf71afeb0d1, type: 3}
@@ -7148,15 +7333,20 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -7486,10 +7676,15 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -7499,7 +7694,7 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 1280
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -7629,15 +7824,20 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: maxHealth
+      value: 170
+      objectReference: {fileID: 0}
     - target: {fileID: 7973710825266850635, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
-      value: 768
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
@@ -7833,7 +8033,7 @@ PrefabInstance:
     - target: {fileID: 4513282155790725926, guid: 9cb91c86160efe243948d3ba92ae5e19,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4272143075294374386, guid: 9cb91c86160efe243948d3ba92ae5e19,
         type: 3}
@@ -7918,22 +8118,22 @@ PrefabInstance:
     - target: {fileID: 3997395558659087785, guid: 9cb91c86160efe243948d3ba92ae5e19,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3997395558659087785, guid: 9cb91c86160efe243948d3ba92ae5e19,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2930003710883416587, guid: 9cb91c86160efe243948d3ba92ae5e19,
         type: 3}
       propertyPath: recastInterval
-      value: 2
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 2930003710883416587, guid: 9cb91c86160efe243948d3ba92ae5e19,
         type: 3}
       propertyPath: targetLayers.m_Bits
-      value: 512
+      value: 1536
       objectReference: {fileID: 0}
     - target: {fileID: 2930003710883416587, guid: 9cb91c86160efe243948d3ba92ae5e19,
         type: 3}

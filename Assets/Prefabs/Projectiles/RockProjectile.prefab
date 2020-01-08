@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 474930429877667309}
   - component: {fileID: 212879827968208119}
   - component: {fileID: 7032941586056444015}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 1238416470330045760}
   - component: {fileID: 7709976829361142644}
   - component: {fileID: 9025272939792811124}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RockProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

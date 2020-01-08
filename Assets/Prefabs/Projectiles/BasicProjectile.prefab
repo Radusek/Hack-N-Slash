@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1238416470330045760}
   - component: {fileID: 7709976829361142644}
   - component: {fileID: 9025272939792811124}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BasicProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,3 +123,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravityAffected: 0
+  gravityScale: 0.5
