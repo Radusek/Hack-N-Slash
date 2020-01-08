@@ -72,7 +72,7 @@ public class Attack : MonoBehaviour
 
     public float GetReloadingTimeLeftFraction()
     {
-        return 1f - (Time.time - lastAttackTime)/recastInterval;
+        return 1f - (Time.time - lastAttackTime)/(recastInterval + 0.1f);
     }
 
     public float GetLastAttackTime()
