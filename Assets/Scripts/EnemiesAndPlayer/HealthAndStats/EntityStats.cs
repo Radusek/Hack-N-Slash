@@ -153,9 +153,7 @@ public class EntityStats : MonoBehaviour
         Attack[] attacks = GetComponents<Attack>();
         foreach (var attack in attacks)
             attack.enabled = false;
-        WeaponManager wm = GetComponent<WeaponManager>();
-        if (wm != null)
-            wm.enabled = false;
+        GetComponent<WeaponManager>().enabled = false;
         GetComponent<Collider>().enabled = false;
     }
 

@@ -47,7 +47,8 @@ public class RangedProjectileAttack : Attack
             relativeTargetPosition.y = 0f;
 
             RaycastHit hit;
-            if (Physics.Raycast(firePoint.position, relativeTargetPosition, out hit, attackRange))
+            int layerMask = ~(1 << gameObject.layer);
+            if (Physics.Raycast(firePoint.position, relativeTargetPosition, out hit, attackRange, layerMask))
             {
                 bool oldVisibilty = targetIsVisible;
                 targetIsVisible = hit.collider.gameObject.layer.IsInLayerMask(targetLayers);
