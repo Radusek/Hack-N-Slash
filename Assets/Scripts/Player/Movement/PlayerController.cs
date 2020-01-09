@@ -81,8 +81,7 @@ public class PlayerController : MonoBehaviour
         if (velocity.sqrMagnitude < 0.01f)
             return Direction.None;
 
-        float cosine = Vector3.Dot(transform.forward, velocity.normalized);
-        float deltaDegrees = Mathf.Acos(cosine) * Mathf.Rad2Deg;
+        float deltaDegrees = transform.forward.AngleDegreesBetween(velocity);
 
         if (deltaDegrees <= 45f)
             return Direction.Forward;

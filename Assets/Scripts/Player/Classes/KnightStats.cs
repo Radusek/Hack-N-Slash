@@ -44,17 +44,31 @@ public class KnightStats : EntityStats
         }
     }
 
-    protected override void SubtractHp(int amount, AttackType attackType)
+    protected override void SubtractHp(int amount, AttackType attackType, Vector3 attackPosition)
     {
-        if (usesShield && Random.Range(0f, 1f) < 0.8f)
-            return;
+        Vector3 knightToAttackDirection = attackPosition - transform.position;
+        bool attackedFromFront = knightToAttackDirection.AngleDegreesBetween(transform.forward) < 45f;
+        if (attackedFromFront)
+        {
+            if (usesShield && Random.Range(0f, 1f) < 0.8f)
+                return;
+        }
 
-        base.SubtractHp(amount, attackType);
+        base.SubtractHp(amount, attackType, attackPosition);
     }
 
     protected override void DisablePlayer()
     {
         base.DisablePlayer();
         this.enabled = false;
+    }
+}
+
+public static class MyVectorExtensions
+{
+    public static float AngleDegreesBetween(this Vector3 lhs, Vector3 rhs)
+    {
+        float cosine = Vector3.Dot(lhs.normalized, rhs.normalized);
+        return Mathf.Acos(cosine) * Mathf.Rad2Deg;
     }
 }

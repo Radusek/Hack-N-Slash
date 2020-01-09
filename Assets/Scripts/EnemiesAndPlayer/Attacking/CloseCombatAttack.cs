@@ -11,7 +11,7 @@ public class CloseCombatAttack : Attack
         {
             if (collider.gameObject != gameObject)
             {
-                collider.GetComponent<EntityStats>().TakeDamage(damage, attackType, gameObject);
+                collider.GetComponent<EntityStats>().TakeDamage(damage, attackType, gameObject, transform.position);
                 attacked = true;
             }
         }

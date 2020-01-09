@@ -609,7 +609,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: LightAttack
-  m_Speed: 1
+  m_Speed: 4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 356630945186974483}
@@ -758,9 +758,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.1428572
+  m_TransitionDuration: 0.15816092
+  m_TransitionOffset: 0.36245233
+  m_ExitTime: 0.81632185
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -960,7 +960,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -8654431040094799845, guid: 91611e1cae1fd7b418fe8e8275438fc0,
+  m_Motion: {fileID: -8654431040094799845, guid: ad40fdebe2c8e0146a2f70300e515ec7,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 

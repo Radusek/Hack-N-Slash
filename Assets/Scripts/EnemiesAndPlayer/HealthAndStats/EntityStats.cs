@@ -97,10 +97,11 @@ public class EntityStats : MonoBehaviour
         return (float)(experiencePoints - (level - 1) * expPerLevel) / expPerLevel;
     }
 
-    public void TakeDamage(int amount, AttackType attackType, GameObject attacker)
+    public void TakeDamage(int amount, AttackType attackType, GameObject attacker, Vector3 attackPosition)
     {
         int oldCurrentHp = currentHealth;
-        SubtractHp(amount, attackType);
+
+        SubtractHp(amount, attackType, attackPosition);
 
         if (currentHealth != oldCurrentHp)
         {
@@ -116,7 +117,7 @@ public class EntityStats : MonoBehaviour
         }
     }
 
-    protected virtual void SubtractHp(int amount, AttackType attackType)
+    protected virtual void SubtractHp(int amount, AttackType attackType, Vector3 attackPosition)
     {
         // take different amount of damage based on the attackType to add
         currentHealth -= amount;
