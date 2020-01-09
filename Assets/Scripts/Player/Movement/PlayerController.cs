@@ -104,4 +104,9 @@ public class PlayerController : MonoBehaviour
     {
         movementSpeed += speed;
     }
+
+    public Vector3 GetLookingPosition()
+    {
+        return lookingPosition;
+    }
 }

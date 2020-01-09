@@ -22,17 +22,26 @@ public class RangedProjectileAttack : Attack
 
     private Rigidbody rb;
 
+    private PlayerController playerController;
+
     private void Awake()
     {
         base.Initialize();
         rb = GetComponent<Rigidbody>();
     }
 
+    private void Start()
+    {
+        if (isPlayer)
+            playerController = GetComponent<PlayerController>();
+    }
+
     protected override bool AttackTarget(Collider[] colliders)
     {
         if (isPlayer)
         {
-            LaunchProjectile(transform.forward);
+            Vector3 direction = playerController.GetLookingPosition() - firePoint.position;
+            LaunchProjectile(direction.normalized);
             return true;
         }
 
