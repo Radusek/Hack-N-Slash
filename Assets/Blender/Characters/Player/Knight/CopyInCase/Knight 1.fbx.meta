@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ad40fdebe2c8e0146a2f70300e515ec7
+guid: b04e0b5c9701e6f47aef9c53d7b20227
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
@@ -40,7 +40,7 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Steel
+      name: Skin
     second: {fileID: 2100000, guid: 41f056bce9e56cd4eadd5935c7434326, type: 2}
   materials:
     importMaterials: 1
