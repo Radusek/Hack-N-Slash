@@ -1023,6 +1023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 60
+  baseExp: 0
   startingLevel: 1
   fadingDepth: 1.2
   minimapMark: {fileID: 250299316337714067}
@@ -1115,6 +1116,9 @@ MonoBehaviour:
   - {fileID: 4698901947556332994}
   - {fileID: 2565850295564168017}
   weaponDistanceTreshold: []
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 1536
   isPlayer: 1
 --- !u!114 &4698901947556332994
 MonoBehaviour:
@@ -1131,9 +1135,6 @@ MonoBehaviour:
   attackType: 0
   damage: 45
   recastInterval: 0.3
-  targetLayers:
-    serializedVersion: 2
-    m_Bits: 1536
   firePoint: {fileID: 45272768559777250}
   attackRange: 0.55
   OnAttacked:
@@ -1165,9 +1166,6 @@ MonoBehaviour:
   attackType: 1
   damage: 5
   recastInterval: 0.6
-  targetLayers:
-    serializedVersion: 2
-    m_Bits: 1536
   firePoint: {fileID: 45272768559777250}
   attackRange: 0
   OnAttacked:

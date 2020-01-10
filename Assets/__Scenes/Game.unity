@@ -228,6 +228,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &12068997 stripped
@@ -331,6 +336,11 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
       value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -438,6 +448,11 @@ PrefabInstance:
       propertyPath: layersToTarget.m_Bits
       value: 1024
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &36948563 stripped
@@ -541,6 +556,11 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
       value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -663,6 +683,11 @@ PrefabInstance:
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
@@ -783,6 +808,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &50106253 stripped
@@ -898,6 +928,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &106990560 stripped
@@ -1012,6 +1047,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -1133,6 +1173,11 @@ PrefabInstance:
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
@@ -1241,6 +1286,11 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
       value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1515,6 +1565,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &180712615 stripped
@@ -1620,6 +1675,11 @@ PrefabInstance:
       propertyPath: layersToTarget.m_Bits
       value: 1024
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &213517835 stripped
@@ -1723,6 +1783,11 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
       value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1960,6 +2025,11 @@ PrefabInstance:
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
@@ -2068,6 +2138,11 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
       value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2539,6 +2614,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &324229954 stripped
@@ -2746,6 +2826,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &348669682 stripped
@@ -2860,6 +2945,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -2990,6 +3080,11 @@ PrefabInstance:
         type: 3}
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
@@ -3125,6 +3220,11 @@ PrefabInstance:
         type: 3}
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
@@ -3326,6 +3426,11 @@ PrefabInstance:
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
@@ -3436,6 +3541,11 @@ PrefabInstance:
       propertyPath: layersToTarget.m_Bits
       value: 1024
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &465117577 stripped
@@ -3541,6 +3651,11 @@ PrefabInstance:
       propertyPath: layersToTarget.m_Bits
       value: 1024
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &467041606 stripped
@@ -3644,6 +3759,11 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
       value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3866,6 +3986,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &502732359 stripped
@@ -3969,6 +4094,11 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
       value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4101,6 +4231,11 @@ PrefabInstance:
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
@@ -4219,6 +4354,11 @@ PrefabInstance:
         type: 3}
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
@@ -4354,6 +4494,11 @@ PrefabInstance:
         type: 3}
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
@@ -4559,6 +4704,11 @@ PrefabInstance:
       propertyPath: layersToTarget.m_Bits
       value: 1024
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &678558895 stripped
@@ -4674,6 +4824,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &691511880 stripped
@@ -4777,6 +4932,11 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
       value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4990,6 +5150,11 @@ PrefabInstance:
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
@@ -5115,6 +5280,11 @@ PrefabInstance:
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
@@ -5235,6 +5405,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &722188467 stripped
@@ -5349,6 +5524,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -5465,6 +5645,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &745243615 stripped
@@ -5568,6 +5753,11 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
       value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5684,6 +5874,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -5897,6 +6092,11 @@ PrefabInstance:
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
@@ -6021,6 +6221,11 @@ PrefabInstance:
         type: 3}
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
@@ -6156,6 +6361,11 @@ PrefabInstance:
         type: 3}
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
@@ -6427,6 +6637,11 @@ PrefabInstance:
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
@@ -6684,6 +6899,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &976767324 stripped
@@ -6787,6 +7007,11 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
       value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6898,6 +7123,11 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
       value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7014,6 +7244,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -7334,6 +7569,11 @@ PrefabInstance:
       propertyPath: layersToTarget.m_Bits
       value: 1024
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &1089844412 stripped
@@ -7437,6 +7677,11 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
       value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7553,6 +7798,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -7704,6 +7954,11 @@ PrefabInstance:
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
@@ -7823,6 +8078,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -8284,6 +8544,11 @@ PrefabInstance:
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
@@ -8419,6 +8684,11 @@ PrefabInstance:
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
@@ -8539,6 +8809,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &1192394783 stripped
@@ -8642,6 +8917,11 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
       value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -8819,6 +9099,11 @@ PrefabInstance:
       propertyPath: layersToTarget.m_Bits
       value: 1024
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &1230813511 stripped
@@ -8928,6 +9213,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -9058,6 +9348,11 @@ PrefabInstance:
         type: 3}
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
@@ -9193,6 +9488,11 @@ PrefabInstance:
         type: 3}
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
@@ -9454,6 +9754,11 @@ PrefabInstance:
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
@@ -9673,6 +9978,11 @@ PrefabInstance:
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
@@ -9781,6 +10091,11 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
       value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -10314,6 +10629,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &1614138077 stripped
@@ -10417,6 +10737,11 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
       value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -10533,6 +10858,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -10850,6 +11180,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &1805155268 stripped
@@ -10953,6 +11288,11 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
       value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -11085,6 +11425,11 @@ PrefabInstance:
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
@@ -11204,6 +11549,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -11354,6 +11704,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &1907383774 stripped
@@ -11484,6 +11839,11 @@ PrefabInstance:
       propertyPath: weaponDistanceTreshold.Array.data[1]
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 3465026405988271750, guid: 99658a91c1955eb47bbcbcf71afeb0d1,
         type: 3}
       propertyPath: targetLayers.m_Bits
@@ -11603,6 +11963,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -11942,6 +12307,11 @@ PrefabInstance:
       propertyPath: layersToTarget.m_Bits
       value: 1024
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &1994882117 stripped
@@ -12045,6 +12415,11 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
       value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -12161,6 +12536,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
@@ -12315,6 +12695,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &2021107531 stripped
@@ -12418,6 +12803,11 @@ PrefabInstance:
     - target: {fileID: 7523097806946245381, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
         type: 3}
       propertyPath: layersToTarget.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
       value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -12535,6 +12925,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
 --- !u!4 &2084693222 stripped
@@ -12649,6 +13044,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971658874142864644, guid: 03ffa5d5835620f4fbec8e3245c7ee2e,
+        type: 3}
+      propertyPath: targetLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}

@@ -16,7 +16,6 @@ public class Attack : MonoBehaviour
 
     private float lastAttackTime;
 
-    [SerializeField]
     protected LayerMask targetLayers;
 
     [SerializeField]
@@ -27,6 +26,9 @@ public class Attack : MonoBehaviour
 
     protected bool isPlayer;
 
+    private float disabledTime;
+    private float equippingTime = 0.2f;
+
     public UnityEvent OnAttacked;
 
     private void Awake()
@@ -34,19 +36,32 @@ public class Attack : MonoBehaviour
         Initialize();
     }
 
-    private void OnEnable()
-    {
-        Initialize();
-    }
-
     protected void Initialize()
     {
-        lastAttackTime = Time.time;
+        lastAttackTime = -recastInterval;
+    }
+
+    private void OnDisable()
+    {
+        disabledTime = Time.time;
+    }
+
+    private void OnEnable()
+    {
+        if (lastAttackTime == -recastInterval)
+            return;
+
+        lastAttackTime = Mathf.Max(Time.time - recastInterval + equippingTime, Time.time - (disabledTime - lastAttackTime));
     }
 
     public void SetIsPlayer(bool itIsPlayer)
     {
         isPlayer = itIsPlayer;
+    }
+
+    public void SetTargetLayers(LayerMask layers)
+    {
+        targetLayers = layers;
     }
 
     public void TryToAttackTarget()

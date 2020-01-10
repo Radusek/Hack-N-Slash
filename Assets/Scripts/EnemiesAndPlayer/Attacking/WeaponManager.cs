@@ -15,16 +15,19 @@ public class WeaponManager : MonoBehaviour
     private Transform target;
 
     [SerializeField]
+    private LayerMask targetLayers;
+
+    [SerializeField]
     private bool isPlayer;
 
     private bool canAttack = true;
 
-
-    private void Start()
+    private void Awake()
     {
         foreach (var weapon in weapons)
         {
             weapon.SetIsPlayer(isPlayer);
+            weapon.SetTargetLayers(targetLayers);
             weapon.enabled = false;
         }
 

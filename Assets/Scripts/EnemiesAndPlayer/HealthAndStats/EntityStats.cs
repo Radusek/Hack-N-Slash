@@ -15,6 +15,9 @@ public class EntityStats : MonoBehaviour
     private int level = 1;
 
     [SerializeField]
+    private int baseExp = 105;
+
+    [SerializeField]
     private int startingLevel = 1;
 
     // some resistances stats and other cool things to add
@@ -127,9 +130,10 @@ public class EntityStats : MonoBehaviour
     {
         EntityStats attackerStats = attacker.GetComponent<EntityStats>();
         int attackerLevel = attackerStats.GetLevel();
-        int baseExp = 230;
-        float levelDiffNerf = 0.15f;
-        int finalExp = (int)(baseExp * Mathf.Clamp01(1f - (attackerLevel - level) * levelDiffNerf));
+        float nerfValue = 0.16f;
+        int levelsDifference = Mathf.Abs(attackerLevel - level);
+        int levelDiffMultiplier = levelsDifference <= 2 ? 0 : levelsDifference - 2;
+        int finalExp = (int)(baseExp * Mathf.Clamp01(1f - levelDiffMultiplier * nerfValue));
         attackerStats.AddExperience(finalExp);
     }
 

@@ -700,6 +700,10 @@ MonoBehaviour:
   weaponDistanceTreshold:
   - 2
   - 8
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 1280
+  isPlayer: 0
 --- !u!114 &3465026405988271750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -715,12 +719,8 @@ MonoBehaviour:
   attackType: 0
   damage: 1
   recastInterval: 0.25
-  targetLayers:
-    serializedVersion: 2
-    m_Bits: 256
   firePoint: {fileID: 6348348421610981626}
   attackRange: 0.65
-  isPlayer: 0
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -750,12 +750,8 @@ MonoBehaviour:
   attackType: 1
   damage: 9
   recastInterval: 0.75
-  targetLayers:
-    serializedVersion: 2
-    m_Bits: 256
   firePoint: {fileID: 6348348421610981626}
   attackRange: 9
-  isPlayer: 0
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -984,7 +980,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 667edd32ac90a12438818230eba5d8cd, type: 3}
+  m_Script: {fileID: 11500000, guid: 99423b4a1c77dba4bba0d5ede0794ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &7984362278382011767

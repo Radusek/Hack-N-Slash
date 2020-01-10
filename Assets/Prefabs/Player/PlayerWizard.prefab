@@ -1038,6 +1038,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2147483648
   movementSpeed: 4.5
+  OnMovementDirectionChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &4272143075294374386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1051,6 +1054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 60
+  baseExp: 0
   startingLevel: 1
   fadingDepth: 1.2
   minimapMark: {fileID: 597835261869785801}
@@ -1151,6 +1155,9 @@ MonoBehaviour:
   - {fileID: 5334258168712799384}
   - {fileID: 2930003710883416587}
   weaponDistanceTreshold: []
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 1536
   isPlayer: 1
 --- !u!114 &5334258168712799384
 MonoBehaviour:
@@ -1167,9 +1174,6 @@ MonoBehaviour:
   attackType: 0
   damage: 6
   recastInterval: 0.3
-  targetLayers:
-    serializedVersion: 2
-    m_Bits: 1536
   firePoint: {fileID: 4235511823258663231}
   attackRange: 0.7
   OnAttacked:
@@ -1201,9 +1205,6 @@ MonoBehaviour:
   attackType: 1
   damage: 5
   recastInterval: 0.6
-  targetLayers:
-    serializedVersion: 2
-    m_Bits: 1536
   firePoint: {fileID: 4235511823258663231}
   attackRange: 1
   OnAttacked:
