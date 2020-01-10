@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,6 +22,8 @@ public class WeaponManager : MonoBehaviour
     private bool isPlayer;
 
     private bool canAttack = true;
+    
+    public event Action<int> OnWeaponChanged;
 
     private void Awake()
     {
@@ -40,10 +43,28 @@ public class WeaponManager : MonoBehaviour
         if (EntityShouldAttack())
             weapons[currentWeapon].TryToAttackTarget();
 
+
         if (isPlayer)
         {
+            int oldCurrentWeapon = currentWeapon;
             if (Input.GetKeyDown(KeyCode.Q))
                 PickWeapon(currentWeapon + 1);
+            else
+            {
+                KeyCode keyCode;
+                for (int i = 0; i < weapons.Length; i++)
+                {
+                    keyCode = (KeyCode)((int)KeyCode.Alpha1 + i);
+                    if (Input.GetKeyDown(keyCode))
+                    {
+                        PickWeapon(i);
+                    }
+                }
+            }
+
+            if (currentWeapon != oldCurrentWeapon)
+                OnWeaponChanged?.Invoke(currentWeapon);
+
             return;
         }
 
@@ -112,6 +133,11 @@ public class WeaponManager : MonoBehaviour
     public void SetCanAttack(bool itCanAttack)
     {
         canAttack = itCanAttack;
+    }
+
+    public Attack[] GetAttacks()
+    {
+        return weapons;
     }
 }
 

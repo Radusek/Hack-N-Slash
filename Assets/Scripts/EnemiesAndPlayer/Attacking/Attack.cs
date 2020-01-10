@@ -29,6 +29,8 @@ public class Attack : MonoBehaviour
     private float disabledTime;
     private float equippingTime = 0.2f;
 
+    public Sprite weaponImage;
+
     public UnityEvent OnAttacked;
 
     private void Awake()

@@ -1120,6 +1120,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1536
   isPlayer: 1
+  OnWeaponChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &4698901947556332994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1137,6 +1140,7 @@ MonoBehaviour:
   recastInterval: 0.3
   firePoint: {fileID: 45272768559777250}
   attackRange: 0.55
+  weaponImage: {fileID: 21300000, guid: 0d6c0be5ce6f8ed43a3ad52642157ee3, type: 3}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -1168,6 +1172,7 @@ MonoBehaviour:
   recastInterval: 0.6
   firePoint: {fileID: 45272768559777250}
   attackRange: 0
+  weaponImage: {fileID: 21300000, guid: 045d73f1d4846af4a85dadaeb7c96949, type: 3}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:

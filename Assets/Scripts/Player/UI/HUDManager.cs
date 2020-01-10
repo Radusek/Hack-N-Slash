@@ -31,6 +31,11 @@ public class HUDManager : MonoBehaviour
         UpdateLevelText();
     }
 
+    public GameObject GetPlayer()
+    {
+        return playerStats.gameObject;
+    }
+
     public void UpdateHpBar()
     {
         hpBar.value = playerStats.GetHpFraction();
