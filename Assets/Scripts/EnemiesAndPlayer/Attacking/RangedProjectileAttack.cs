@@ -41,6 +41,7 @@ public class RangedProjectileAttack : Attack
         if (isPlayer)
         {
             Vector3 direction = playerController.GetLookingPosition() - firePoint.position;
+            direction.y = 0;
             LaunchProjectile(direction.normalized);
             return true;
         }

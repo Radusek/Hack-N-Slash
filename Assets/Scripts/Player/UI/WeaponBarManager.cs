@@ -10,13 +10,15 @@ public class WeaponBarManager : MonoBehaviour
     [SerializeField]
     private WeaponBarSlot[] weaponSlots;
 
+    private Attack[] playerAttacks;
+
     int currentWeapon;
 
     private void Awake()
     {
         playerWeaponManager = transform.parent.parent.GetComponent<HUDManager>().GetPlayer().GetComponent<WeaponManager>();
 
-        Attack[] playerAttacks = playerWeaponManager.GetAttacks();
+        playerAttacks = playerWeaponManager.GetAttacks();
 
         for (int i = 0; i < playerAttacks.Length; i++)
         {
@@ -39,6 +41,11 @@ public class WeaponBarManager : MonoBehaviour
     private void OnDisable()
     {
         playerWeaponManager.OnWeaponChanged -= ChooseWeapon;
+    }
+
+    private void Update()
+    {
+        weaponSlots[currentWeapon].SetReloadBarValue(playerAttacks[currentWeapon].GetReloadingBarValue());
     }
 
     public void ChooseWeapon(int newWeapon)

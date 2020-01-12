@@ -923,6 +923,7 @@ GameObject:
   - component: {fileID: 4969526370019623260}
   - component: {fileID: 4698901947556332994}
   - component: {fileID: 2565850295564168017}
+  - component: {fileID: 7255895932022428417}
   - component: {fileID: 1225155052658214612}
   - component: {fileID: 946095415525151661}
   m_Layer: 8
@@ -1115,14 +1116,12 @@ MonoBehaviour:
   weapons:
   - {fileID: 4698901947556332994}
   - {fileID: 2565850295564168017}
+  - {fileID: 7255895932022428417}
   weaponDistanceTreshold: []
   targetLayers:
     serializedVersion: 2
     m_Bits: 1536
   isPlayer: 1
-  OnWeaponChanged:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &4698901947556332994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1190,6 +1189,45 @@ MonoBehaviour:
   projectilePrefab: {fileID: 6053647093871153789, guid: 62ce6556f6dbc014fa9fbae565788ae5,
     type: 3}
   projectileSpeed: 20
+  degreesTolerance: 10
+  OnTargetVisibilityChange:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &7255895932022428417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3859773805247681148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5527b3db2c51534fa379fb86503c34f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackType: 1
+  damage: 35
+  recastInterval: 5
+  firePoint: {fileID: 45272768559777250}
+  attackRange: 0
+  weaponImage: {fileID: 21300000, guid: 045d73f1d4846af4a85dadaeb7c96949, type: 3}
+  OnAttacked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5244746588865600288}
+        m_MethodName: SetAttackTrigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  projectilePrefab: {fileID: 6053647093871153789, guid: 27f67a72b1f90d447aff9bff20f88ed1,
+    type: 3}
+  projectileSpeed: 15
   degreesTolerance: 10
   OnTargetVisibilityChange:
     m_PersistentCalls:
