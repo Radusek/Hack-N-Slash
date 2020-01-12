@@ -52,12 +52,13 @@ public class RangedProjectileAttack : Attack
         {
             if (target.gameObject == gameObject)
                 continue;
-            Vector3 relativeTargetPosition = target.transform.position - transform.position;
+
+            Vector3 relativeTargetPosition = target.transform.position - firePoint.position;
             relativeTargetPosition.y = 0f;
 
             RaycastHit hit;
-            int layerMask = ~(1 << gameObject.layer);
-            if (Physics.Raycast(firePoint.position, relativeTargetPosition, out hit, attackRange, layerMask))
+            int visibilityMask = ~(1 << gameObject.layer);
+            if (Physics.Raycast(firePoint.position, relativeTargetPosition, out hit, attackRange, visibilityMask))
             {
                 bool oldVisibilty = targetIsVisible;
                 targetIsVisible = hit.collider.gameObject.layer.IsInLayerMask(targetLayers);
@@ -68,8 +69,7 @@ public class RangedProjectileAttack : Attack
             if (!targetIsVisible)
                 return false;
 
-            float cosine = Vector3.Dot(transform.forward, relativeTargetPosition.normalized);
-            float deltaDegrees = Mathf.Acos(cosine) * Mathf.Rad2Deg;
+            float deltaDegrees = transform.forward.AngleDegreesBetween(relativeTargetPosition.normalized);
             if (deltaDegrees <= degreesTolerance)
             {
                 LaunchProjectile(relativeTargetPosition.normalized);
@@ -81,12 +81,11 @@ public class RangedProjectileAttack : Attack
 
     private void LaunchProjectile(Vector3 direction)
     {
-        direction.y = 0f;
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+        projectile.transform.LookAt(firePoint.position + direction);
         projectile.GetComponent<Projectile>().Initialize(gameObject, damage, targetLayers, attackType);
         Vector3 resultVelocity = (projectileSpeed + Vector3.Dot(transform.forward, rb.velocity)) * direction;
         projectile.GetComponent<Rigidbody>().velocity = resultVelocity;
-        projectile.transform.LookAt(firePoint.position + direction);
     }
 }
 

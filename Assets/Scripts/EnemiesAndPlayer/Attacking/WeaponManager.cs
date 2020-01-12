@@ -120,9 +120,9 @@ public class WeaponManager : MonoBehaviour
         weapons[currentWeapon].enabled = true;
     }
 
-    public float GetReloadingTimeLeftFraction()
+    public float GetReloadingBarValue()
     {
-        return weapons[currentWeapon].GetReloadingTimeLeftFraction();
+        return weapons[currentWeapon].GetReloadingBarValue();
     }
 
     public float GetLastWeaponUsageTime()

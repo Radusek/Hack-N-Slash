@@ -9,11 +9,11 @@ public class CloseCombatAttack : Attack
         bool attacked = false;
         foreach(var collider in colliders)
         {
-            if (collider.gameObject != gameObject)
-            {
-                collider.GetComponent<EntityStats>().TakeDamage(damage, attackType, gameObject, transform.position);
-                attacked = true;
-            }
+            if (collider.gameObject == gameObject)
+                continue;
+
+            collider.GetComponent<EntityStats>().TakeDamage(damage, attackType, gameObject, transform.position);
+            attacked = true;
         }
         return attacked;
     }

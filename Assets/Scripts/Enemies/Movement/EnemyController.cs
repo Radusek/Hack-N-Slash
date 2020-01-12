@@ -18,10 +18,10 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private float sightRange = 3f;
 
-    private float playerCheckInterval = 0.5f;
-
     [SerializeField]
     private float closeCombatRange = 2f;
+
+    private float playerCheckInterval = 0.5f;
 
     protected float targetDistanceSquared;
     protected bool isInCloseCombatRange = false;
@@ -90,13 +90,12 @@ public class EnemyController : MonoBehaviour
                 target = null;
         }
 
-        Collider[] colliders = Physics.OverlapSphere(transform.position, sightRange, layersToTarget);
-        Collider[] collidersFiltered = colliders.Where(col => col.enabled && col.gameObject != gameObject).ToArray();
-        if (collidersFiltered.Length > 0)
+        Collider[] colliders = Physics.OverlapSphere(transform.position, sightRange, layersToTarget).Where(col => col.gameObject != gameObject).ToArray();
+        if (colliders.Length > 0)
         {
             float distance = float.MaxValue;
             Collider finalTarget = null;
-            foreach (var col in collidersFiltered)
+            foreach (var col in colliders)
             {
                 float currentDistance = (col.transform.position - transform.position).sqrMagnitude;
                 if (currentDistance < distance)
@@ -144,7 +143,7 @@ public class EnemyController : MonoBehaviour
 
         float rotationSpeed = 5f;
         float rotation = rotationSpeed * Vector3.Cross(transform.forward, targetDirection).y * Time.deltaTime;
-        transform.RotateAround(Vector3.up, rotation);
+        transform.Rotate(Vector3.up * rotation);
     }
 }
 

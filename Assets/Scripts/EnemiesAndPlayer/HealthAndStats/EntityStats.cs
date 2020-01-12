@@ -7,6 +7,8 @@ using UnityEngine.Events;
 
 public class EntityStats : MonoBehaviour
 {
+    public readonly static int expPerLevel = 1000;
+
     [SerializeField]
     protected int maxHealth = 50;
     protected int currentHealth;
@@ -35,7 +37,6 @@ public class EntityStats : MonoBehaviour
     public UnityEvent OnExpGained;
     public UnityEvent OnLevelUp;
 
-    private int expPerLevel = 1000;
 
     private void Awake()
     {

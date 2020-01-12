@@ -18,6 +18,6 @@ public class ReloadBarHandler : MonoBehaviour
 
     void Update()
     {
-        reloadBar.value = wm.GetReloadingTimeLeftFraction();
+        reloadBar.value = wm.GetReloadingBarValue();
     }
 }

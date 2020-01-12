@@ -87,7 +87,7 @@ public class Attack : MonoBehaviour
         return false;
     }
 
-    public float GetReloadingTimeLeftFraction()
+    public float GetReloadingBarValue()
     {
         return 1f - (Time.time - lastAttackTime)/(recastInterval + 0.1f);
     }
