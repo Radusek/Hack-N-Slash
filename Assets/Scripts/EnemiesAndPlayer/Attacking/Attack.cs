@@ -53,7 +53,7 @@ public class Attack : MonoBehaviour
         if (lastAttackTime == -recastInterval)
             return;
 
-        lastAttackTime = Mathf.Max(Time.time - recastInterval + equippingTime, Time.time - (disabledTime - lastAttackTime));
+        lastAttackTime = Mathf.Max(Time.time - recastInterval + equippingTime, lastAttackTime);
     }
 
     public void SetIsPlayer(bool itIsPlayer)
@@ -95,6 +95,11 @@ public class Attack : MonoBehaviour
     public float GetLastAttackTime()
     {
         return lastAttackTime;
+    }
+
+    public void ReduceCooldown(float time, float multiplier)
+    {
+        lastAttackTime += (1f - multiplier) * time;
     }
 
     private void OnDrawGizmosSelected()

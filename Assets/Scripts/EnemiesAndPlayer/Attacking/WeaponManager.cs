@@ -46,6 +46,8 @@ public class WeaponManager : MonoBehaviour
 
         if (isPlayer)
         {
+            SlowlyReloadOtherWeapons();
+
             int oldCurrentWeapon = currentWeapon;
             if (Input.GetKeyDown(KeyCode.Q))
                 PickWeapon(currentWeapon + 1);
@@ -72,6 +74,17 @@ public class WeaponManager : MonoBehaviour
             return;
 
         PickWeaponForEnemy();
+    }
+
+    private void SlowlyReloadOtherWeapons()
+    {
+        foreach (var weapon in weapons)
+        {
+            if (weapon == weapons[currentWeapon])
+                continue;
+
+            weapon.ReduceCooldown(Time.deltaTime, 0.4f);
+        }
     }
 
     protected virtual bool EntityShouldAttack()

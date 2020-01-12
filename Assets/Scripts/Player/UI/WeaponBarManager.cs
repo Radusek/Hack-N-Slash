@@ -45,7 +45,8 @@ public class WeaponBarManager : MonoBehaviour
 
     private void Update()
     {
-        weaponSlots[currentWeapon].SetReloadBarValue(playerAttacks[currentWeapon].GetReloadingBarValue());
+        for (int i = 0; i < playerAttacks.Length; i++)
+            weaponSlots[i].SetReloadBarValue(playerAttacks[i].GetReloadingBarValue());
     }
 
     public void ChooseWeapon(int newWeapon)
