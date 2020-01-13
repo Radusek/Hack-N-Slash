@@ -26,6 +26,9 @@ public class EnemyController : MonoBehaviour
     protected float targetDistanceSquared;
     protected bool isInCloseCombatRange = false;
 
+    private Vector3 mobAreaPosition;
+    private float mobAreaRadius;
+
     public TransformEvent onTargetChanged;
 
     private Coroutine idleCoroutine;
@@ -39,6 +42,12 @@ public class EnemyController : MonoBehaviour
     private void Start()
     {
         StartCoroutine(LookForTargetCoroutine());
+    }
+
+    public void SetMobArea(Vector3 areaPosition, float areaRadius)
+    {
+        mobAreaPosition = areaPosition;
+        mobAreaRadius = areaRadius;
     }
 
     private void FixedUpdate()
@@ -129,8 +138,13 @@ public class EnemyController : MonoBehaviour
             agent.destination = transform.position;
             yield return delay;
 
-            Vector2 newDestination = travellingRange * Random.insideUnitCircle;
-            agent.destination = transform.position + new Vector3(newDestination.x, 0f, newDestination.y);
+            if ((transform.position - mobAreaPosition).sqrMagnitude > mobAreaRadius * mobAreaRadius)
+                agent.destination = mobAreaPosition;
+            else
+            {
+                Vector2 newDestination = travellingRange * Random.insideUnitCircle;
+                agent.destination = transform.position + new Vector3(newDestination.x, 0f, newDestination.y);
+            }
             yield return delay;
         }
     }

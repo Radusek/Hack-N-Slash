@@ -577,7 +577,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   sightRange: 11
-  closeCombatRange: 1.75
+  closeCombatRange: 2
   onTargetChanged:
     m_PersistentCalls:
       m_Calls:
@@ -606,6 +606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
+  baseExp: 105
   startingLevel: 1
   fadingDepth: 1.2
   minimapMark: {fileID: 2031939018467669069}
@@ -721,6 +722,7 @@ MonoBehaviour:
   recastInterval: 0.25
   firePoint: {fileID: 6348348421610981626}
   attackRange: 0.65
+  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -752,6 +754,7 @@ MonoBehaviour:
   recastInterval: 0.75
   firePoint: {fileID: 6348348421610981626}
   attackRange: 9
+  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
