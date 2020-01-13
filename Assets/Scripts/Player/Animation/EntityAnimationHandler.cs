@@ -17,6 +17,7 @@ public class EntityAnimationHandler : MonoBehaviour
 
     private NavMeshAgent agent;
 
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -41,6 +42,7 @@ public class EntityAnimationHandler : MonoBehaviour
     public void SetDeathTrigger()
     {
         SetShieldingBool(false);
+        SetWalkDirection(Direction.None);
         animator.SetTrigger("Death");
     }
 

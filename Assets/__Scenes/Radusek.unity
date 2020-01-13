@@ -899,6 +899,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8f5da2a819e800429b6503ee30b52ac, type: 3}
+--- !u!114 &662740744 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5244746588865600288, guid: c460c360247f850429e8b484a905c8a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1051210512}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc3e8727b8c2c6248a97f38ea16ddeee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1576,6 +1588,31 @@ PrefabInstance:
     - target: {fileID: 6970192410519166165, guid: c460c360247f850429e8b484a905c8a7,
         type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970192410519166165, guid: c460c360247f850429e8b484a905c8a7,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970192410519166165, guid: c460c360247f850429e8b484a905c8a7,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970192410519166165, guid: c460c360247f850429e8b484a905c8a7,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 662740744}
+    - target: {fileID: 6970192410519166165, guid: c460c360247f850429e8b484a905c8a7,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetDeathTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6970192410519166165, guid: c460c360247f850429e8b484a905c8a7,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3106931281368107752, guid: c460c360247f850429e8b484a905c8a7,
