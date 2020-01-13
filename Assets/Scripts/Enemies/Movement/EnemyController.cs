@@ -143,7 +143,7 @@ public class EnemyController : MonoBehaviour
 
         float rotationSpeed = 5f;
         float rotation = rotationSpeed * Vector3.Cross(transform.forward, targetDirection).y * Time.deltaTime;
-        transform.Rotate(Vector3.up * rotation);
+        transform.RotateAround(Vector3.up, rotation);
     }
 }
 

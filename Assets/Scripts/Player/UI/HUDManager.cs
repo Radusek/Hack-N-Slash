@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class HUDManager : MonoBehaviour
 {
     [SerializeField]
+    private Animator animator;
+
+    [SerializeField]
     private EntityStats playerStats;
 
     [SerializeField]
@@ -24,11 +27,17 @@ public class HUDManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI levelText;
 
+    private PlayerSpawn playerSpawn;
+
+
     private void Start()
     {
         UpdateHpBar();
         UpdateExpBar();
         UpdateLevelText();
+
+        animator = GetComponent<Animator>();
+        playerSpawn = FindObjectOfType<PlayerSpawn>();
     }
 
     public GameObject GetPlayer()
@@ -60,5 +69,15 @@ public class HUDManager : MonoBehaviour
     public void SetPlayer(EntityStats player)
     {
         playerStats = player;
+    }
+
+    public void RunRespawnAnimation()
+    {
+        animator.SetTrigger("PlayerDeath");
+    }
+
+    public void RespawnPlayer()
+    {
+        playerSpawn.PreparePlayer();
     }
 }

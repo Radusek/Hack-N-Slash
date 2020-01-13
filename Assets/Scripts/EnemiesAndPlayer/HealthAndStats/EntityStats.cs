@@ -138,7 +138,7 @@ public class EntityStats : MonoBehaviour
         attackerStats.AddExperience(finalExp);
     }
 
-    protected void Die()
+    private void Die()
     {
         OnDeath?.Invoke();
 
@@ -176,6 +176,12 @@ public class EntityStats : MonoBehaviour
         GetComponent<Rigidbody>().isKinematic = true;
     }
 
+    public virtual void EnablePlayer()
+    {
+        GetComponent<PlayerController>().enabled = true;
+        GetComponent<Rigidbody>().isKinematic = false;
+    }
+
     private IEnumerator FadeAndDestroyCoroutine()
     {
         yield return new WaitForSeconds(5f);
@@ -188,6 +194,12 @@ public class EntityStats : MonoBehaviour
             yield return null;
         }
         Destroy(gameObject);
+    }
+
+    public void SetFullHealth()
+    {
+        currentHealth = maxHealth;
+        OnHpChanged?.Invoke();
     }
 }
 

@@ -47,7 +47,7 @@ public class KnightStats : EntityStats
     protected override void SubtractHp(int amount, AttackType attackType, Vector3 attackPosition)
     {
         Vector3 knightToAttackDirection = attackPosition - transform.position;
-        bool attackedFromFront = knightToAttackDirection.AngleDegreesBetween(transform.forward) < 45f;
+        bool attackedFromFront = knightToAttackDirection.AngleDegreesBetween(transform.forward) < 60f;
         if (attackedFromFront)
         {
             if (usesShield && Random.Range(0f, 1f) < 0.8f)
@@ -61,6 +61,12 @@ public class KnightStats : EntityStats
     {
         base.DisablePlayer();
         this.enabled = false;
+    }
+
+    public override void EnablePlayer()
+    {
+        base.EnablePlayer();
+        this.enabled = true;
     }
 }
 

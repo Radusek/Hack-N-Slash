@@ -40,6 +40,7 @@ public class EntityAnimationHandler : MonoBehaviour
 
     public void SetDeathTrigger()
     {
+        SetShieldingBool(false);
         animator.SetTrigger("Death");
     }
 
