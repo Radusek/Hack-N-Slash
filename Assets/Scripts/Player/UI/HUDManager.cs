@@ -36,7 +36,6 @@ public class HUDManager : MonoBehaviour
         UpdateExpBar();
         UpdateLevelText();
 
-        animator = GetComponent<Animator>();
         playerSpawn = FindObjectOfType<PlayerSpawn>();
     }
 
