@@ -33,6 +33,7 @@ public class EntityStats : MonoBehaviour
     public UnityEvent OnHpChanged;
     public IntEvent OnDamageAmountTaken;
     public UnityEvent OnDeath;
+    public UnityEvent OnDyingAnimationEnd;
 
     public UnityEvent OnExpGained;
     public UnityEvent OnLevelUp;
@@ -142,47 +143,21 @@ public class EntityStats : MonoBehaviour
     {
         OnDeath?.Invoke();
 
-        PrepareDisabling();
-
         if (gameObject.GetComponent<PlayerController>() != null)
-            DisablePlayer();
+            EnablePlayer(false);
         else
-        {
-            DisableEnemy();
-            StartCoroutine(FadeAndDestroyCoroutine());
-        }
+            StartCoroutine(FadeCoroutine());
     }
 
-    private void PrepareDisabling()
+    public virtual void EnablePlayer(bool enabled)
     {
-        gameObject.layer = (int)Layer.Dead;
-        Attack[] attacks = GetComponents<Attack>();
-        foreach (var attack in attacks)
-            attack.enabled = false;
-        GetComponent<WeaponManager>().enabled = false;
-        GetComponent<Collider>().enabled = false;
+        GetComponent<WeaponManager>().enabled = enabled;
+        GetComponent<Collider>().enabled = enabled;
+        GetComponent<PlayerController>().enabled = enabled;
+        GetComponent<Rigidbody>().isKinematic = !enabled;
     }
 
-    private void DisableEnemy()
-    {
-        GetComponent<NavMeshAgent>().enabled = false;
-        Destroy(GetComponent<EnemyController>());
-        minimapMark.SetActive(false);
-    }
-
-    protected virtual void DisablePlayer()
-    {
-        GetComponent<PlayerController>().enabled = false;
-        GetComponent<Rigidbody>().isKinematic = true;
-    }
-
-    public virtual void EnablePlayer()
-    {
-        GetComponent<PlayerController>().enabled = true;
-        GetComponent<Rigidbody>().isKinematic = false;
-    }
-
-    private IEnumerator FadeAndDestroyCoroutine()
+    private IEnumerator FadeCoroutine()
     {
         yield return new WaitForSeconds(5f);
 
@@ -193,7 +168,8 @@ public class EntityStats : MonoBehaviour
             transform.position = transform.position + fadingDepth * Vector3.down / fadingTime * Time.deltaTime;
             yield return null;
         }
-        Destroy(gameObject);
+
+        OnDyingAnimationEnd?.Invoke();
     }
 
     public void SetFullHealth()

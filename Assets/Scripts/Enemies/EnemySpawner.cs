@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField]
-    private GameObject[] enemyPrefabs;
+    private PoolType[] enemyTypes;
 
     [SerializeField]
     private int maxEnemiesSpawnedCount = 5;
@@ -19,37 +19,53 @@ public class EnemySpawner : MonoBehaviour
 
     private Transform playerTransform;
 
-    private GameObject[] enemiesPool;
+    private IRecyclable[] enemiesPool;
     private List<int> indexesOfDeadEnemies;
 
-    private void Awake()
-    {
-        enemiesPool = new GameObject[maxEnemiesSpawnedCount];
-        for (int i = 0; i < maxEnemiesSpawnedCount; i++)
-            enemiesPool[i] = GetEnemy();
-        
-        indexesOfDeadEnemies = new List<int>();
-    }
 
     private void Start()
     {
+        enemiesPool = new IRecyclable[maxEnemiesSpawnedCount];
+        for (int i = 0; i < Random.Range(1, maxEnemiesSpawnedCount + 1); i++)
+            enemiesPool[i] = GetEnemy();
+
+        indexesOfDeadEnemies = new List<int>();
+
         playerTransform = FindObjectOfType<PlayerController>().transform;
         StartCoroutine(SpawningCoroutine());
     }
 
-    private GameObject GetEnemy()
+    private IRecyclable GetEnemy()
     {
-        GameObject prefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
+        int enemyTypeIndex = Random.Range(0, enemyTypes.Length);
+        int randomizedIndex = enemyTypeIndex;
+        PoolType enemyType = enemyTypes[enemyTypeIndex];
+        do
+        {
+            if (ObjectPoolManager.Instance.PoolCount(enemyType) <= 0)
+            {
+                enemyTypeIndex++;
+                enemyTypeIndex %= enemyTypes.Length;
+                enemyType = enemyTypes[enemyTypeIndex];
+                continue;
+            }
+
+            IRecyclable enemy = ObjectPoolManager.Instance.DequeueObject(enemyType);
+            enemy.SetInitialValues(GetSpawningPosition(), transform.position, areaRadius);
+
+            return enemy;
+        } while (enemyTypeIndex != randomizedIndex);
+        return null;
+    }
+
+    private Vector3 GetSpawningPosition()
+    {
         Vector3 position = transform.position;
         Vector2 randomOffset = Random.insideUnitCircle * areaRadius;
         position.x += randomOffset.x;
         position.z += randomOffset.y;
-
-        GameObject go = Instantiate(prefab, position, Quaternion.identity);
-        go.GetComponent<EnemyController>().SetMobArea(transform.position, areaRadius);
-        return go;
+        return position;
     }
-
 
     private IEnumerator SpawningCoroutine()
     {
@@ -75,7 +91,7 @@ public class EnemySpawner : MonoBehaviour
         indexesOfDeadEnemies.Clear();
         for (int i = 0; i < enemiesPool.Length; i++)
         {
-            if (enemiesPool[i] != null)
+            if (enemiesPool[i] != null && enemiesPool[i].IsActive())
                 currentEnemiesSpawnedCount++;
             else
                 indexesOfDeadEnemies.Add(i);
@@ -88,6 +104,9 @@ public class EnemySpawner : MonoBehaviour
         for (int i = 0; i < enemiesToSpawn; i++)
         {
             enemiesPool[indexesOfDeadEnemies[0]] = GetEnemy();
+            if (enemiesPool[indexesOfDeadEnemies[0]] == null)
+                return;
+
             indexesOfDeadEnemies.RemoveAt(0);
         }
     }

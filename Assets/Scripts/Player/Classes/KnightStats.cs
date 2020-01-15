@@ -57,16 +57,10 @@ public class KnightStats : EntityStats
         base.SubtractHp(amount, attackType, attackPosition);
     }
 
-    protected override void DisablePlayer()
+    public override void EnablePlayer(bool enabled)
     {
-        base.DisablePlayer();
-        this.enabled = false;
-    }
-
-    public override void EnablePlayer()
-    {
-        base.EnablePlayer();
-        this.enabled = true;
+        base.EnablePlayer(enabled);
+        this.enabled = enabled;
     }
 }
 

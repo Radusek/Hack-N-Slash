@@ -31,11 +31,9 @@ public class WeaponManager : MonoBehaviour
         {
             weapon.SetIsPlayer(isPlayer);
             weapon.SetTargetLayers(targetLayers);
-            weapon.enabled = false;
         }
 
         currentWeapon = 0;
-        weapons[currentWeapon].enabled = true;
     }
 
     void Update()
@@ -122,15 +120,12 @@ public class WeaponManager : MonoBehaviour
 
     private void PickWeapon(int id)
     {
-        weapons[currentWeapon].enabled = false;
-
         if (id < 0)
             id = weapons.Length;
         else
             id %= weapons.Length;
 
         currentWeapon = id;
-        weapons[currentWeapon].enabled = true;
     }
 
     public float GetReloadingBarValue()

@@ -26,7 +26,6 @@ public class Attack : MonoBehaviour
 
     protected bool isPlayer;
 
-    private float disabledTime;
     private float equippingTime = 0.2f;
 
     public Sprite weaponImage;
@@ -41,11 +40,6 @@ public class Attack : MonoBehaviour
     protected void Initialize()
     {
         lastAttackTime = -recastInterval;
-    }
-
-    private void OnDisable()
-    {
-        disabledTime = Time.time;
     }
 
     private void OnEnable()

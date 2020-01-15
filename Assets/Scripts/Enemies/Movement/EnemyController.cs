@@ -31,17 +31,33 @@ public class EnemyController : MonoBehaviour
 
     public TransformEvent onTargetChanged;
 
+    private Coroutine lookForTargetCoroutine;
     private Coroutine idleCoroutine;
 
     private void Awake()
     {
         idleCoroutine = null;
+        lookForTargetCoroutine = null;
         agent = GetComponent<NavMeshAgent>();
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        StartCoroutine(LookForTargetCoroutine());
+        lookForTargetCoroutine = StartCoroutine(LookForTargetCoroutine());
+    }
+
+    private void OnDisable()
+    {
+        if (lookForTargetCoroutine != null)
+        {
+            StopCoroutine(lookForTargetCoroutine);
+            lookForTargetCoroutine = null;
+        }
+        if (idleCoroutine != null)
+        {
+            StopCoroutine(idleCoroutine);
+            idleCoroutine = null;
+        }
     }
 
     public void SetMobArea(Vector3 areaPosition, float areaRadius)

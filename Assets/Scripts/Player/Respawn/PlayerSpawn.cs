@@ -35,10 +35,7 @@ public class PlayerSpawn : MonoBehaviour
 
         player.gameObject.layer = (int)Layer.Player;
 
-        wm.enabled = true;
-        playerCollider.enabled = true;
-
-        playerStats.EnablePlayer();
+        playerStats.EnablePlayer(true);
         playerStats.SetFullHealth();
     }
 }
