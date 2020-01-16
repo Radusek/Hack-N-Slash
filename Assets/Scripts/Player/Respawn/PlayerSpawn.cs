@@ -23,6 +23,11 @@ public class PlayerSpawn : MonoBehaviour
         playerStats = player.GetComponent<EntityStats>();
     }
 
+    public void SetPlayer(Transform playerTransform)
+    {
+        player = playerTransform.gameObject;
+    }
+
     public void PreparePlayer()
     {
         StartCoroutine(RespawnCoroutine());

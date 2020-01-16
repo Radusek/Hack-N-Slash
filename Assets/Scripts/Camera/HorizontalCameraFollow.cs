@@ -10,6 +10,10 @@ public class HorizontalCameraFollow : MonoBehaviour
     [SerializeField]
     private Vector3 positionOffset;
 
+    public void SetObjectToFollow(Transform newObjectToFollow)
+    {
+        objectToFollow = newObjectToFollow;
+    }
 
     void Update()
     {

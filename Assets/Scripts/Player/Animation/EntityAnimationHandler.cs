@@ -21,9 +21,9 @@ public class EntityAnimationHandler : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        rb = transform.parent.GetComponent<Rigidbody>();
+        rb = transform.parent.parent.GetComponent<Rigidbody>();
         if (usesNavMeshAgent)
-            agent = transform.parent.GetComponent<NavMeshAgent>();
+            agent = transform.parent.parent.GetComponent<NavMeshAgent>();
     }
 
     void Update()

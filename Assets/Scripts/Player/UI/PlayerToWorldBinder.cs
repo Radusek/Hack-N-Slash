@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HUDBinder : MonoBehaviour
+public class PlayerToWorldBinder : MonoBehaviour
 {
-    private void Start()
+    private void Awake()
     {
         FindObjectOfType<HUDManager>().SetPlayer(GetComponent<EntityStats>());
         FindObjectOfType<CameraController>().SetObjectToFollow(transform);
+        FindObjectOfType<HorizontalCameraFollow>().SetObjectToFollow(transform);
+        FindObjectOfType<PlayerSpawn>().SetPlayer(transform);
         Destroy(this);
     }
 }
