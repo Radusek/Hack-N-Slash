@@ -19276,6 +19276,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Village
       objectReference: {fileID: 0}
+    - target: {fileID: -4161514258539370982, guid: 869251f11a5031147a46e224950473c6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 869251f11a5031147a46e224950473c6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19345,6 +19350,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4647724087509732484, guid: 869251f11a5031147a46e224950473c6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 869251f11a5031147a46e224950473c6, type: 3}
