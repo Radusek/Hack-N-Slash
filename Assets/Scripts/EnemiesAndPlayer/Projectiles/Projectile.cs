@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Projectile : MonoBehaviour
@@ -9,6 +10,8 @@ public class Projectile : MonoBehaviour
 
     private int damage;
     private LayerMask targetLayers;
+
+    [SerializeField]
     private AttackType attackType;
 
     [SerializeField]
@@ -20,15 +23,21 @@ public class Projectile : MonoBehaviour
 
     private Rigidbody rb;
 
+    public UnityEvent OnHit;
 
-    public void Initialize(GameObject caster, int dmg, LayerMask layers, AttackType type)
+
+    private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         rb.useGravity = gravityAffected;
-        projectileCaster = caster;
+
+    }
+
+    public void Initialize(int dmg, LayerMask layers, GameObject caster)
+    {
         damage = dmg;
         targetLayers = layers;
-        attackType = type;
+        projectileCaster = caster;
     }
 
     private void FixedUpdate()
@@ -48,11 +57,11 @@ public class Projectile : MonoBehaviour
         if (other.gameObject.layer.IsInLayerMask(targetLayers))
         {
             InteractWithTarget(other);
-            Destroy(gameObject);
+            OnHit?.Invoke();
         }
 
         if (other.gameObject.layer == (int)Layer.Default || other.gameObject.layer == (int)Layer.Environment)
-            Destroy(gameObject);
+            OnHit?.Invoke();
     }
 
     protected virtual void InteractWithTarget(Collider other)
