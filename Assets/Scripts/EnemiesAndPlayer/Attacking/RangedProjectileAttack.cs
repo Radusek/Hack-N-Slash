@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public class RangedProjectileAttack : Attack
 {
     [SerializeField]
-    private GameObject projectilePrefab;
+    private PoolType projectileType;
 
     [SerializeField]
     private float projectileSpeed = 40f;
@@ -82,11 +82,13 @@ public class RangedProjectileAttack : Attack
 
     private void LaunchProjectile(Vector3 direction)
     {
-        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
-        projectile.transform.LookAt(firePoint.position + direction);
-        projectile.GetComponent<Projectile>().Initialize(gameObject, damage, targetLayers, attackType);
+        if (ObjectPoolManager.Instance.PoolCount(projectileType) <= 0)
+            return;
+
+        IRecyclable projectile = ObjectPoolManager.Instance.DequeueObject(projectileType);
         Vector3 resultVelocity = (projectileSpeed + Vector3.Dot(transform.forward, rb.velocity)) * direction;
-        projectile.GetComponent<Rigidbody>().velocity = resultVelocity;
+        //modify damage basing on velocity for archer later
+        projectile.SetInitialProjectileValues(firePoint.position, resultVelocity, damage, targetLayers, gameObject);
     }
 }
 

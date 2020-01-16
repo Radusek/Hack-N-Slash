@@ -6,6 +6,9 @@ public enum PoolType
 {
     Warrior,
     Archer,
+    Arrow,
+    Rock,
+    Spike,
     Count
 }
 
@@ -34,7 +37,10 @@ public class ObjectPoolManager : MonoBehaviour
         objectPools = new Dictionary<PoolType, Queue<IRecyclable>>
         {
             { PoolType.Warrior, new Queue<IRecyclable>() },
-            { PoolType.Archer, new Queue<IRecyclable>() }
+            { PoolType.Archer, new Queue<IRecyclable>() },
+            { PoolType.Arrow, new Queue<IRecyclable>() },
+            { PoolType.Rock, new Queue<IRecyclable>() },
+            { PoolType.Spike, new Queue<IRecyclable>() },
         };
 
         for (int i = 0; i < poolParents.Length; i++)
