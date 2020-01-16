@@ -795,7 +795,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  projectileType: 2
+  projectilePrefab: {fileID: 6053647093871153789, guid: 16a727ef01c5cc6448c1b8458608edc8,
+    type: 3}
   projectileSpeed: 8
   degreesTolerance: 15
   OnTargetVisibilityChange:
@@ -867,6 +868,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CanvasWithHpBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5821735226769588517, guid: 0821d67f861df1a45871279e8610f2d8,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6278273597713719674, guid: 0821d67f861df1a45871279e8610f2d8,
         type: 3}
@@ -972,11 +978,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5821735226769588517, guid: 0821d67f861df1a45871279e8610f2d8,
-        type: 3}
-      propertyPath: m_Interactable
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5861610571317251200, guid: 0821d67f861df1a45871279e8610f2d8,
         type: 3}

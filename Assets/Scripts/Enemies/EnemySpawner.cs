@@ -51,7 +51,7 @@ public class EnemySpawner : MonoBehaviour
             }
 
             IRecyclable enemy = ObjectPoolManager.Instance.DequeueObject(enemyType);
-            enemy.SetInitialEnemyValues(GetSpawningPosition(), transform.position, areaRadius);
+            enemy.SetInitialValues(GetSpawningPosition(), transform.position, areaRadius);
 
             return enemy;
         } while (enemyTypeIndex != randomizedIndex);

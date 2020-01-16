@@ -18,8 +18,6 @@ public class EnemyRecycler : Recycler
 
     private void Awake()
     {
-        base.Initialize();
-
         wm = GetComponent<WeaponManager>();
         col = GetComponent<Collider>();
         agent = GetComponent<NavMeshAgent>();
@@ -27,9 +25,9 @@ public class EnemyRecycler : Recycler
         stats = GetComponent<EntityStats>();
     }
 
-    public override void SetInitialEnemyValues(Vector3 spawnPosition, Vector3 areaPosition, float areaRadius)
+    public override void SetInitialValues(Vector3 spawnPosition, Vector3 areaPosition, float areaRadius)
     {
-        SetInitialValues(spawnPosition);
+        base.SetInitialValues(spawnPosition, areaPosition, areaRadius);
         minimapMark.SetActive(true);
         stats.SetFullHealth();
         controller.SetMobArea(areaPosition, areaRadius);
