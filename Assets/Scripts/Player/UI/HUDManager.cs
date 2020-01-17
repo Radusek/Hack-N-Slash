@@ -10,6 +10,9 @@ public class HUDManager : MonoBehaviour
     private Animator animator;
 
     [SerializeField]
+    private GameObject inventoryUI;
+
+    [SerializeField]
     private EntityStats playerStats;
 
     [SerializeField]
@@ -37,6 +40,12 @@ public class HUDManager : MonoBehaviour
         UpdateLevelText();
 
         playerSpawn = FindObjectOfType<PlayerSpawn>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.I))
+            inventoryUI.SetActive(!inventoryUI.activeSelf);
     }
 
     public GameObject GetPlayer()

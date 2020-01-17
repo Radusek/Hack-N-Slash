@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class WeaponManager : MonoBehaviour
 {
@@ -91,7 +92,9 @@ public class WeaponManager : MonoBehaviour
             return false;
 
         if (isPlayer)
+        {
             return Input.GetButtonDown("Fire1");
+        }
 
         return true;
     }
@@ -153,6 +156,7 @@ public enum Layer
 {
     Default = 0,
     Player = 8,
+    Item = 27,
     Environment = 28,
     Dead = 30
 }
