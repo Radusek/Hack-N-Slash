@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 430d34cb837bad34495074f85bfc310a, type: 3}
-  m_Name: Mushroom
+  m_Script: {fileID: 11500000, guid: 6a6153d4a526ee1438884e7770be86c9, type: 3}
+  m_Name: MushroomYellow
   m_EditorClassIdentifier: 
-  itemName: Mushroom
-  icon: {fileID: 21300000, guid: 045d73f1d4846af4a85dadaeb7c96949, type: 3}
+  owner: {fileID: 0}
+  itemName: Yellow Mushroom
+  icon: {fileID: 21300000, guid: 57ee7f43126fe4849ab53555903b9532, type: 3}
+  healingValue: 10
+  manaRestorationValue: 0

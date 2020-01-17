@@ -122,6 +122,20 @@ public class EntityStats : MonoBehaviour
         }
     }
 
+    public void GetHealed(int amount)
+    {
+        int oldCurrentHp = currentHealth;
+        currentHealth += amount;
+        if (currentHealth > maxHealth)
+            currentHealth = maxHealth;
+
+        if (currentHealth != oldCurrentHp)
+            OnHpChanged?.Invoke();
+
+        if (currentHealth <= 0)
+            Die();
+    }
+
     protected virtual void SubtractHp(int amount, AttackType attackType, Vector3 attackPosition)
     {
         // take different amount of damage based on the attackType to add

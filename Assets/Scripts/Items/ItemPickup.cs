@@ -26,6 +26,7 @@ public class ItemPickup : Interactable
 
         if (playerInventory.WantsToPickUp())
         {
+            item.owner = playerInventory.gameObject;
             playerInventory.AddItem(item);
             Destroy(gameObject);
         }

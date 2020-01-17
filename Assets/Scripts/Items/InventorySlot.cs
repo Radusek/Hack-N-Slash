@@ -34,7 +34,10 @@ public class InventorySlot : MonoBehaviour
     public void UseItem()
     {
         if (item != null)
-            item.Use();
+        {
+            if (item.Use())
+                inventoryUI.inventory.RemoveItem(item);
+        }
     }
 
     public void OnRemoveButton()
