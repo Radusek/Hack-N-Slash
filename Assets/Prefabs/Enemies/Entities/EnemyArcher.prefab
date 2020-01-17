@@ -45,6 +45,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8981682371891863218}
+        m_MethodName: PlaySound
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   projectileType: 2
   projectileSpeed: 8
   degreesTolerance: 15
@@ -246,26 +257,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 6930871316224377938}
-    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetDeathTrigger
-      objectReference: {fileID: 0}
-    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: maxHealth
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: baseExp
-      value: 95
-      objectReference: {fileID: 0}
     - target: {fileID: 7867032241443879736, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
       propertyPath: weapons.Array.size
@@ -290,16 +281,6 @@ PrefabInstance:
         type: 3}
       propertyPath: weaponDistanceTreshold.Array.data[0]
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6683992356715671035, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6683992356715671035, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4797944912686769341, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
@@ -341,6 +322,46 @@ PrefabInstance:
       propertyPath: recastInterval
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6930871316224377938}
+    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetDeathTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: maxHealth
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: baseExp
+      value: 95
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683992356715671035, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6683992356715671035, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 811634569000421063, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: audioClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 811634569000421063, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d6479ba6180c8f545b9a8da65c458d1e, type: 3}
     m_RemovedComponents:
     - {fileID: 3068324248208962941, guid: 624900fa670a52341aa083f337140c75, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 624900fa670a52341aa083f337140c75, type: 3}
@@ -360,6 +381,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aef312c2acedaa44ca6fcd6a1480fe5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8981682371891863218 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 811634569000421063, guid: 624900fa670a52341aa083f337140c75,
+    type: 3}
+  m_PrefabInstance: {fileID: 8639832425262880885}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48918045814840742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e4faeda66813f4c9527d45bcd1e3c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &8466509478744396496 stripped

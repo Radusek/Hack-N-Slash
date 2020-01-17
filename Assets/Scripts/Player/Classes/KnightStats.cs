@@ -18,6 +18,8 @@ public class KnightStats : EntityStats
 
     public BoolEvent OnShieldingStateChanged;
 
+    public UnityEvent OnAttackBlocked;
+
     private void Awake()
     {
         base.Initialize();
@@ -50,8 +52,11 @@ public class KnightStats : EntityStats
         bool attackedFromFront = knightToAttackDirection.AngleDegreesBetween(transform.forward) < 60f;
         if (attackedFromFront)
         {
-            if (usesShield && Random.Range(0f, 1f) < 0.8f)
+            if (usesShield && Random.Range(0f, 1f) < 0.85f)
+            {
+                OnAttackBlocked?.Invoke();
                 return;
+            }
         }
 
         base.SubtractHp(amount, attackType, attackPosition);
