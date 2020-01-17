@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 1040742756524163520}
   - component: {fileID: 6231078056930832879}
   - component: {fileID: 5262137783827683673}
+  - component: {fileID: 8585557209692535423}
+  - component: {fileID: 6427950879228962332}
+  - component: {fileID: 1452842399274245158}
   m_Layer: 0
   m_Name: StoneHengeRock2
   m_TagString: Untagged
@@ -78,3 +81,42 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &8585557209692535423
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2891205642927953936}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0015744383, y: 0.005427883, z: 0.007775975}
+  m_Center: {x: -0.00016588822, y: -0.000033000182, z: 0.0045179757}
+--- !u!65 &6427950879228962332
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2891205642927953936}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0015744383, y: 0.0044123544, z: 0.0011708098}
+  m_Center: {x: -0.00016588822, y: -0.00014054326, z: 0.00852712}
+--- !u!65 &1452842399274245158
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2891205642927953936}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0015744383, y: 0.0042291074, z: 0.0010497757}
+  m_Center: {x: -0.00016588822, y: 0.000043837998, z: 0.0004790762}

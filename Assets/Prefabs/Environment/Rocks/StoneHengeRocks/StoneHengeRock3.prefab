@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5550273725082578842}
   - component: {fileID: 7095295849090310324}
   - component: {fileID: 6223818769133827310}
+  - component: {fileID: 6577060997027653901}
   m_Layer: 0
   m_Name: StoneHengeRock3
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6577060997027653901
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3211278653004875718}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0012440082, y: 0.0036712124, z: 0.008084944}
+  m_Center: {x: -0.0001686486, y: -0.00019015327, z: 0.0045590727}
