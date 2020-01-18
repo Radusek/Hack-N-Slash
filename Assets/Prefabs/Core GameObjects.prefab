@@ -3028,12 +3028,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5403ff6721ada5d408edfa9bdc5f8bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 0
-  damage: 1
-  recastInterval: 0.3
+  weapon: {fileID: 0}
   firePoint: {fileID: 6273266465001817355}
   attackRange: 0.5
-  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -3189,12 +3186,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5527b3db2c51534fa379fb86503c34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 1
-  damage: 8
-  recastInterval: 0.75
+  weapon: {fileID: 0}
   firePoint: {fileID: 6273266465001817355}
   attackRange: 9
-  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -3220,8 +3214,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  projectileType: 2
-  projectileSpeed: 8
   degreesTolerance: 15
   OnTargetVisibilityChange:
     m_PersistentCalls:
@@ -7356,12 +7348,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5403ff6721ada5d408edfa9bdc5f8bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 0
-  damage: 1
-  recastInterval: 0.3
+  weapon: {fileID: 0}
   firePoint: {fileID: 6273266464820343833}
   attackRange: 0.5
-  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -7517,12 +7506,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5527b3db2c51534fa379fb86503c34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 1
-  damage: 8
-  recastInterval: 0.75
+  weapon: {fileID: 0}
   firePoint: {fileID: 6273266464820343833}
   attackRange: 9
-  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -7548,8 +7534,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  projectileType: 2
-  projectileSpeed: 8
   degreesTolerance: 15
   OnTargetVisibilityChange:
     m_PersistentCalls:
@@ -7997,12 +7981,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5403ff6721ada5d408edfa9bdc5f8bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 0
-  damage: 5
-  recastInterval: 0.8
+  weapon: {fileID: 0}
   firePoint: {fileID: 6273266464258046985}
   attackRange: 0.5
-  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -9163,12 +9144,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5403ff6721ada5d408edfa9bdc5f8bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 0
-  damage: 5
-  recastInterval: 0.8
+  weapon: {fileID: 0}
   firePoint: {fileID: 6273266465259652292}
   attackRange: 0.5
-  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -11555,12 +11533,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5403ff6721ada5d408edfa9bdc5f8bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 0
-  damage: 1
-  recastInterval: 0.3
+  weapon: {fileID: 0}
   firePoint: {fileID: 6273266465110711686}
   attackRange: 0.5
-  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -11716,12 +11691,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5527b3db2c51534fa379fb86503c34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 1
-  damage: 8
-  recastInterval: 0.75
+  weapon: {fileID: 0}
   firePoint: {fileID: 6273266465110711686}
   attackRange: 9
-  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -11747,8 +11719,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  projectileType: 2
-  projectileSpeed: 8
   degreesTolerance: 15
   OnTargetVisibilityChange:
     m_PersistentCalls:
@@ -24553,12 +24523,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5403ff6721ada5d408edfa9bdc5f8bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 0
-  damage: 1
-  recastInterval: 0.3
+  weapon: {fileID: 0}
   firePoint: {fileID: 6273266464348951315}
   attackRange: 0.5
-  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -24714,12 +24681,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5527b3db2c51534fa379fb86503c34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 1
-  damage: 8
-  recastInterval: 0.75
+  weapon: {fileID: 0}
   firePoint: {fileID: 6273266464348951315}
   attackRange: 9
-  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -24745,8 +24709,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  projectileType: 2
-  projectileSpeed: 8
   degreesTolerance: 15
   OnTargetVisibilityChange:
     m_PersistentCalls:
@@ -31545,12 +31507,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5403ff6721ada5d408edfa9bdc5f8bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 0
-  damage: 5
-  recastInterval: 0.8
+  weapon: {fileID: 0}
   firePoint: {fileID: 6273266465304217658}
   attackRange: 0.5
-  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -35808,12 +35767,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5403ff6721ada5d408edfa9bdc5f8bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 0
-  damage: 5
-  recastInterval: 0.8
+  weapon: {fileID: 11400000, guid: 9327dddaa0e86a449a45bfaf41603c97, type: 2}
   firePoint: {fileID: 6273266463466839726}
   attackRange: 0.65
-  weaponImage: {fileID: 21300000, guid: 0d6c0be5ce6f8ed43a3ad52642157ee3, type: 3}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -35852,12 +35808,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5527b3db2c51534fa379fb86503c34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 2
-  damage: 18
-  recastInterval: 1.6
+  weapon: {fileID: 11400000, guid: abd05a9c61644d14a912e3d9b2c62eb8, type: 2}
   firePoint: {fileID: 6273266464586783301}
   attackRange: 0
-  weaponImage: {fileID: 21300000, guid: 045d73f1d4846af4a85dadaeb7c96949, type: 3}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -35883,8 +35836,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  projectileType: 4
-  projectileSpeed: 20
   degreesTolerance: 10
   OnTargetVisibilityChange:
     m_PersistentCalls:
@@ -36454,12 +36405,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5403ff6721ada5d408edfa9bdc5f8bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 0
-  damage: 5
-  recastInterval: 0.8
+  weapon: {fileID: 0}
   firePoint: {fileID: 6273266465063391951}
   attackRange: 0.5
-  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -40854,12 +40802,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5403ff6721ada5d408edfa9bdc5f8bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 0
-  damage: 1
-  recastInterval: 0.3
+  weapon: {fileID: 0}
   firePoint: {fileID: 6273266463694955381}
   attackRange: 0.5
-  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -41015,12 +40960,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5527b3db2c51534fa379fb86503c34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 1
-  damage: 8
-  recastInterval: 0.75
+  weapon: {fileID: 0}
   firePoint: {fileID: 6273266463694955381}
   attackRange: 9
-  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -41046,8 +40988,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  projectileType: 2
-  projectileSpeed: 8
   degreesTolerance: 15
   OnTargetVisibilityChange:
     m_PersistentCalls:
@@ -41276,12 +41216,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5403ff6721ada5d408edfa9bdc5f8bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 0
-  damage: 12
-  recastInterval: 0.55
+  weapon: {fileID: 11400000, guid: 84c0deed55979b94894c36381df03f6f, type: 2}
   firePoint: {fileID: 6273266465019401168}
   attackRange: 0.65
-  weaponImage: {fileID: 21300000, guid: 0d6c0be5ce6f8ed43a3ad52642157ee3, type: 3}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -41320,12 +41257,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5527b3db2c51534fa379fb86503c34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 1
-  damage: 4
-  recastInterval: 1.2
+  weapon: {fileID: 0}
   firePoint: {fileID: 6273266465019401168}
   attackRange: 0
-  weaponImage: {fileID: 21300000, guid: 045d73f1d4846af4a85dadaeb7c96949, type: 3}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -41351,8 +41285,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  projectileType: 3
-  projectileSpeed: 15
   degreesTolerance: 10
   OnTargetVisibilityChange:
     m_PersistentCalls:
@@ -46780,12 +46712,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5403ff6721ada5d408edfa9bdc5f8bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 0
-  damage: 1
-  recastInterval: 0.3
+  weapon: {fileID: 0}
   firePoint: {fileID: 6273266464868331204}
   attackRange: 0.5
-  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -46941,12 +46870,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5527b3db2c51534fa379fb86503c34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 1
-  damage: 8
-  recastInterval: 0.75
+  weapon: {fileID: 0}
   firePoint: {fileID: 6273266464868331204}
   attackRange: 9
-  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -46972,8 +46898,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  projectileType: 2
-  projectileSpeed: 8
   degreesTolerance: 15
   OnTargetVisibilityChange:
     m_PersistentCalls:
@@ -54000,12 +53924,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5403ff6721ada5d408edfa9bdc5f8bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 0
-  damage: 5
-  recastInterval: 0.8
+  weapon: {fileID: 0}
   firePoint: {fileID: 6273266465547992099}
   attackRange: 0.5
-  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -68743,12 +68664,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5403ff6721ada5d408edfa9bdc5f8bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 0
-  damage: 5
-  recastInterval: 0.8
+  weapon: {fileID: 0}
   firePoint: {fileID: 6273266464723356732}
   attackRange: 0.5
-  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -69801,12 +69719,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5403ff6721ada5d408edfa9bdc5f8bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 0
-  damage: 1
-  recastInterval: 0.3
+  weapon: {fileID: 0}
   firePoint: {fileID: 6273266464316365954}
   attackRange: 0.5
-  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -69962,12 +69877,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5527b3db2c51534fa379fb86503c34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 1
-  damage: 8
-  recastInterval: 0.75
+  weapon: {fileID: 0}
   firePoint: {fileID: 6273266464316365954}
   attackRange: 9
-  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -69993,8 +69905,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  projectileType: 2
-  projectileSpeed: 8
   degreesTolerance: 15
   OnTargetVisibilityChange:
     m_PersistentCalls:

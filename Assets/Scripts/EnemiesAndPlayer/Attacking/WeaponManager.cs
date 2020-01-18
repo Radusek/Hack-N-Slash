@@ -37,6 +37,16 @@ public class WeaponManager : MonoBehaviour
         currentWeapon = 0;
     }
 
+    public WeaponItem GetCurrentWeaponItem(int slotNumber)
+    {
+        return weapons[slotNumber].GetWeaponItem();
+    }
+
+    public void SetNewWeapon(WeaponItem newWeapon, int slotNumber)
+    {
+        weapons[slotNumber].SetNewWeapon(newWeapon);
+    }
+
     void Update()
     {
         if (EntityShouldAttack())

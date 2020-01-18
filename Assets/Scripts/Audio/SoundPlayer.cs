@@ -18,4 +18,16 @@ public class SoundPlayer : MonoBehaviour
     {
         audioSource.PlayOneShot(audioClips[clipIndex]);
     }
+
+    public void SetAudioClip(AudioClip clip, EntitySoundIndex index)
+    {
+        audioClips[(int)index] = clip;
+    }
+}
+
+public enum EntitySoundIndex
+{
+    Hurt,
+    MeleeHit,
+    RangedWeaponUse
 }

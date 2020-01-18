@@ -7,11 +7,9 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Rigidbody))]
 public class RangedProjectileAttack : Attack
 {
-    [SerializeField]
     private PoolType projectileType;
 
-    [SerializeField]
-    private float projectileSpeed = 40f;
+    private float projectileSpeed;
 
     [SerializeField]
     [Range(10f, 180f)]
@@ -34,6 +32,13 @@ public class RangedProjectileAttack : Attack
     {
         if (isPlayer)
             playerController = GetComponent<PlayerController>();
+    }
+
+    public override void UpdateWeaponStats()
+    {
+        base.UpdateWeaponStats();
+        projectileType = weapon.projectileType;
+        projectileSpeed = weapon.projectileSpeed;
     }
 
     protected override bool AttackTarget(Collider[] colliders)

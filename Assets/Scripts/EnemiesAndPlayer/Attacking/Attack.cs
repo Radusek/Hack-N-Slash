@@ -6,13 +6,13 @@ using UnityEngine.Events;
 public class Attack : MonoBehaviour
 {
     [SerializeField]
+    protected WeaponItem weapon;
+
     protected AttackType attackType;
 
-    [SerializeField]
-    protected int damage = 5;
+    protected int damage;
 
-    [SerializeField]
-    protected float recastInterval = 0.25f;
+    protected float recastInterval;
 
     private float lastAttackTime;
 
@@ -28,8 +28,6 @@ public class Attack : MonoBehaviour
 
     private float equippingTime = 0.2f;
 
-    public Sprite weaponImage;
-
     public UnityEvent OnAttacked;
 
     private void Awake()
@@ -39,7 +37,28 @@ public class Attack : MonoBehaviour
 
     protected void Initialize()
     {
+        UpdateWeaponStats();
         lastAttackTime = -recastInterval;
+    }
+
+    public void SetNewWeapon(WeaponItem newWeapon)
+    {
+        weapon = newWeapon;
+        UpdateWeaponStats();
+    }
+
+    public virtual void UpdateWeaponStats()
+    {
+        attackType = weapon.attackType;
+        damage = weapon.damage;
+        recastInterval = weapon.recastInterval;
+        EntitySoundIndex soundIndex = attackType == AttackType.Melee ? EntitySoundIndex.MeleeHit : EntitySoundIndex.RangedWeaponUse;
+        GetComponent<SoundPlayer>().SetAudioClip(weapon.firingSound, soundIndex);
+    }
+
+    public WeaponItem GetWeaponItem()
+    {
+        return weapon;
     }
 
     private void OnEnable()
@@ -94,6 +113,11 @@ public class Attack : MonoBehaviour
     public void ReduceCooldown(float time, float multiplier)
     {
         lastAttackTime += (1f - multiplier) * time;
+    }
+
+    public Sprite GetSprite()
+    {
+        return weapon.icon;
     }
 
     private void OnDrawGizmosSelected()

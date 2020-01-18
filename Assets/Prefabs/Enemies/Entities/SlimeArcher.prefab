@@ -25,12 +25,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5527b3db2c51534fa379fb86503c34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 1
-  damage: 8
-  recastInterval: 0.75
+  weapon: {fileID: 11400000, guid: 4820bebef379afa44bc82946b800fc4c, type: 2}
   firePoint: {fileID: 3458488061912600719}
   attackRange: 9
-  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -56,8 +53,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  projectileType: 2
-  projectileSpeed: 8
   degreesTolerance: 15
   OnTargetVisibilityChange:
     m_PersistentCalls:
@@ -200,7 +195,7 @@ PrefabInstance:
     - target: {fileID: 8595985637026579923, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
       propertyPath: m_Name
-      value: EnemyArcher
+      value: SlimeArcher
       objectReference: {fileID: 0}
     - target: {fileID: 8595985637026579919, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
@@ -322,6 +317,12 @@ PrefabInstance:
       propertyPath: recastInterval
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 4797944912686769341, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 7a27cd9cbea4df447ac237e335215ce7,
+        type: 2}
     - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -342,6 +343,21 @@ PrefabInstance:
       propertyPath: baseExp
       value: 95
       objectReference: {fileID: 0}
+    - target: {fileID: 811634569000421063, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: audioClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 811634569000421063, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d6479ba6180c8f545b9a8da65c458d1e, type: 3}
+    - target: {fileID: 811634569000421063, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: audioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: d6479ba6180c8f545b9a8da65c458d1e, type: 3}
     - target: {fileID: 6683992356715671035, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -352,16 +368,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 811634569000421063, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: audioClips.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 811634569000421063, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: audioClips.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: d6479ba6180c8f545b9a8da65c458d1e, type: 3}
     m_RemovedComponents:
     - {fileID: 3068324248208962941, guid: 624900fa670a52341aa083f337140c75, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 624900fa670a52341aa083f337140c75, type: 3}

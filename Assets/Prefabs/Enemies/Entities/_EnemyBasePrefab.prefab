@@ -335,12 +335,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5403ff6721ada5d408edfa9bdc5f8bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 0
-  damage: 5
-  recastInterval: 0.8
+  weapon: {fileID: 0}
   firePoint: {fileID: 6348348421610981626}
   attackRange: 0.5
-  weaponImage: {fileID: 0}
   OnAttacked:
     m_PersistentCalls:
       m_Calls: []
@@ -466,9 +463,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47e4faeda66813f4c9527d45bcd1e3c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 7905430528996981825}
   audioClips:
   - {fileID: 8300000, guid: fef32fb1ecd7ed24c898841fc18ab40a, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &7695619409280501491
 PrefabInstance:
   m_ObjectHideFlags: 0

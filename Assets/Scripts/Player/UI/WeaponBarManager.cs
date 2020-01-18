@@ -23,7 +23,7 @@ public class WeaponBarManager : MonoBehaviour
         for (int i = 0; i < playerAttacks.Length; i++)
         {
             weaponSlots[i].gameObject.SetActive(true);
-            weaponSlots[i].weaponImage.sprite = playerAttacks[i].weaponImage;
+            weaponSlots[i].weaponImage.sprite = playerAttacks[i].GetSprite();
         }
 
         currentWeapon = 0;
