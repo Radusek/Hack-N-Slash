@@ -103,7 +103,7 @@ PrefabInstance:
     - target: {fileID: 8595985637026579923, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
       propertyPath: m_Name
-      value: EnemyWarrior
+      value: SlimeWarrior
       objectReference: {fileID: 0}
     - target: {fileID: 8595985637026579919, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
@@ -163,7 +163,7 @@ PrefabInstance:
     - target: {fileID: 4797944912686769341, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
       propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4797944912686769341, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
@@ -196,6 +196,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 26ecb379a6e373d4da0b97b6cd74bd68,
         type: 2}
+    - target: {fileID: 4797944912686769341, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4797944912686769341, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4797944912686769341, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 8010875993747569808}
+    - target: {fileID: 4797944912686769341, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlaySound
+      objectReference: {fileID: 0}
+    - target: {fileID: 4797944912686769341, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4797944912686769341, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
       propertyPath: OnHpChanged.m_PersistentCalls.m_Calls.Array.size
@@ -248,6 +278,18 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: fc621929fa48beb49b146a9373b0f941, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 624900fa670a52341aa083f337140c75, type: 3}
+--- !u!114 &8010875993747569808 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 811634569000421063, guid: 624900fa670a52341aa083f337140c75,
+    type: 3}
+  m_PrefabInstance: {fileID: 7237240701379263063}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e4faeda66813f4c9527d45bcd1e3c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7419139705898152178 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 187405519902444197, guid: 624900fa670a52341aa083f337140c75,

@@ -15,5 +15,8 @@ MonoBehaviour:
   owner: {fileID: 0}
   itemName: Poisonous Mushroom
   icon: {fileID: 21300000, guid: aef36af6e9676f1429e42c4a522de00f, type: 3}
-  healingValue: -20
+  healingValue: -10
   manaRestorationValue: 0
+  hpRegenerationRate: -5
+  manaRegenerationRate: -10
+  effectDuration: 2

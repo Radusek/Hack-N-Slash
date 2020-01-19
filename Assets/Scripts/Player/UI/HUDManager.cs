@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,6 +20,12 @@ public class HUDManager : MonoBehaviour
     private TextMeshProUGUI hpText;
 
     [SerializeField]
+    private Slider manaBar;
+
+    [SerializeField]
+    private TextMeshProUGUI manaText;
+
+    [SerializeField]
     private Slider expBar;
 
     [SerializeField]
@@ -36,6 +40,7 @@ public class HUDManager : MonoBehaviour
     private void Start()
     {
         UpdateHpBar();
+        UpdateManaBar();
         UpdateExpBar();
         UpdateLevelText();
 
@@ -59,7 +64,18 @@ public class HUDManager : MonoBehaviour
         Vector2Int hpValues = playerStats.GetHpValues();
         if (hpValues.x < 0)
             hpValues.x = 0;
+
         hpText.text = hpValues.x.ToString() + "/" + hpValues.y.ToString();
+    }
+
+    public void UpdateManaBar()
+    {
+        manaBar.value = playerStats.GetManaFraction();
+        Vector2Int manaValues = playerStats.GetManaValues();
+        if (manaValues.x < 0)
+            manaValues.x = 0;
+
+        manaText.text = manaValues.x.ToString() + "/" + manaValues.y.ToString();
     }
 
     public void UpdateExpBar()

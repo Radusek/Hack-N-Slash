@@ -28,6 +28,8 @@ public class Attack : MonoBehaviour
 
     private float equippingTime = 0.2f;
 
+    private EntityStats stats;
+
     public UnityEvent OnAttacked;
 
     private void Awake()
@@ -37,6 +39,7 @@ public class Attack : MonoBehaviour
 
     protected void Initialize()
     {
+        stats = GetComponent<EntityStats>();
         UpdateWeaponStats();
         lastAttackTime = -recastInterval;
     }
@@ -50,10 +53,36 @@ public class Attack : MonoBehaviour
     public virtual void UpdateWeaponStats()
     {
         attackType = weapon.attackType;
-        damage = weapon.damage;
-        recastInterval = weapon.recastInterval;
+        SetDamage();
+        SetRecastInterval();
         EntitySoundIndex soundIndex = attackType == AttackType.Melee ? EntitySoundIndex.MeleeHit : EntitySoundIndex.RangedWeaponUse;
         GetComponent<SoundPlayer>().SetAudioClip(weapon.firingSound, soundIndex);
+    }
+
+    private void SetDamage()
+    {
+        float damageMultiplier = 1f;
+        if (attackType == AttackType.Melee)
+            damageMultiplier = 1f + 0.005f * stats.GetStrength();
+
+        damage = (int)(damageMultiplier * weapon.damage);
+    }
+
+    private void SetRecastInterval()
+    {
+        float recastIntervalMultiplier = 1f;
+        if (attackType != AttackType.Melee)
+            recastIntervalMultiplier = GetRecastIntervalTimeMultiplier(stats.GetDexterity());
+
+        recastInterval = recastIntervalMultiplier * weapon.recastInterval;
+    }
+
+    private float GetRecastIntervalTimeMultiplier(int dexterity)
+    {
+        float baseValue = -0.138f;
+        float baseMultiplier = 1f - baseValue;
+        float sqrtBaseParameter = 50000;
+        return baseValue + baseMultiplier / (1f + Mathf.Sqrt(sqrtBaseParameter + dexterity) - Mathf.Sqrt(sqrtBaseParameter));
     }
 
     public WeaponItem GetWeaponItem()

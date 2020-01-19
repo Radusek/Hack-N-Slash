@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9027483241868944380}
   - component: {fileID: 5372844396304842}
   - component: {fileID: 5994185523489875251}
-  m_Layer: 0
+  m_Layer: 27
   m_Name: Mushroom3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 5196329793654599763}
   - component: {fileID: 965923872678746954}
   - component: {fileID: 965923872678746955}
-  m_Layer: 0
+  m_Layer: 27
   m_Name: MushroomPoisonous
   m_TagString: Untagged
   m_Icon: {fileID: 0}

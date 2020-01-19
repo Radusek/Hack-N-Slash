@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 875930046197262838}
   - component: {fileID: 2333587510935805583}
   - component: {fileID: 5676089009272280600}
-  m_Layer: 0
+  m_Layer: 27
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 7271713042550540349}
   - component: {fileID: 9087127378133913715}
   - component: {fileID: 8289509338789995981}
-  m_Layer: 0
+  m_Layer: 27
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,8 +168,8 @@ GameObject:
   - component: {fileID: 5196329793654599763}
   - component: {fileID: 965923872678746954}
   - component: {fileID: 965923872678746955}
-  m_Layer: 0
-  m_Name: Mushroom1
+  m_Layer: 27
+  m_Name: MushroomBrown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

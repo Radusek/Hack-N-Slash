@@ -47,6 +47,12 @@ public class WeaponManager : MonoBehaviour
         weapons[slotNumber].SetNewWeapon(newWeapon);
     }
 
+    public void UpdateWeapons()
+    {
+        foreach (var weapon in weapons)
+            weapon.UpdateWeaponStats();
+    }
+
     void Update()
     {
         if (EntityShouldAttack())

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.Events;
 
 public class EntityStats : MonoBehaviour
@@ -12,6 +9,19 @@ public class EntityStats : MonoBehaviour
     [SerializeField]
     protected int maxHealth = 50;
     protected int currentHealth;
+
+    [SerializeField]
+    protected int MaxMana = 10;
+    protected int currentMana;
+
+
+    protected int vitality;
+    protected int energy;
+    protected int strength;
+    protected int dexterity;
+
+    private int statPointsToDistribute;
+
 
     private int experiencePoints = 0;
     private int level = 1;
@@ -31,6 +41,7 @@ public class EntityStats : MonoBehaviour
     private GameObject minimapMark;
 
     public UnityEvent OnHpChanged;
+    public UnityEvent OnManaChanged;
     public IntEvent OnDamageAmountTaken;
     public UnityEvent OnDeath;
     public UnityEvent OnDyingAnimationEnd;
@@ -52,6 +63,7 @@ public class EntityStats : MonoBehaviour
     protected void Initialize()
     {
         currentHealth = maxHealth;
+        currentMana = MaxMana;
     }
 
     protected void InitializeStart()
@@ -80,6 +92,7 @@ public class EntityStats : MonoBehaviour
         int updatedLevel = GetLevel();
         if (updatedLevel > level)
         {
+            statPointsToDistribute += 5 * (updatedLevel - level);
             level = updatedLevel;
             OnLevelUp?.Invoke();
         }
@@ -92,9 +105,19 @@ public class EntityStats : MonoBehaviour
         return (float)currentHealth / maxHealth;
     }
 
+    public float GetManaFraction()
+    {
+        return (float)currentMana / MaxMana;
+    }
+
     public Vector2Int GetHpValues()
     {
         return new Vector2Int(currentHealth, maxHealth);
+    }
+
+    public Vector2Int GetManaValues()
+    {
+        return new Vector2Int(currentMana, MaxMana);
     }
 
     public float GetExpFraction()
@@ -190,6 +213,33 @@ public class EntityStats : MonoBehaviour
     {
         currentHealth = maxHealth;
         OnHpChanged?.Invoke();
+    }
+
+    public void Regenerate(int hpToRegen, int manaToRegen)
+    {
+        GetHealed(hpToRegen);
+
+        int oldMana = currentMana;
+
+        currentMana += manaToRegen;
+        if (currentMana > MaxMana)
+            currentMana = MaxMana;
+
+        if (currentMana < 0)
+            currentMana = 0;
+
+        if (currentMana != oldMana)
+            OnManaChanged?.Invoke();
+    }
+
+    public int GetStrength()
+    {
+        return strength;
+    }
+
+    public int GetDexterity()
+    {
+        return dexterity;
     }
 }
 

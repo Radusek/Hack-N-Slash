@@ -15,5 +15,8 @@ MonoBehaviour:
   owner: {fileID: 0}
   itemName: Yummy Mushroom
   icon: {fileID: 21300000, guid: 861719d1e71eba64a8ce5cf5138e7420, type: 3}
-  healingValue: 35
+  healingValue: 5
   manaRestorationValue: 0
+  hpRegenerationRate: 3
+  manaRegenerationRate: 0
+  effectDuration: 5

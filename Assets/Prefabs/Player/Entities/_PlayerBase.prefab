@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 1149275966775542089}
   - component: {fileID: 6385155246696668754}
   - component: {fileID: 7661918964736400952}
+  - component: {fileID: 5942101657486821792}
   m_Layer: 8
   m_Name: _PlayerBase
   m_TagString: Untagged
@@ -229,6 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 60
+  maxMana: 100
   baseExp: 0
   startingLevel: 1
   fadingDepth: 1.2
@@ -247,6 +249,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnManaChanged:
+    m_PersistentCalls:
+      m_Calls: []
   OnDamageAmountTaken:
     m_PersistentCalls:
       m_Calls:
@@ -282,6 +287,17 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5942101657486821792}
+        m_MethodName: OnDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -338,12 +354,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5403ff6721ada5d408edfa9bdc5f8bf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 0
-  damage: 12
-  recastInterval: 0.55
+  weapon: {fileID: 0}
   firePoint: {fileID: 4279073395854843008}
   attackRange: 0.65
-  weaponImage: {fileID: 21300000, guid: 0d6c0be5ce6f8ed43a3ad52642157ee3, type: 3}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -381,12 +394,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5527b3db2c51534fa379fb86503c34f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 1
-  damage: 4
-  recastInterval: 1.2
+  weapon: {fileID: 0}
   firePoint: {fileID: 4279073395854843008}
   attackRange: 0
-  weaponImage: {fileID: 21300000, guid: 045d73f1d4846af4a85dadaeb7c96949, type: 3}
   OnAttacked:
     m_PersistentCalls:
       m_Calls:
@@ -401,8 +411,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  projectileType: 3
-  projectileSpeed: 20
   degreesTolerance: 10
   OnTargetVisibilityChange:
     m_PersistentCalls:
@@ -563,11 +571,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f1fa8424d63f6546a3dfce30ca2888d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
   inventorySize: 20
   OnInventoryChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5942101657486821792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3859773805247681148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68348d0d695753645968322d4b71ff56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4410173448273442268
 GameObject:
   m_ObjectHideFlags: 0

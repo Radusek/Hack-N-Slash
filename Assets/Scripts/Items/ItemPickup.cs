@@ -34,6 +34,7 @@ public class ItemPickup : Interactable
 
     private void OnTriggerExit(Collider other)
     {
-        playerInventory = null;
+        if (other.gameObject.layer == (int)Layer.Player)
+            playerInventory = null;
     }
 }
