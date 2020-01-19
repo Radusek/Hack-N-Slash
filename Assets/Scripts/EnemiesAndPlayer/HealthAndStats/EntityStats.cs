@@ -7,18 +7,29 @@ public class EntityStats : MonoBehaviour
     public readonly static int expPerLevel = 1000;
 
     [SerializeField]
-    protected int maxHealth = 50;
+    private int hpAtLevelOne = 50;
+
+    protected int maxHealth;
     protected int currentHealth;
 
     [SerializeField]
-    protected int MaxMana = 10;
+    private int manaAtLevelOne = 10;
+
+    protected int maxMana;
     protected int currentMana;
 
+    [Space]
 
+    [SerializeField]
     protected int vitality;
+    [SerializeField]
     protected int energy;
+    [SerializeField]
     protected int strength;
+    [SerializeField]
     protected int dexterity;
+
+    [Space]
 
     private int statPointsToDistribute;
 
@@ -49,6 +60,8 @@ public class EntityStats : MonoBehaviour
     public UnityEvent OnExpGained;
     public UnityEvent OnLevelUp;
 
+    public UnityEvent OnStatPointSpent;
+
 
     private void Awake()
     {
@@ -62,8 +75,21 @@ public class EntityStats : MonoBehaviour
 
     protected void Initialize()
     {
+        maxHealth = GetMaxHp();
         currentHealth = maxHealth;
-        currentMana = MaxMana;
+
+        maxMana = GetMaxMana();
+        currentMana = maxMana;
+    }
+
+    private int GetMaxHp()
+    {
+        return hpAtLevelOne + 2 * vitality;
+    }
+
+    private int GetMaxMana()
+    {
+        return manaAtLevelOne + energy;
     }
 
     protected void InitializeStart()
@@ -107,7 +133,7 @@ public class EntityStats : MonoBehaviour
 
     public float GetManaFraction()
     {
-        return (float)currentMana / MaxMana;
+        return (float)currentMana / maxMana;
     }
 
     public Vector2Int GetHpValues()
@@ -117,7 +143,7 @@ public class EntityStats : MonoBehaviour
 
     public Vector2Int GetManaValues()
     {
-        return new Vector2Int(currentMana, MaxMana);
+        return new Vector2Int(currentMana, maxMana);
     }
 
     public float GetExpFraction()
@@ -222,14 +248,24 @@ public class EntityStats : MonoBehaviour
         int oldMana = currentMana;
 
         currentMana += manaToRegen;
-        if (currentMana > MaxMana)
-            currentMana = MaxMana;
+        if (currentMana > maxMana)
+            currentMana = maxMana;
 
         if (currentMana < 0)
             currentMana = 0;
 
         if (currentMana != oldMana)
             OnManaChanged?.Invoke();
+    }
+
+    public int GetVitality()
+    {
+        return vitality;
+    }
+
+    public int GetEnergy()
+    {
+        return energy;
     }
 
     public int GetStrength()
@@ -240,6 +276,19 @@ public class EntityStats : MonoBehaviour
     public int GetDexterity()
     {
         return dexterity;
+    }
+
+    public void UpdateStatsEffects()
+    {
+        int oldMaxHp = maxHealth;
+        maxHealth = GetMaxHp();
+        currentHealth += maxHealth - oldMaxHp;
+
+        int oldMaxMana = maxMana;
+        maxMana = GetMaxMana();
+        currentMana += maxMana - oldMaxMana;
+
+        OnStatPointSpent?.Invoke();
     }
 }
 

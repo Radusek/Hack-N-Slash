@@ -15,6 +15,9 @@ public class EnemySpawner : MonoBehaviour
     private float areaRadius = 8f;
 
     [SerializeField]
+    private bool spawnOnce;
+
+    [SerializeField]
     private float minPlayerDistance = 50f;
 
     private Transform playerTransform;
@@ -26,8 +29,14 @@ public class EnemySpawner : MonoBehaviour
     private void Start()
     {
         enemiesPool = new IRecyclable[maxEnemiesSpawnedCount];
-        for (int i = 0; i < Random.Range(1, maxEnemiesSpawnedCount + 1); i++)
+        for (int i = 0; i < maxEnemiesSpawnedCount; i++)
             enemiesPool[i] = GetEnemy();
+
+        if (spawnOnce)
+        {
+            Destroy(gameObject);
+            return;
+        }
 
         indexesOfDeadEnemies = new List<int>();
 

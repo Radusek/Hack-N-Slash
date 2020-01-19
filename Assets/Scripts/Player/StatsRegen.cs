@@ -10,6 +10,9 @@ public class StatsRegen : MonoBehaviour
     [SerializeField]
     private float baseManaRegenerationRate;
 
+    private float baseHpRegenRateWithStats;
+    private float baseManaRegenRateWithStats;
+
     private float accumulatedHp;
     private float accumulatedMana;
 
@@ -21,7 +24,7 @@ public class StatsRegen : MonoBehaviour
     private void Awake()
     {
         playerStats = GetComponent<EntityStats>();
-        SetNewBaseRegeneration(0, 0);
+        SetNewBaseRegeneration(playerStats.GetVitality(), playerStats.GetEnergy());
     }
 
     private void Update()
@@ -29,8 +32,8 @@ public class StatsRegen : MonoBehaviour
         if (!healingEnabled)
             return;
 
-        accumulatedHp +=  (baseHpRegenerationRate + hpRegenerationRate) * Time.deltaTime;
-        accumulatedMana += (baseManaRegenerationRate + manaRegenerationRate) * Time.deltaTime;
+        accumulatedHp +=  (baseHpRegenRateWithStats + hpRegenerationRate) * Time.deltaTime;
+        accumulatedMana += (baseManaRegenRateWithStats + manaRegenerationRate) * Time.deltaTime;
 
         if (Mathf.Abs(accumulatedHp) < 1f && Mathf.Abs(accumulatedMana) < 1f)
             return;
@@ -82,7 +85,7 @@ public class StatsRegen : MonoBehaviour
 
     public void SetNewBaseRegeneration(int vitality, int energy)
     {
-        baseHpRegenerationRate = 0.2f + vitality * 0.01f;
-        baseManaRegenerationRate = 0.5f + energy * 0.02f;
+        baseHpRegenRateWithStats = baseHpRegenerationRate + vitality * 0.01f;
+        baseManaRegenRateWithStats = baseManaRegenerationRate + energy * 0.02f;
     }
 }
