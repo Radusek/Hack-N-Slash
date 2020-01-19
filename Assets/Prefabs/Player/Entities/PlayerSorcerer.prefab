@@ -130,11 +130,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 1.8
       objectReference: {fileID: 0}
-    - target: {fileID: 1120040289332253002, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: m_Name
-      value: FirePointRod
-      objectReference: {fileID: 0}
     - target: {fileID: 2565850295564168017, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
       propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.size
@@ -206,6 +201,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: abd05a9c61644d14a912e3d9b2c62eb8,
         type: 2}
+    - target: {fileID: 1120040289332253002, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: m_Name
+      value: FirePointRod
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385155246696668754, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: audioClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385155246696668754, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: audioClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 96e10f01fd44c7841a7968c73e9f4368, type: 3}
+    - target: {fileID: 6385155246696668754, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: audioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 96e10f01fd44c7841a7968c73e9f4368, type: 3}
+    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: movementSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: OnMovementDirectionChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6842027100426814149}
+    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: OnMovementDirectionChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetWalkDirection
+      objectReference: {fileID: 0}
     - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
       propertyPath: damage
@@ -247,36 +277,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 9327dddaa0e86a449a45bfaf41603c97,
         type: 2}
-    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
+    - target: {fileID: 4385291968575179607, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
-      propertyPath: movementSpeed
-      value: 4
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
+    - target: {fileID: 4385291968575179607, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
-      propertyPath: OnMovementDirectionChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 6842027100426814149}
-    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: OnMovementDirectionChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetWalkDirection
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6385155246696668754, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: audioClips.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6385155246696668754, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: audioClips.Array.data[3]
-      value: 
-      objectReference: {fileID: 8300000, guid: 96e10f01fd44c7841a7968c73e9f4368, type: 3}
-    - target: {fileID: 6385155246696668754, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: audioClips.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: 96e10f01fd44c7841a7968c73e9f4368, type: 3}
     - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -297,15 +307,15 @@ PrefabInstance:
       propertyPath: MaxMana
       value: 80
       objectReference: {fileID: 0}
-    - target: {fileID: 4385291968575179607, guid: 14f786243b46ad349b4a89e09b355ae8,
+    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
+      propertyPath: hpAtLevelOne
+      value: 60
       objectReference: {fileID: 0}
-    - target: {fileID: 4385291968575179607, guid: 14f786243b46ad349b4a89e09b355ae8,
+    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+      propertyPath: manaAtLevelOne
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14f786243b46ad349b4a89e09b355ae8, type: 3}

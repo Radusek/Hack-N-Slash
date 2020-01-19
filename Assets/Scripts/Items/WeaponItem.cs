@@ -45,7 +45,7 @@ public class WeaponItem : Item
         Inventory ownerInventory = owner.GetComponent<Inventory>();
         ownerInventory.RemoveItem(this);
         ownerInventory.AddItem(previouslyEquippedWeapon);
-
+        
         wm.SetNewWeapon(this, slotNumber);
         return false;
     }

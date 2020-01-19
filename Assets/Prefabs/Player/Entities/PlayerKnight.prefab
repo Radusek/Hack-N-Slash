@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48683e94d42bcaa449c7e724711867e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 80
-  MaxMana: 30
+  hpAtLevelOne: 80
+  manaAtLevelOne: 30
+  vitality: 0
+  energy: 0
+  strength: 0
+  dexterity: 0
   baseExp: 0
   startingLevel: 1
   fadingDepth: 1.2
@@ -105,6 +109,31 @@ MonoBehaviour:
   OnLevelUp:
     m_PersistentCalls:
       m_Calls: []
+  OnStatPointSpent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7661887413140998823}
+        m_MethodName: SetNewBaseRegeneration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8995278473999778395}
+        m_MethodName: UpdateWeapons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnShieldingStateChanged:
     m_PersistentCalls:
       m_Calls:
@@ -269,37 +298,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: a9645d0f782ef9c4fb8da330c39ef4c5,
         type: 2}
-    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 5775410462634868208}
-    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetAttackTrigger
-      objectReference: {fileID: 0}
-    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: weapon
-      value: 
-      objectReference: {fileID: 11400000, guid: 84c0deed55979b94894c36381df03f6f,
-        type: 2}
-    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: OnMovementDirectionChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 5775410462634868208}
-    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: OnMovementDirectionChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetWalkDirection
-      objectReference: {fileID: 0}
-    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: movementSpeed
-      value: 4.5
-      objectReference: {fileID: 0}
     - target: {fileID: 6385155246696668754, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
       propertyPath: audioClips.Array.size
@@ -320,16 +318,37 @@ PrefabInstance:
       propertyPath: audioClips.Array.data[3]
       value: 
       objectReference: {fileID: 8300000, guid: 3768f8e1f8d4d09419a9b44f9f1171f5, type: 3}
-    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
+    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
-      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: OnMovementDirectionChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 5775410462634868208}
-    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
+    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
-      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetDeathTrigger
+      propertyPath: OnMovementDirectionChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetWalkDirection
       objectReference: {fileID: 0}
+    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: movementSpeed
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5775410462634868208}
+    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetAttackTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 84c0deed55979b94894c36381df03f6f,
+        type: 2}
     - target: {fileID: 4385291968575179607, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -340,6 +359,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5775410462634868208}
+    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetDeathTrigger
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 14f786243b46ad349b4a89e09b355ae8, type: 3}
@@ -349,6 +378,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4045054881026622215}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8995278473999778395 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4969526370019623260, guid: 14f786243b46ad349b4a89e09b355ae8,
+    type: 3}
+  m_PrefabInstance: {fileID: 4045054881026622215}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986921813179634043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef312c2acedaa44ca6fcd6a1480fe5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6971091901870955861 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6385155246696668754, guid: 14f786243b46ad349b4a89e09b355ae8,

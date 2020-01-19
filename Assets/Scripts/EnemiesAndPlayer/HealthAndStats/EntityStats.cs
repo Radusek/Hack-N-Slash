@@ -278,15 +278,45 @@ public class EntityStats : MonoBehaviour
         return dexterity;
     }
 
+    public void SpendStatPoint(int index)
+    {
+        if (statPointsToDistribute <= 0)
+            return;
+
+        switch (index)
+        {
+            case 0:
+                vitality++;
+                break;
+            case 1:
+                strength++;
+                break;
+            case 2:
+                dexterity++;
+                break;
+            case 3:
+                energy++;
+                break;
+            default:
+                return;
+        }
+
+        statPointsToDistribute--;
+        UpdateStatsEffects();
+    }
+
     public void UpdateStatsEffects()
     {
         int oldMaxHp = maxHealth;
         maxHealth = GetMaxHp();
         currentHealth += maxHealth - oldMaxHp;
+        OnHpChanged?.Invoke();
+
 
         int oldMaxMana = maxMana;
         maxMana = GetMaxMana();
         currentMana += maxMana - oldMaxMana;
+        OnManaChanged?.Invoke();
 
         OnStatPointSpent?.Invoke();
     }

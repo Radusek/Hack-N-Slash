@@ -246,6 +246,11 @@ PrefabInstance:
       propertyPath: baseExp
       value: 70
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: hpAtLevelOne
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6683992356715671035, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
       propertyPath: m_AnchorMax.x

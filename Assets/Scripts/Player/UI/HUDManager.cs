@@ -11,6 +11,9 @@ public class HUDManager : MonoBehaviour
     private GameObject inventoryUI;
 
     [SerializeField]
+    private GameObject statsUI;
+
+    [SerializeField]
     private EntityStats playerStats;
 
     [SerializeField]
@@ -51,6 +54,9 @@ public class HUDManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
             inventoryUI.SetActive(!inventoryUI.activeSelf);
+
+        if (Input.GetKeyDown(KeyCode.C))
+            statsUI.SetActive(!statsUI.activeSelf);
     }
 
     public GameObject GetPlayer()
@@ -103,5 +109,10 @@ public class HUDManager : MonoBehaviour
     public void RespawnPlayer()
     {
         playerSpawn.PreparePlayer();
+    }
+
+    public void SpendStatPoint(int index)
+    {
+        playerStats.SpendStatPoint(index);
     }
 }
