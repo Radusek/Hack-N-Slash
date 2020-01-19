@@ -289,9 +289,13 @@ public class EntityStats : MonoBehaviour
                 vitality++;
                 break;
             case 1:
+                if (strength == 500)
+                    return;
                 strength++;
                 break;
             case 2:
+                if (dexterity == 500)
+                    return;
                 dexterity++;
                 break;
             case 3:
@@ -303,6 +307,11 @@ public class EntityStats : MonoBehaviour
 
         statPointsToDistribute--;
         UpdateStatsEffects();
+    }
+
+    public int GetAvailableStatsPoints()
+    {
+        return statPointsToDistribute;
     }
 
     public void UpdateStatsEffects()
