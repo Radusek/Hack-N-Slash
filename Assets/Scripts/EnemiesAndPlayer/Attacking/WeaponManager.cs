@@ -45,6 +45,7 @@ public class WeaponManager : MonoBehaviour
     public void SetNewWeapon(WeaponItem newWeapon, int slotNumber)
     {
         weapons[slotNumber].SetNewWeapon(newWeapon);
+        PickWeapon(slotNumber, true);
     }
 
     public void UpdateWeapons()
@@ -109,6 +110,9 @@ public class WeaponManager : MonoBehaviour
 
         if (isPlayer)
         {
+            if (EventSystem.current.IsPointerOverGameObject())
+                return false;
+
             return Input.GetButtonDown("Fire1");
         }
 
@@ -137,14 +141,19 @@ public class WeaponManager : MonoBehaviour
         target = newTarget;
     }
 
-    private void PickWeapon(int id)
+    private void PickWeapon(int id, bool forceReloadTime = false)
     {
+        if (currentWeapon == id && !forceReloadTime)
+            return;
+
         if (id < 0)
             id = weapons.Length;
         else
             id %= weapons.Length;
 
         currentWeapon = id;
+        OnWeaponChanged?.Invoke(currentWeapon);
+        weapons[currentWeapon].SetLastAttackTime();
     }
 
     public float GetReloadingBarValue()
@@ -172,7 +181,7 @@ public enum Layer
 {
     Default = 0,
     Player = 8,
-    Item = 27,
+    Interactable = 27,
     Environment = 28,
     Dead = 30
 }

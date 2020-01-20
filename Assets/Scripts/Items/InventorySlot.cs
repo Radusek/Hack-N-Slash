@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour
@@ -9,13 +10,19 @@ public class InventorySlot : MonoBehaviour
     private Image icon;
     [SerializeField]
     private Button removeButton;
+    [SerializeField]
+    private TextMeshProUGUI stackNumberText;
 
     private Item item;
 
     
-    public void SetItem(Item newItem)
+    public void SetItem(ItemStack itemStack)
     {
-        item = newItem;
+        item = itemStack.item;
+
+        int stackNumber = itemStack.count;
+        stackNumberText.gameObject.SetActive(stackNumber > 1);
+        stackNumberText.text = stackNumber.ToString();
 
         icon.sprite = item.icon;
         icon.enabled = true;
@@ -29,6 +36,7 @@ public class InventorySlot : MonoBehaviour
         icon.sprite = null;
         icon.enabled = false;
         removeButton.interactable = false;
+        stackNumberText.gameObject.SetActive(false);
     }
 
     public void UseItem()

@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 6385155246696668754}
   - component: {fileID: 7661918964736400952}
   - component: {fileID: 5942101657486821792}
+  - component: {fileID: 2206057095170570310}
   m_Layer: 8
   m_Name: _PlayerBase
   m_TagString: Untagged
@@ -618,6 +619,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseHpRegenerationRate: 0.2
   baseManaRegenerationRate: 0.5
+--- !u!114 &2206057095170570310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3859773805247681148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58a76be0708aff64fb3fcb48e86ed2f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionRange: 1
 --- !u!1 &4410173448273442268
 GameObject:
   m_ObjectHideFlags: 0

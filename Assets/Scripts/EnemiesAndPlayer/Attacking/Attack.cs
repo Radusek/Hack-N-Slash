@@ -48,6 +48,7 @@ public class Attack : MonoBehaviour
     {
         weapon = newWeapon;
         UpdateWeaponStats();
+        lastAttackTime = Time.time;
     }
 
     public virtual void UpdateWeaponStats()
@@ -90,7 +91,7 @@ public class Attack : MonoBehaviour
         return weapon;
     }
 
-    private void OnEnable()
+    public void SetLastAttackTime()
     {
         if (lastAttackTime == -recastInterval)
             return;

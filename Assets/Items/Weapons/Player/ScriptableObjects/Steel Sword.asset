@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3cd33046c64f864c8a007ea6ec46f9a, type: 3}
-  m_Name: Sorcerer Ranged
+  m_Name: Steel Sword
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
-  itemName: Sorcerer Rod Ranged
-  icon: {fileID: 21300000, guid: 873689f0499c3cd47a3311223120c433, type: 3}
-  firingSound: {fileID: 8300000, guid: 96e10f01fd44c7841a7968c73e9f4368, type: 3}
-  attackType: 2
-  damage: 18
-  recastInterval: 1.6
-  projectileType: 4
-  projectileSpeed: 20
+  itemName: Steel Sword
+  icon: {fileID: 21300000, guid: 0d6c0be5ce6f8ed43a3ad52642157ee3, type: 3}
+  stackLimit: 1
+  firingSound: {fileID: 8300000, guid: 70fbe3f1f9f2c164dabca072e597e7a3, type: 3}
+  attackType: 0
+  damage: 14
+  recastInterval: 0.6
+  projectileType: 5
+  projectileSpeed: 0

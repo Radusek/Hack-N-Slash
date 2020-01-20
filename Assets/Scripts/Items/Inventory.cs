@@ -3,62 +3,117 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+
+public class ItemStack
+{
+    public Item item;
+    public int count;
+
+
+    public void AddItem()
+    {
+        count++;
+    }
+
+    // returns true if should destroy stack
+    public bool RemoveItem()
+    {
+        count--;
+        if (count == 0)
+        {
+            item = null;
+            return true;
+        }
+
+        return false;
+    }
+
+    public bool IsFull()
+    {
+        return count == item.stackLimit;
+    }
+}
+
+
 public class Inventory : MonoBehaviour
 {
-    private List<Item> items = new List<Item>();
+    private List<ItemStack> itemStacks = new List<ItemStack>();
 
     [SerializeField]
     private int inventorySize = 20;
 
-    private bool pickUpItem;
-
     public UnityEvent OnInventoryChanged;
 
-    private Coroutine cancelPickupCoroutine;
-
-    public bool WantsToPickUp()
-    {
-        return pickUpItem;
-    }
 
     public void AddItem(Item item)
     {
-        items.Add(item);
-        pickUpItem = false;
+        if (ShouldUseNewSlot(item))
+        {
+            ItemStack newStack = new ItemStack();
+            newStack.item = item;
+            newStack.count = 1;
+            itemStacks.Add(newStack);
+        }
+        else
+            StackUpItem(item);
+
         OnInventoryChanged?.Invoke();
+    }
+
+    private bool ShouldUseNewSlot(Item item)
+    {
+        foreach(var stack in itemStacks)
+            if (stack.item == item && !stack.IsFull())
+                return false;
+        
+        return true;
+    }
+
+    private void StackUpItem(Item item)
+    {
+        foreach(var stack in itemStacks)
+        {
+            if (stack.item == item && !stack.IsFull())
+            {
+                stack.AddItem();
+                return;
+            }
+        }
+
+        Debug.LogError("Items couldn't be added");
     }
 
     public void RemoveItem(Item item)
     {
-        items.Remove(item);
+        RemoveFromStack(item);
         OnInventoryChanged?.Invoke();
+    }
+
+    private void RemoveFromStack(Item item)
+    {
+        for (int i = itemStacks.Count - 1; i >= 0; i--)
+        {
+            if (itemStacks[i].item == item)
+            {
+                if (itemStacks[i].RemoveItem())
+                    itemStacks.RemoveAt(i);
+                return;
+            }
+        }
     }
 
     public int GetItemsCount()
     {
-        return items.Count;
+        return itemStacks.Count;
     }
 
-    public Item GetItem(int index)
+    public ItemStack GetItem(int index)
     {
-        return items[index];
+        return itemStacks[index];
     }
 
-    private void Update()
+    public bool CanPickItem(Item item)
     {
-        if (Input.GetKeyDown(KeyCode.Space) && items.Count < inventorySize)
-        {
-            pickUpItem = true;
-            if (cancelPickupCoroutine != null)
-                StopCoroutine(cancelPickupCoroutine);
-            cancelPickupCoroutine = StartCoroutine(CancelPickUpCoroutine());
-        }
-    }
-
-    private IEnumerator CancelPickUpCoroutine()
-    {
-        yield return new WaitForSeconds(0.1f);
-        pickUpItem = false;
-        cancelPickupCoroutine = null;
+        return itemStacks.Count < inventorySize || !ShouldUseNewSlot(item);
     }
 }

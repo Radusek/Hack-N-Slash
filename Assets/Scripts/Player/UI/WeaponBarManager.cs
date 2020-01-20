@@ -54,5 +54,6 @@ public class WeaponBarManager : MonoBehaviour
         weaponSlots[currentWeapon].DeselectWeapon();
         weaponSlots[newWeapon].SelectWeapon();
         currentWeapon = newWeapon;
+        weaponSlots[currentWeapon].weaponImage.sprite = playerAttacks[newWeapon].GetSprite();
     }
 }

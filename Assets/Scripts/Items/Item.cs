@@ -11,6 +11,7 @@ public class Item : ScriptableObject
     public string itemName = "New item";
     public Sprite icon = null;
 
+    public int stackLimit = 1;
 
     // returns true if should be destroyed after using it
     public virtual bool Use() { return false; }
