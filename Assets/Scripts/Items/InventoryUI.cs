@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -10,6 +11,16 @@ public class InventoryUI : MonoBehaviour
 
     private InventorySlot[] slots;
 
+    [SerializeField]
+    private GameObject descriptionObject;
+    [SerializeField]
+    private TextMeshProUGUI descriptionText;
+
+
+    private void OnDisable()
+    {
+        DisableDescription();
+    }
 
     private void Awake()
     {
@@ -28,5 +39,19 @@ public class InventoryUI : MonoBehaviour
 
         for (int i = occupiedSlots; i < slots.Length; i++)
             slots[i].ClearSlot();
+    }
+
+    public void SetDescription(string description)
+    {
+        if (description == null)
+            DisableDescription();
+
+        descriptionObject.SetActive(true);
+        descriptionText.text = description;
+    }
+
+    public void DisableDescription()
+    {
+        descriptionObject.gameObject.SetActive(false);
     }
 }

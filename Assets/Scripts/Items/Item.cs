@@ -9,10 +9,12 @@ public class Item : ScriptableObject
     public GameObject owner;
 
     public string itemName = "New item";
+    public string itemDescription = "Description";
     public Sprite icon = null;
 
     public int stackLimit = 1;
 
     // returns true if should be destroyed after using it
     public virtual bool Use() { return false; }
+    public virtual string GetDescription() { return $"<b>{itemName}</b>"; }
 }

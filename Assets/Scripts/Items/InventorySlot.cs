@@ -52,4 +52,14 @@ public class InventorySlot : MonoBehaviour
     {
         inventoryUI.inventory.RemoveItem(item);
     }
+
+    public void OnPointerEnter()
+    {
+        inventoryUI.SetDescription(item != null ? item.GetDescription() : null);
+    }
+
+    public void OnPointerExit()
+    {
+        inventoryUI.DisableDescription();
+    }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New weapon", menuName = "HackNSlash/Weapon item")]
@@ -48,5 +49,16 @@ public class WeaponItem : Item
         
         wm.SetNewWeapon(this, slotNumber);
         return false;
+    }
+
+    public override string GetDescription()
+    {
+        StringBuilder sb = new StringBuilder(base.GetDescription());
+
+        sb.Append($"\nDamage type: {attackType.ToString()}");
+        sb.Append($"\nDamage value: {damage.ToString()}");
+        sb.Append($"\nReuse time: {recastInterval.ToString("n2")} s");
+
+        return sb.ToString();
     }
 }
