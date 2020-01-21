@@ -197,31 +197,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlimeArcher
       objectReference: {fileID: 0}
-    - target: {fileID: 7867032241443879736, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: weapons.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867032241443879736, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: weaponDistanceTreshold.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867032241443879736, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: weapons.Array.data[1]
-      value: 
-      objectReference: {fileID: 1789460327402883432}
-    - target: {fileID: 7867032241443879736, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: weaponDistanceTreshold.Array.data[1]
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867032241443879736, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: weaponDistanceTreshold.Array.data[0]
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8595985637026579919, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -276,6 +251,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567821184091704485, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: poolType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: weapons.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: weaponDistanceTreshold.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: weapons.Array.data[1]
+      value: 
+      objectReference: {fileID: 1789460327402883432}
+    - target: {fileID: 7867032241443879736, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: weaponDistanceTreshold.Array.data[1]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: weaponDistanceTreshold.Array.data[0]
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4797944912686769341, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
