@@ -6,6 +6,12 @@ ModelImporter:
   - first:
       74: -4330011589286983099
     second: Doors|DoorsAction
+  - first:
+      74: 580732871272547063
+    second: Doors|DoorsAction.001
+  - first:
+      74: 5374803138225965571
+    second: Doors|DoorsAction.002
   externalObjects: {}
   materials:
     importMaterials: 1

@@ -1,20 +1,20 @@
 fileFormatVersion: 2
-guid: 1c3b7d479b5e6ac4980f8bc2657ffc6f
+guid: b550b5406227dbb4d9f11b9b5f83fad7
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
   - first:
-      74: 4781951162920444690
-    second: Armature|ArmatureAction
-  - first:
       74: -655187974116394378
+    second: BatNPC|ArmatureAction
+  - first:
+      74: -1136959195811944773
     second: BatNPC|Fly
   - first:
-      74: -9024879304128293011
+      74: 901994504651357531
     second: BatNPC|Attack
   - first:
-      74: 2499024361605245123
-    second: BatNPC|ArmatureAction (2)
+      74: -3248601270466330862
+    second: BatNPC|Die
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -44,11 +44,40 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
+      name: BatNPC|ArmatureAction
+      takeName: BatNPC|ArmatureAction
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
       name: BatNPC|Fly
       takeName: BatNPC|ArmatureAction
       internalID: 0
       firstFrame: 0
-      lastFrame: 40
+      lastFrame: 35
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -102,10 +131,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: BatNPC|ArmatureAction (2)
+      name: BatNPC|Die
       takeName: BatNPC|ArmatureAction
       internalID: 0
-      firstFrame: 70
+      firstFrame: 80
       lastFrame: 90
       wrapMode: 0
       orientationOffsetY: 0
@@ -143,7 +172,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
