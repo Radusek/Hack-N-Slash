@@ -19,7 +19,7 @@ public class Interactor : MonoBehaviour
         if (!hudManager.GetInputEnabled())
             return;
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Space))
             UseInteractable();
     }
 

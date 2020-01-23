@@ -131,7 +131,7 @@ PrefabInstance:
     - target: {fileID: 7910525599668519277, guid: 9dc3403ced712fa47bf433eca851376c,
         type: 3}
       propertyPath: m_Name
-      value: MushroomYellow (4)
+      value: Yellow Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: 6601305944128664446, guid: 9dc3403ced712fa47bf433eca851376c,
         type: 3}
@@ -290,7 +290,7 @@ PrefabInstance:
     - target: {fileID: 8679289478170333040, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
       propertyPath: m_Name
-      value: MushroomYummy (2)
+      value: Yummy Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
@@ -330,7 +330,7 @@ PrefabInstance:
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
@@ -534,7 +534,7 @@ PrefabInstance:
     - target: {fileID: 3650927638774628707, guid: 0764a60f5cbdf654a8b63faca18da32e,
         type: 3}
       propertyPath: enemyTypes.Array.data[0]
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3650927638774628707, guid: 0764a60f5cbdf654a8b63faca18da32e,
         type: 3}
@@ -592,17 +592,17 @@ Transform:
   - {fileID: 191775883}
   - {fileID: 1055512266}
   - {fileID: 846637511}
+  - {fileID: 1113667892}
   - {fileID: 218391052}
   - {fileID: 1750605411}
   - {fileID: 1045446463}
   - {fileID: 1834119314}
-  - {fileID: 896841049}
-  - {fileID: 224435294}
-  - {fileID: 1113667892}
   - {fileID: 1837530395}
   - {fileID: 39112819}
   - {fileID: 884774381}
   - {fileID: 1636524651}
+  - {fileID: 896841049}
+  - {fileID: 224435294}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -700,7 +700,7 @@ PrefabInstance:
     - target: {fileID: 7910525599668519277, guid: 9dc3403ced712fa47bf433eca851376c,
         type: 3}
       propertyPath: m_Name
-      value: MushroomYellow (1)
+      value: Yellow Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: 6601305944128664446, guid: 9dc3403ced712fa47bf433eca851376c,
         type: 3}
@@ -859,7 +859,7 @@ PrefabInstance:
     - target: {fileID: 8679289478170333040, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
       propertyPath: m_Name
-      value: MushroomYummy (3)
+      value: Yummy Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
@@ -899,7 +899,7 @@ PrefabInstance:
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
@@ -934,7 +934,7 @@ PrefabInstance:
     - target: {fileID: 1837155381218177368, guid: 1ae37a098dc5f734d83a410feab4e993,
         type: 3}
       propertyPath: m_Name
-      value: MushroomPoisonous
+      value: Poisonous Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: 3397326883705193291, guid: 1ae37a098dc5f734d83a410feab4e993,
         type: 3}
@@ -974,7 +974,7 @@ PrefabInstance:
     - target: {fileID: 3397326883705193291, guid: 1ae37a098dc5f734d83a410feab4e993,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3397326883705193291, guid: 1ae37a098dc5f734d83a410feab4e993,
         type: 3}
@@ -1015,7 +1015,7 @@ PrefabInstance:
     - target: {fileID: 7910525599668519277, guid: 9dc3403ced712fa47bf433eca851376c,
         type: 3}
       propertyPath: m_Name
-      value: MushroomYellow (3)
+      value: Yellow Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: 6601305944128664446, guid: 9dc3403ced712fa47bf433eca851376c,
         type: 3}
@@ -2534,7 +2534,7 @@ PrefabInstance:
     - target: {fileID: 7083280485283223294, guid: 6636b241632081f4a9cc1f7f441fd922,
         type: 3}
       propertyPath: m_Name
-      value: MushroomBrown
+      value: Brown Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: 6059461127422977261, guid: 6636b241632081f4a9cc1f7f441fd922,
         type: 3}
@@ -2609,7 +2609,7 @@ PrefabInstance:
     - target: {fileID: 8679289478170333040, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
       propertyPath: m_Name
-      value: MushroomYummy (1)
+      value: Yummy Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
@@ -2649,7 +2649,7 @@ PrefabInstance:
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
@@ -2684,7 +2684,7 @@ PrefabInstance:
     - target: {fileID: 1837155381218177368, guid: 1ae37a098dc5f734d83a410feab4e993,
         type: 3}
       propertyPath: m_Name
-      value: MushroomPoisonous (1)
+      value: Poisonous Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: 3397326883705193291, guid: 1ae37a098dc5f734d83a410feab4e993,
         type: 3}
@@ -2724,7 +2724,7 @@ PrefabInstance:
     - target: {fileID: 3397326883705193291, guid: 1ae37a098dc5f734d83a410feab4e993,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3397326883705193291, guid: 1ae37a098dc5f734d83a410feab4e993,
         type: 3}
@@ -3078,7 +3078,7 @@ PrefabInstance:
     - target: {fileID: 8679289478170333040, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
       propertyPath: m_Name
-      value: MushroomYummy (1)
+      value: Yummy Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
@@ -3118,7 +3118,7 @@ PrefabInstance:
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
@@ -3153,7 +3153,7 @@ PrefabInstance:
     - target: {fileID: 7910525599668519277, guid: 9dc3403ced712fa47bf433eca851376c,
         type: 3}
       propertyPath: m_Name
-      value: MushroomYellow
+      value: Yellow Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: 6601305944128664446, guid: 9dc3403ced712fa47bf433eca851376c,
         type: 3}
@@ -3228,7 +3228,7 @@ PrefabInstance:
     - target: {fileID: 7083280485283223294, guid: 6636b241632081f4a9cc1f7f441fd922,
         type: 3}
       propertyPath: m_Name
-      value: MushroomBrown
+      value: Brown Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: 6059461127422977261, guid: 6636b241632081f4a9cc1f7f441fd922,
         type: 3}
@@ -3268,7 +3268,7 @@ PrefabInstance:
     - target: {fileID: 6059461127422977261, guid: 6636b241632081f4a9cc1f7f441fd922,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6059461127422977261, guid: 6636b241632081f4a9cc1f7f441fd922,
         type: 3}
@@ -4136,7 +4136,7 @@ PrefabInstance:
     - target: {fileID: 8679289478170333040, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
       propertyPath: m_Name
-      value: MushroomYummy
+      value: Yummy Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
@@ -4176,7 +4176,7 @@ PrefabInstance:
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
@@ -4305,7 +4305,7 @@ PrefabInstance:
     - target: {fileID: 8167567042565249537, guid: 38459520e1e05a04a8ccdf2eceb871dc,
         type: 3}
       propertyPath: m_Name
-      value: ForestChest
+      value: Treasure Chest
       objectReference: {fileID: 0}
     - target: {fileID: 8167567042565249537, guid: 38459520e1e05a04a8ccdf2eceb871dc,
         type: 3}
@@ -4422,7 +4422,7 @@ PrefabInstance:
     - target: {fileID: 8679289478170333040, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
       propertyPath: m_Name
-      value: MushroomYummy (2)
+      value: Yummy Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
@@ -4462,7 +4462,7 @@ PrefabInstance:
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
@@ -4581,7 +4581,7 @@ PrefabInstance:
     - target: {fileID: 8679289478170333040, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
       propertyPath: m_Name
-      value: MushroomYummy
+      value: Yummy Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
@@ -4621,7 +4621,7 @@ PrefabInstance:
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
@@ -4656,7 +4656,7 @@ PrefabInstance:
     - target: {fileID: 8679289478170333040, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
       propertyPath: m_Name
-      value: MushroomYummy (3)
+      value: Yummy Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
@@ -4696,7 +4696,7 @@ PrefabInstance:
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5631854770910543203, guid: 6bb14491aa358864fbe3ef2e1642ac99,
         type: 3}
@@ -4994,7 +4994,7 @@ PrefabInstance:
     - target: {fileID: 7910525599668519277, guid: 9dc3403ced712fa47bf433eca851376c,
         type: 3}
       propertyPath: m_Name
-      value: MushroomYellow (2)
+      value: Yellow Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: 6601305944128664446, guid: 9dc3403ced712fa47bf433eca851376c,
         type: 3}
@@ -6839,7 +6839,7 @@ PrefabInstance:
     - target: {fileID: 3650927638774628706, guid: 0764a60f5cbdf654a8b63faca18da32e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3650927638774628700, guid: 0764a60f5cbdf654a8b63faca18da32e,
         type: 3}
@@ -6899,7 +6899,7 @@ PrefabInstance:
     - target: {fileID: 3650927638774628707, guid: 0764a60f5cbdf654a8b63faca18da32e,
         type: 3}
       propertyPath: enemyTypes.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3650927638774628707, guid: 0764a60f5cbdf654a8b63faca18da32e,
         type: 3}
@@ -6909,17 +6909,17 @@ PrefabInstance:
     - target: {fileID: 3650927638774628707, guid: 0764a60f5cbdf654a8b63faca18da32e,
         type: 3}
       propertyPath: maxEnemiesSpawnedCount
-      value: 12
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3650927638774628707, guid: 0764a60f5cbdf654a8b63faca18da32e,
         type: 3}
       propertyPath: enemyTypes.Array.data[1]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3650927638774628707, guid: 0764a60f5cbdf654a8b63faca18da32e,
         type: 3}
       propertyPath: enemyTypes.Array.data[0]
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3650927638774628707, guid: 0764a60f5cbdf654a8b63faca18da32e,
         type: 3}

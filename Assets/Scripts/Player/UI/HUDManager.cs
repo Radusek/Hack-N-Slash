@@ -68,7 +68,7 @@ public class HUDManager : MonoBehaviour
         if (!inputEnabled)
             return;
 
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.E))
             inventoryUI.SetActive(!inventoryUI.activeSelf);
 
         if (Input.GetKeyDown(KeyCode.C))

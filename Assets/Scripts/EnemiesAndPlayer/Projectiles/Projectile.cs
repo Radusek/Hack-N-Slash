@@ -50,7 +50,7 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == projectileCaster || other.isTrigger)
+        if (other.gameObject == projectileCaster || other.isTrigger || other.gameObject.layer == projectileCaster.layer)
             return;
 
         if (other.gameObject.layer.IsInLayerMask(targetLayers))

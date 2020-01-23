@@ -12,7 +12,8 @@ public class TooltipHandler : MonoBehaviour
     [SerializeField]
     private LayerMask raycastMask;
 
-    private EntityStats pointedEntity;
+    private GameObject pointedEntity;
+    private EntityStats pointedEntityStats;
 
     [SerializeField]
     private GameObject tooltipObject;
@@ -25,15 +26,12 @@ public class TooltipHandler : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI nameText;
 
-
     private Coroutine cancelTargetCoroutine;
 
 
     void Update()
     {
         CheckForObject();
-
-
     }
 
     private void CheckForObject()
@@ -58,11 +56,19 @@ public class TooltipHandler : MonoBehaviour
                 cancelTargetCoroutine = null;
             }
 
-            RemoveEventListeners();
+            if (pointedEntityStats != null)
+                RemoveEventListeners();
             SetNewTarget(hit);
         }
         else if (pointedEntity != null)
         {
+            if (pointedEntity.layer != (int)Layer.Enemy && pointedEntity.layer != (int)Layer.Enemy2)
+            {
+                pointedEntity = null;
+                tooltipObject.SetActive(false);
+                return;
+            }
+
             if (cancelTargetCoroutine == null)
                 cancelTargetCoroutine = StartCoroutine(CancelCurrentTargetCoroutine());
         }
@@ -70,30 +76,35 @@ public class TooltipHandler : MonoBehaviour
 
     private void SetNewTarget(RaycastHit newTargetHit)
     {
-        pointedEntity = newTargetHit.collider.gameObject.GetComponent<EntityStats>();
-        SetInitialHUDValues();
+        pointedEntity = newTargetHit.collider.gameObject;
+        nameText.text = pointedEntity.name;
 
-        pointedEntity.OnHpChanged.AddListener(UpdateHpBar);
-        pointedEntity.OnLevelUp.AddListener(UpdateLevel);
+        int targetLayer = newTargetHit.collider.gameObject.layer;
+        if (targetLayer == (int)Layer.Enemy || targetLayer == (int)Layer.Enemy2)
+        {
+            SetEnemyObjects(true);
+            pointedEntityStats = newTargetHit.collider.gameObject.GetComponent<EntityStats>();
+
+            UpdateHpBar();
+            UpdateLevel();
+
+            pointedEntityStats.OnHpChanged.AddListener(UpdateHpBar);
+            pointedEntityStats.OnLevelUp.AddListener(UpdateLevel);
+        }
+        else
+            SetEnemyObjects(false);
     }
 
     private void RemoveEventListeners()
     {
-        pointedEntity.OnHpChanged.RemoveListener(UpdateHpBar);
-        pointedEntity.OnLevelUp.RemoveListener(UpdateLevel);
-    }
-
-    private void SetInitialHUDValues()
-    {
-        nameText.text = pointedEntity.name;
-        UpdateLevel();
-        UpdateHpBar();
+        pointedEntityStats.OnHpChanged.RemoveListener(UpdateHpBar);
+        pointedEntityStats.OnLevelUp.RemoveListener(UpdateLevel);
     }
 
     private void UpdateHpBar()
     {
-        hpBar.value = pointedEntity.GetHpFraction();
-        Vector2Int hpValues = pointedEntity.GetHpValues();
+        hpBar.value = pointedEntityStats.GetHpFraction();
+        Vector2Int hpValues = pointedEntityStats.GetHpValues();
         if (hpValues.x < 0)
             hpValues.x = 0;
         healthNumbers.text = hpValues.x.ToString() + "/" + hpValues.y.ToString();
@@ -101,15 +112,22 @@ public class TooltipHandler : MonoBehaviour
 
     private void UpdateLevel()
     {
-        levelText.text = pointedEntity.GetLevel().ToString();
+        levelText.text = pointedEntityStats.GetLevel().ToString();
     }
 
     private IEnumerator CancelCurrentTargetCoroutine()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.5f);
         RemoveEventListeners();
+        pointedEntityStats = null;
         pointedEntity = null;
         tooltipObject.SetActive(false);
         cancelTargetCoroutine = null;
+    }
+
+    private void SetEnemyObjects(bool val)
+    {
+        levelText.gameObject.SetActive(val);
+        hpBar.gameObject.SetActive(val);
     }
 }

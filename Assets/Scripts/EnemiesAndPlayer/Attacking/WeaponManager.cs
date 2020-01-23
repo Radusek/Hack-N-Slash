@@ -181,6 +181,8 @@ public enum Layer
 {
     Default = 0,
     Player = 8,
+    Enemy = 9,
+    Enemy2 = 10,
     Interactable = 27,
     Environment = 28,
     Dead = 30
