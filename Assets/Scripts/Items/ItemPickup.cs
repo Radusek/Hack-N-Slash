@@ -22,7 +22,7 @@ public class ItemPickup : Interactable
         collider.enabled = false;
         GameObject interactor = interactorInventory.gameObject;
         float distanceTreshold = 0.1f;
-        float movingSpeed = 5f;
+        float movingSpeed = 6f;
         while ((interactor.transform.position - transform.position).sqrMagnitude > distanceTreshold * distanceTreshold)
         {
             Vector3 relativeVector = interactor.transform.position - transform.position;
