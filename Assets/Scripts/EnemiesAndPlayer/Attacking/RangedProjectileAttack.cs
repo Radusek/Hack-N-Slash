@@ -11,14 +11,11 @@ public class RangedProjectileAttack : Attack
 
     private float projectileSpeed;
 
-    [SerializeField]
-    [Range(10f, 180f)]
-    private float degreesTolerance = 15f;
-
     private bool targetIsVisible;
     public BoolEvent OnTargetVisibilityChange;
 
     private Rigidbody rb;
+    private Rigidbody targetRb;
 
     private PlayerController playerController;
 
@@ -59,12 +56,16 @@ public class RangedProjectileAttack : Attack
             if (target.gameObject == gameObject)
                 continue;
 
-            Vector3 relativeTargetPosition = target.transform.position - firePoint.position;
-            relativeTargetPosition.y = 0f;
+            if ((targetRb == null) || targetRb.gameObject != target.gameObject)
+                targetRb = target.GetComponent<Rigidbody>();
+
+            Vector3 shootingDirection = GetInterceptCourseDirection(target.transform.position, targetRb.velocity, firePoint.position, projectileSpeed);
+            if (shootingDirection == Vector3.zero)
+                continue;
 
             RaycastHit hit;
             int visibilityMask = ~(1 << gameObject.layer | 1 << (int)Layer.Interactable);
-            if (Physics.Raycast(firePoint.position, relativeTargetPosition, out hit, attackRange, visibilityMask))
+            if (Physics.Raycast(firePoint.position - firePoint.forward, shootingDirection, out hit, attackRange + 1f, visibilityMask))
             {
                 bool oldVisibilty = targetIsVisible;
                 targetIsVisible = hit.collider.gameObject.layer.IsInLayerMask(targetLayers);
@@ -73,14 +74,11 @@ public class RangedProjectileAttack : Attack
             }
 
             if (!targetIsVisible)
-                return false;
+                continue;
 
-            float deltaDegrees = transform.forward.AngleDegreesBetween(relativeTargetPosition.normalized);
-            if (deltaDegrees <= degreesTolerance)
-            {
-                LaunchProjectile(relativeTargetPosition.normalized);
-                return true;
-            }
+            LaunchProjectile(shootingDirection.normalized);
+            return true;
+            
         }
         return false;
     }
@@ -95,7 +93,37 @@ public class RangedProjectileAttack : Attack
         //modify damage basing on velocity for archer later
         projectile.SetInitialProjectileValues(firePoint.position, resultVelocity, damage, targetLayers, gameObject);
     }
+
+    private Vector3 GetInterceptCourseDirection(Vector3 targetPos, Vector3 targetVelocity, Vector3 firePoint, float projectileSpeed)
+    {
+        Vector3 targetDir = targetPos - firePoint;
+        targetDir.y = 0f;
+        float iSpeed2 = projectileSpeed * projectileSpeed;
+        float tSpeed2 = targetVelocity.sqrMagnitude;
+        float fDot1 = Vector3.Dot(targetDir, targetVelocity);
+        float targetDist2 = targetDir.sqrMagnitude;
+        float d = (fDot1 * fDot1) - targetDist2 * (tSpeed2 - iSpeed2);
+        if (d < 0.1f)  // negative == no possible course because the interceptor isn't fast enough
+            return Vector3.zero;
+        float sqrt = Mathf.Sqrt(d);
+        float S1 = (-fDot1 - sqrt) / targetDist2;
+        float S2 = (-fDot1 + sqrt) / targetDist2;
+        if (S1 < 0.0001f)
+        {
+            if (S2 < 0.0001f)
+                return Vector3.zero;
+            else
+                return (S2) * targetDir + targetVelocity;
+        }
+        else if (S2 < 0.0001f)
+            return (S1) * targetDir + targetVelocity;
+        else if (S1 < S2)
+            return (S2) * targetDir + targetVelocity;
+        else
+            return (S1) * targetDir + targetVelocity;
+    }
 }
+
 
 [System.Serializable]
 public class BoolEvent : UnityEvent<bool> { }

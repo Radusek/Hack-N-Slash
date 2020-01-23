@@ -30,7 +30,6 @@ public class Projectile : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.useGravity = gravityAffected;
-
     }
 
     public void Initialize(int dmg, LayerMask layers, GameObject caster)
@@ -51,17 +50,13 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == projectileCaster)
+        if (other.gameObject == projectileCaster || other.isTrigger)
             return;
 
         if (other.gameObject.layer.IsInLayerMask(targetLayers))
-        {
             InteractWithTarget(other);
-            OnHit?.Invoke();
-        }
-
-        if (other.gameObject.layer == (int)Layer.Default || other.gameObject.layer == (int)Layer.Environment)
-            OnHit?.Invoke();
+        
+        OnHit?.Invoke();
     }
 
     protected virtual void InteractWithTarget(Collider other)

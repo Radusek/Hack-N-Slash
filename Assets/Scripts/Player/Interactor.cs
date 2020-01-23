@@ -7,8 +7,18 @@ public class Interactor : MonoBehaviour
     [SerializeField]
     private float interactionRange = 1f;
 
+    private HUDManager hudManager;
+
+    private void Awake()
+    {
+        hudManager = FindObjectOfType<HUDManager>();
+    }
+
     void Update()
     {
+        if (!hudManager.GetInputEnabled())
+            return;
+
         if (Input.GetKeyDown(KeyCode.E))
             UseInteractable();
     }

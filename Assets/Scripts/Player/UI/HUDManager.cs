@@ -171,4 +171,9 @@ public class HUDManager : MonoBehaviour
         statsUI.SetActive(false);
         openStatsButton.SetActive(playerStats.GetAvailableStatsPoints() > 0);
     }
+
+    public bool GetInputEnabled()
+    {
+        return inputEnabled;
+    }
 }
