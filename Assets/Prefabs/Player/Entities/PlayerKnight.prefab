@@ -162,6 +162,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  shieldingMovementSpeedDecrease: 1.25
 --- !u!114 &5775410462634868208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,6 +451,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Knight
       objectReference: {fileID: 0}
+    - target: {fileID: 2395823112672405650, guid: ad40fdebe2c8e0146a2f70300e515ec7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: ad40fdebe2c8e0146a2f70300e515ec7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -520,6 +526,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8958823237397950257, guid: ad40fdebe2c8e0146a2f70300e515ec7,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.779646
+      objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: ad40fdebe2c8e0146a2f70300e515ec7,
         type: 3}
       propertyPath: m_Controller
@@ -568,3 +579,78 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6926328503199228113}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &7318183964679454046 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8822504832033628785, guid: ad40fdebe2c8e0146a2f70300e515ec7,
+    type: 3}
+  m_PrefabInstance: {fileID: 6926328503199228113}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8864234892670547908
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7318183964679454046}
+    m_Modifications:
+    - target: {fileID: 9090965095651627933, guid: a784cafc7b862e34c8d561a01e6fb011,
+        type: 3}
+      propertyPath: m_Name
+      value: SteelSword Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220447460041466254, guid: a784cafc7b862e34c8d561a01e6fb011,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0106
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220447460041466254, guid: a784cafc7b862e34c8d561a01e6fb011,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0028
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220447460041466254, guid: a784cafc7b862e34c8d561a01e6fb011,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220447460041466254, guid: a784cafc7b862e34c8d561a01e6fb011,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220447460041466254, guid: a784cafc7b862e34c8d561a01e6fb011,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220447460041466254, guid: a784cafc7b862e34c8d561a01e6fb011,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220447460041466254, guid: a784cafc7b862e34c8d561a01e6fb011,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220447460041466254, guid: a784cafc7b862e34c8d561a01e6fb011,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220447460041466254, guid: a784cafc7b862e34c8d561a01e6fb011,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220447460041466254, guid: a784cafc7b862e34c8d561a01e6fb011,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220447460041466254, guid: a784cafc7b862e34c8d561a01e6fb011,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a784cafc7b862e34c8d561a01e6fb011, type: 3}
