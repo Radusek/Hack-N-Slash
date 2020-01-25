@@ -14,11 +14,13 @@ public class KnightStats : EntityStats
 
     private PlayerController playerController;
 
-    private float shieldingMovementSpeedDecrease = 2f;
-
     public BoolEvent OnShieldingStateChanged;
 
     public UnityEvent OnAttackBlocked;
+
+    [SerializeField]
+    private float shieldingMovementSpeedDecrease = 1.25f;
+
 
     private void Awake()
     {

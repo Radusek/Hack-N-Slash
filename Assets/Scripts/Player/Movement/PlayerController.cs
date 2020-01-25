@@ -23,6 +23,10 @@ public class PlayerController : MonoBehaviour
     public DirectionEvent OnMovementDirectionChanged;
     private Direction lastDirection = Direction.None;
 
+    [SerializeField]
+    [Range(0f, 1f)]
+    private float lookingDirectionFactor = 0.5f;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -59,10 +63,19 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        Vector3 newVelocity;
-        newVelocity.x = movementSpeed * movementInput.x;
+        Vector3 lookingDirection = transform.rotation * Vector3.forward;
+
+        Vector3 inputVelocity;
+        inputVelocity.x = movementSpeed * movementInput.x;
+        inputVelocity.y = 0f;
+        inputVelocity.z = movementSpeed * movementInput.y;
+
+        float angleRadians = inputVelocity.AngleDegreesBetween(lookingDirection) * Mathf.Deg2Rad;
+
+        Vector3 newVelocity = inputVelocity * (Mathf.Cos(angleRadians*0.5f)* lookingDirectionFactor + (1f - lookingDirectionFactor));
         newVelocity.y = rb.velocity.y;
-        newVelocity.z = movementSpeed * movementInput.y;
+
+        Debug.Log(newVelocity.magnitude);
 
         rb.velocity = Vector3.Lerp(rb.velocity, newVelocity, movementSpeed * 2 * Time.deltaTime);
 
