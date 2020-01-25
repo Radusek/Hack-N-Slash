@@ -17,11 +17,11 @@ MonoBehaviour:
   itemDescription: Description
   icon: {fileID: 21300000, guid: bdeeff79aea70d9408593fafed9b4d0d, type: 3}
   stackLimit: 1
-  weaponPrefab: {fileID: 9090965095651627933, guid: a784cafc7b862e34c8d561a01e6fb011,
+  weaponPrefab: {fileID: 3594500312880797250, guid: aeca6405422840e49a3f73de6a9f011b,
     type: 3}
   firingSound: {fileID: 8300000, guid: 70fbe3f1f9f2c164dabca072e597e7a3, type: 3}
   attackType: 0
   damage: 25
   recastInterval: 0.75
-  projectileType: 5
+  projectileType: 0
   projectileSpeed: 0
