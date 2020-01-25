@@ -54,7 +54,11 @@ public class WeaponManager : MonoBehaviour
     {
         weapons[slotNumber].SetNewWeapon(newWeapon);
         PickWeapon(slotNumber, true);
+        ChangeWeaponMesh(newWeapon);
+    }
 
+    private void ChangeWeaponMesh(WeaponItem newWeapon)
+    {
         Destroy(currentWeaponObject);
         currentWeaponObject = Instantiate(newWeapon.weaponPrefab, holdingHand.position, holdingHand.rotation, holdingHand);
     }
@@ -94,6 +98,7 @@ public class WeaponManager : MonoBehaviour
             if (currentWeapon != oldCurrentWeapon)
                 OnWeaponChanged?.Invoke(currentWeapon);
 
+            ChangeWeaponMesh(weapons[currentWeapon].GetWeaponItem());
             return;
         }
 
