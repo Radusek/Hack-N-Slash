@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
   itemName: Soul Eater
-  itemDescription: Description
+  itemDescription: Description.
   icon: {fileID: 21300000, guid: bbce9470179f037488a08cce017c89c4, type: 3}
   stackLimit: 1
   weaponPrefab: {fileID: 4593070119155281648, guid: d8a981f4a7ad58542b004f25953ec6a8,

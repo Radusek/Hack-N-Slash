@@ -19,5 +19,14 @@ public class ItemEditor : Editor
         EditorGUILayout.EndHorizontal();
 
         item.stackLimit = EditorGUILayout.IntField("Stack Limit", item.stackLimit);
+
+        if (GUI.changed)
+        {
+            Undo.RecordObject(item, "save");
+            EditorUtility.SetDirty(item);
+            AssetDatabase.SaveAssets();
+            Repaint();
+            Debug.Log("SAVED item");
+        }
     }
 }

@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
   itemName: New item
+  itemDescription: Description
   icon: {fileID: 0}
+  stackLimit: 1
+  weaponPrefab: {fileID: 0}
   firingSound: {fileID: 8300000, guid: d6479ba6180c8f545b9a8da65c458d1e, type: 3}
   attackType: 1
   damage: 8

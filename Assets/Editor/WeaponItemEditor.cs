@@ -32,5 +32,14 @@ public class WeaponItemEditor : ItemEditor
             weaponItem.projectileType = (PoolType)EditorGUILayout.EnumPopup("Projectile Type", weaponItem.projectileType);
             weaponItem.projectileSpeed = EditorGUILayout.FloatField("Projectile Speed", weaponItem.projectileSpeed);
         }
+
+        if (GUI.changed)
+        {
+            Undo.RecordObject(weaponItem, "save");
+            EditorUtility.SetDirty(weaponItem);
+            AssetDatabase.SaveAssets();
+            Repaint();
+            Debug.Log("SAVED weapon");
+        }
     }
 }
