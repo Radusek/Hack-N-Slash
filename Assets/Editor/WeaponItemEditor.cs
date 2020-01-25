@@ -12,6 +12,11 @@ public class WeaponItemEditor : ItemEditor
 
         WeaponItem weaponItem = (WeaponItem)target;
 
+        EditorGUILayout.BeginHorizontal();
+        EditorGUILayout.PrefixLabel("Weapon Prefab");
+        weaponItem.weaponPrefab = (GameObject)EditorGUILayout.ObjectField(weaponItem.weaponPrefab, typeof(GameObject), allowSceneObjects: true);
+        EditorGUILayout.EndHorizontal();
+
         weaponItem.attackType = (AttackType)EditorGUILayout.EnumPopup("Attack Type", weaponItem.attackType);
 
         EditorGUILayout.BeginHorizontal();

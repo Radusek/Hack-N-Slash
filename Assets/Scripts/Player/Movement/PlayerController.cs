@@ -63,17 +63,16 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        Vector3 lookingDirection = transform.forward;
+        Vector3 lookingDirection = transform.rotation * Vector3.forward;
 
-        Vector3 worldDirection = transform.forward * movementInput.y + transform.right * movementInput.x;
-        worldDirection.y = 0f;
-        worldDirection.Normalize(); 
+        Vector3 inputVelocity;
+        inputVelocity.x = movementSpeed * movementInput.x;
+        inputVelocity.y = 0f;
+        inputVelocity.z = movementSpeed * movementInput.y;
 
-        float movementCosine = Vector3.Dot(worldDirection, lookingDirection);
+        float angleRadians = inputVelocity.AngleDegreesBetween(lookingDirection) * Mathf.Deg2Rad;
 
-        Debug.Log(movementCosine);
-        
-        Vector3 newVelocity = movementSpeed * worldDirection * ((movementCosine + 1f)*0.5f * lookingDirectionFactor + (1f - lookingDirectionFactor));
+        Vector3 newVelocity = inputVelocity * (Mathf.Cos(angleRadians*0.5f)* lookingDirectionFactor + (1f - lookingDirectionFactor));
         newVelocity.y = rb.velocity.y;
 
         rb.velocity = Vector3.Lerp(rb.velocity, newVelocity, movementSpeed * 2 * Time.deltaTime);

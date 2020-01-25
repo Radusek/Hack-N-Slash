@@ -348,8 +348,13 @@ PrefabInstance:
         type: 3}
       propertyPath: weapon
       value: 
-      objectReference: {fileID: 11400000, guid: 84c0deed55979b94894c36381df03f6f,
+      objectReference: {fileID: 11400000, guid: ce328d5868350d1429c744588b7850a3,
         type: 2}
+    - target: {fileID: 4969526370019623260, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: holdingHand
+      value: 
+      objectReference: {fileID: 7318183964679454046}
     - target: {fileID: 4385291968575179607, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -585,7 +590,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6926328503199228113}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &8864234892670547908
+--- !u!1001 &8666215087973890034
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -595,17 +600,17 @@ PrefabInstance:
     - target: {fileID: 9090965095651627933, guid: a784cafc7b862e34c8d561a01e6fb011,
         type: 3}
       propertyPath: m_Name
-      value: SteelSword Variant
+      value: ThroatSeeker Hand
       objectReference: {fileID: 0}
     - target: {fileID: 5220447460041466254, guid: a784cafc7b862e34c8d561a01e6fb011,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0106
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5220447460041466254, guid: a784cafc7b862e34c8d561a01e6fb011,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0028
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5220447460041466254, guid: a784cafc7b862e34c8d561a01e6fb011,
         type: 3}
@@ -615,22 +620,22 @@ PrefabInstance:
     - target: {fileID: 5220447460041466254, guid: a784cafc7b862e34c8d561a01e6fb011,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5220447460041466254, guid: a784cafc7b862e34c8d561a01e6fb011,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5220447460041466254, guid: a784cafc7b862e34c8d561a01e6fb011,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5220447460041466254, guid: a784cafc7b862e34c8d561a01e6fb011,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5220447460041466254, guid: a784cafc7b862e34c8d561a01e6fb011,
         type: 3}
@@ -645,12 +650,17 @@ PrefabInstance:
     - target: {fileID: 5220447460041466254, guid: a784cafc7b862e34c8d561a01e6fb011,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5220447460041466254, guid: a784cafc7b862e34c8d561a01e6fb011,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919287927999834020, guid: a784cafc7b862e34c8d561a01e6fb011,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a784cafc7b862e34c8d561a01e6fb011, type: 3}

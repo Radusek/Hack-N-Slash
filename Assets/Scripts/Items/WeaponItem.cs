@@ -7,6 +7,10 @@ using UnityEngine;
 public class WeaponItem : Item
 {
     [Space]
+
+    public GameObject weaponPrefab;
+
+    [Space]
     [Space]
 
     public AudioClip firingSound;

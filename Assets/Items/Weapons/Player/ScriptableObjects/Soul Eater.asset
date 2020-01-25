@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3cd33046c64f864c8a007ea6ec46f9a, type: 3}
+  m_Name: Soul Eater
+  m_EditorClassIdentifier: 
+  owner: {fileID: 0}
+  itemName: Steel Sword
+  itemDescription: Description
+  icon: {fileID: 21300000, guid: bbce9470179f037488a08cce017c89c4, type: 3}
+  stackLimit: 1
+  weaponPrefab: {fileID: 0}
+  firingSound: {fileID: 8300000, guid: 70fbe3f1f9f2c164dabca072e597e7a3, type: 3}
+  attackType: 0
+  damage: 20
+  recastInterval: 0.55
+  projectileType: 5
+  projectileSpeed: 0

@@ -10,12 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3cd33046c64f864c8a007ea6ec46f9a, type: 3}
-  m_Name: Steel Sword
+  m_Name: Throat Seeker
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
-  itemName: Steel Sword
-  icon: {fileID: 21300000, guid: 0d6c0be5ce6f8ed43a3ad52642157ee3, type: 3}
+  itemName: Throat Seeker
+  itemDescription: Description
+  icon: {fileID: 21300000, guid: 627a3fa7e5195254ca63aa484f567f05, type: 3}
   stackLimit: 1
+  weaponPrefab: {fileID: 9090965095651627933, guid: a784cafc7b862e34c8d561a01e6fb011,
+    type: 3}
   firingSound: {fileID: 8300000, guid: 70fbe3f1f9f2c164dabca072e597e7a3, type: 3}
   attackType: 0
   damage: 14

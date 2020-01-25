@@ -23,8 +23,13 @@ public class WeaponManager : MonoBehaviour
     private bool isPlayer;
 
     private bool canAttack = true;
-    
+
+    [SerializeField]
+    private Transform holdingHand;
+    private GameObject currentWeaponObject;
+
     public event Action<int> OnWeaponChanged;
+
 
     private void Awake()
     {
@@ -35,6 +40,9 @@ public class WeaponManager : MonoBehaviour
         }
 
         currentWeapon = 0;
+
+        if (isPlayer)
+            currentWeaponObject = holdingHand.GetChild(0).gameObject;
     }
 
     public WeaponItem GetCurrentWeaponItem(int slotNumber)
@@ -46,6 +54,9 @@ public class WeaponManager : MonoBehaviour
     {
         weapons[slotNumber].SetNewWeapon(newWeapon);
         PickWeapon(slotNumber, true);
+
+        Destroy(currentWeaponObject);
+        currentWeaponObject = Instantiate(newWeapon.weaponPrefab, holdingHand.position, holdingHand.rotation, holdingHand);
     }
 
     public void UpdateWeapons()
