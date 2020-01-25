@@ -78,4 +78,10 @@ public static class MyVectorExtensions
         float cosine = Vector3.Dot(lhs.normalized, rhs.normalized);
         return Mathf.Acos(cosine) * Mathf.Rad2Deg;
     }
+
+    public static float AngleRadsBetween(this Vector3 lhs, Vector3 rhs)
+    {
+        float cosine = Vector3.Dot(lhs.normalized, rhs.normalized);
+        return Mathf.Acos(cosine);
+    }
 }
