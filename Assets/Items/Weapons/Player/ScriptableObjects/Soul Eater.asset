@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: Soul Eater
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
-  itemName: Steel Sword
+  itemName: Soul Eater
   itemDescription: Description
   icon: {fileID: 21300000, guid: bbce9470179f037488a08cce017c89c4, type: 3}
   stackLimit: 1
-  weaponPrefab: {fileID: 0}
+  weaponPrefab: {fileID: 4593070119155281648, guid: d8a981f4a7ad58542b004f25953ec6a8,
+    type: 3}
   firingSound: {fileID: 8300000, guid: 70fbe3f1f9f2c164dabca072e597e7a3, type: 3}
   attackType: 0
   damage: 20
   recastInterval: 0.55
-  projectileType: 5
+  projectileType: 0
   projectileSpeed: 0
