@@ -235,8 +235,8 @@ GameObject:
   - component: {fileID: 2024682343721641489}
   - component: {fileID: 1238416470330045760}
   - component: {fileID: 7709976829361142644}
-  - component: {fileID: 9025272939792811124}
   - component: {fileID: -2664464650874667315}
+  - component: {fileID: 5743606242864498381}
   m_Layer: 11
   m_Name: SpikeProjectile
   m_TagString: Untagged
@@ -288,7 +288,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 1
---- !u!114 &9025272939792811124
+--- !u!114 &-2664464650874667315
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -297,10 +297,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 6053647093871153789}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c24244c0b5095ff408700a939b8a67e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 60fd71addafce194b9724c7e60045387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: 1
+  poolType: 4
+--- !u!114 &5743606242864498381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6053647093871153789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 319a0d9646a2d1a4fbec4ea78fe8bb88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackType: 2
   gravityAffected: 0
   gravityScale: 0.5
   OnHit:
@@ -317,16 +330,5 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &-2664464650874667315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6053647093871153789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60fd71addafce194b9724c7e60045387, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolType: 4
+  explosionObject: {fileID: 6053647093871153789, guid: 6d8fcb3ecf5e2ae49bc6c258b73163d7,
+    type: 3}

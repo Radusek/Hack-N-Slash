@@ -6,13 +6,13 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Rigidbody))]
 public class Projectile : MonoBehaviour
 {
-    private GameObject projectileCaster; //change to ranged attack and check for targetLayer to be destroyed, enable enemyProjectile and enemy collisions
+    protected GameObject projectileCaster; //change to ranged attack and check for targetLayer to be destroyed, enable enemyProjectile and enemy collisions
 
     private int damage;
-    private LayerMask targetLayers;
+    protected LayerMask targetLayers;
 
     [SerializeField]
-    private AttackType attackType;
+    protected AttackType attackType;
 
     [SerializeField]
     private bool gravityAffected;
@@ -75,12 +75,12 @@ public class Projectile : MonoBehaviour
         other.GetComponent<EntityStats>().TakeDamage(GetCurrentDamage(), attackType, projectileCaster, transform.position);
     }
 
-    protected void Hit(bool forceDestroy = false)
+    protected virtual void Hit(bool forceDestroy = false)
     {
         OnHit?.Invoke();
     }
 
-    private int GetCurrentDamage()
+    protected int GetCurrentDamage()
     {
         float minDamageFraction = 0.5f;
         float distance = (startPosition - transform.position).magnitude;
