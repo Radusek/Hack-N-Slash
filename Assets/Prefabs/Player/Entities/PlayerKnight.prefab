@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48683e94d42bcaa449c7e724711867e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpAtLevelOne: 80
-  manaAtLevelOne: 30
+  hpAtLevelOne: 200
+  manaAtLevelOne: 40
   vitality: 0
   energy: 0
   strength: 0
@@ -319,6 +319,16 @@ PrefabInstance:
       propertyPath: audioClips.Array.data[3]
       value: 
       objectReference: {fileID: 8300000, guid: 3768f8e1f8d4d09419a9b44f9f1171f5, type: 3}
+    - target: {fileID: 5942101657486821792, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: baseHpRegenerationRate
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942101657486821792, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: baseManaRegenerationRate
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
       propertyPath: OnMovementDirectionChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target

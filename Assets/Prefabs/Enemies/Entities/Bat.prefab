@@ -33,7 +33,7 @@ PrefabInstance:
     - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
       propertyPath: hpAtLevelOne
-      value: 25
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
@@ -123,7 +123,12 @@ PrefabInstance:
     - target: {fileID: 8439176225099780599, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
       propertyPath: m_Speed
-      value: 3.5
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439176225099780599, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: m_Acceleration
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4797944912686769341, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
@@ -196,11 +201,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: b550b5406227dbb4d9f11b9b5f83fad7,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 23f704c1ea11826428aceb138be0776f, type: 2}
     - target: {fileID: -4216859302048453862, guid: b550b5406227dbb4d9f11b9b5f83fad7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -256,6 +256,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: b550b5406227dbb4d9f11b9b5f83fad7,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 23f704c1ea11826428aceb138be0776f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b550b5406227dbb4d9f11b9b5f83fad7, type: 3}
 --- !u!1 &3199614735355108681 stripped

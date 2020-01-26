@@ -105,6 +105,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlimeWarrior
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: OnHpChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2381277455510928022}
+    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetDeathTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: baseExp
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: hpAtLevelOne
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 8595985637026579919, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -225,31 +250,6 @@ PrefabInstance:
         type: 3}
       propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: OnHpChanged.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2381277455510928022}
-    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetDeathTrigger
-      objectReference: {fileID: 0}
-    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: baseExp
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: hpAtLevelOne
-      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6683992356715671035, guid: 624900fa670a52341aa083f337140c75,
         type: 3}

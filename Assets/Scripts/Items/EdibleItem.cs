@@ -31,11 +31,11 @@ public class EdibleItem : Item
         if (healingValue != 0)
             sb.Append($"\nHealth: {healingValue.ToString()}");
         if (manaRestorationValue != 0)
-            sb.Append($"Mana: {manaRestorationValue.ToString()}");
+            sb.Append($"\nMana: {manaRestorationValue.ToString()}");
 
         if ((hpRegenerationRate != 0 || manaRegenerationRate != 0))
         {
-            sb.Append($"\nBoosts regeneration for {effectDuration.ToString("n0")} s:");
+            sb.Append($"\nRegeneration for {effectDuration.ToString("n0")} s:");
             if (hpRegenerationRate != 0)
                 sb.Append($"\nHp/s: {hpRegenerationRate.ToString("n1")}");
             if (manaRegenerationRate != 0)

@@ -64,7 +64,7 @@ public class Attack : MonoBehaviour
     {
         float damageMultiplier = 1f;
         if (attackType == AttackType.Melee)
-            damageMultiplier = 1f + 0.005f * stats.GetStrength();
+            damageMultiplier = 1f + 0.0125f * stats.GetStrength();
 
         damage = (int)(damageMultiplier * weapon.damage);
     }
@@ -83,7 +83,7 @@ public class Attack : MonoBehaviour
         float baseValue = -0.138f;
         float baseMultiplier = 1f - baseValue;
         float sqrtBaseParameter = 50000;
-        return baseValue + baseMultiplier / (1f + Mathf.Sqrt(sqrtBaseParameter + dexterity) - Mathf.Sqrt(sqrtBaseParameter));
+        return baseValue + baseMultiplier / (1f + Mathf.Sqrt(sqrtBaseParameter + 2.5f * dexterity) - Mathf.Sqrt(sqrtBaseParameter));
     }
 
     public WeaponItem GetWeaponItem()

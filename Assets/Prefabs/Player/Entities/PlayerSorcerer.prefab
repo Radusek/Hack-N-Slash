@@ -252,6 +252,16 @@ PrefabInstance:
       propertyPath: audioClips.Array.data[2]
       value: 
       objectReference: {fileID: 8300000, guid: 96e10f01fd44c7841a7968c73e9f4368, type: 3}
+    - target: {fileID: 5942101657486821792, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: baseHpRegenerationRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942101657486821792, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: baseManaRegenerationRate
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
       propertyPath: movementSpeed
@@ -346,12 +356,12 @@ PrefabInstance:
     - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
       propertyPath: hpAtLevelOne
-      value: 60
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
       propertyPath: manaAtLevelOne
-      value: 80
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14f786243b46ad349b4a89e09b355ae8, type: 3}

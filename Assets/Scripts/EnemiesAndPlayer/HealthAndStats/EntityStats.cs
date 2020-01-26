@@ -84,12 +84,12 @@ public class EntityStats : MonoBehaviour
 
     private int GetMaxHp()
     {
-        return hpAtLevelOne + 2 * vitality;
+        return hpAtLevelOne + 5 * vitality;
     }
 
     private int GetMaxMana()
     {
-        return manaAtLevelOne + energy;
+        return manaAtLevelOne + 3 * energy;
     }
 
     protected void InitializeStart()
@@ -289,12 +289,12 @@ public class EntityStats : MonoBehaviour
                 vitality++;
                 break;
             case 1:
-                if (strength == 500)
+                if (strength == 200)
                     return;
                 strength++;
                 break;
             case 2:
-                if (dexterity == 500)
+                if (dexterity == 200)
                     return;
                 dexterity++;
                 break;

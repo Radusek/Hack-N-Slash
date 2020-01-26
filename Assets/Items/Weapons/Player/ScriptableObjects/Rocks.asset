@@ -21,7 +21,7 @@ MonoBehaviour:
     type: 3}
   firingSound: {fileID: 8300000, guid: 63db2a50e873a3b449fe204148014189, type: 3}
   attackType: 1
-  damage: 9
+  damage: 21
   recastInterval: 3
   projectileType: 3
   projectileSpeed: 12

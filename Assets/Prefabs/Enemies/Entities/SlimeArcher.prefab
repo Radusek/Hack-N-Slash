@@ -53,7 +53,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  degreesTolerance: 15
   OnTargetVisibilityChange:
     m_PersistentCalls:
       m_Calls:
@@ -197,6 +196,76 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlimeArcher
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6930871316224377938}
+    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetDeathTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: maxHealth
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: baseExp
+      value: 95
+      objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: hpAtLevelOne
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 811634569000421063, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: audioClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 811634569000421063, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d6479ba6180c8f545b9a8da65c458d1e, type: 3}
+    - target: {fileID: 811634569000421063, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: audioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: d6479ba6180c8f545b9a8da65c458d1e, type: 3}
+    - target: {fileID: 7867032241443879736, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: weapons.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: weaponDistanceTreshold.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: weapons.Array.data[1]
+      value: 
+      objectReference: {fileID: 1789460327402883432}
+    - target: {fileID: 7867032241443879736, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: weaponDistanceTreshold.Array.data[1]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867032241443879736, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: weaponDistanceTreshold.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8567821184091704485, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: poolType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8595985637026579919, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -251,36 +320,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8567821184091704485, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: poolType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867032241443879736, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: weapons.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867032241443879736, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: weaponDistanceTreshold.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867032241443879736, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: weapons.Array.data[1]
-      value: 
-      objectReference: {fileID: 1789460327402883432}
-    - target: {fileID: 7867032241443879736, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: weaponDistanceTreshold.Array.data[1]
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7867032241443879736, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: weaponDistanceTreshold.Array.data[0]
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4797944912686769341, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
@@ -358,46 +397,6 @@ PrefabInstance:
       propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 6930871316224377938}
-    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetDeathTrigger
-      objectReference: {fileID: 0}
-    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: maxHealth
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: baseExp
-      value: 95
-      objectReference: {fileID: 0}
-    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: hpAtLevelOne
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 811634569000421063, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: audioClips.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 811634569000421063, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: audioClips.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: d6479ba6180c8f545b9a8da65c458d1e, type: 3}
-    - target: {fileID: 811634569000421063, guid: 624900fa670a52341aa083f337140c75,
-        type: 3}
-      propertyPath: audioClips.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: d6479ba6180c8f545b9a8da65c458d1e, type: 3}
     - target: {fileID: 6683992356715671035, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
       propertyPath: m_AnchorMax.x

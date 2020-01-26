@@ -20,7 +20,7 @@ MonoBehaviour:
   weaponPrefab: {fileID: 0}
   firingSound: {fileID: 8300000, guid: d6479ba6180c8f545b9a8da65c458d1e, type: 3}
   attackType: 1
-  damage: 8
+  damage: 18
   recastInterval: 0.9
   projectileType: 2
   projectileSpeed: 8

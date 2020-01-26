@@ -17,7 +17,7 @@ MonoBehaviour:
   itemDescription: Description
   icon: {fileID: 21300000, guid: 57ee7f43126fe4849ab53555903b9532, type: 3}
   stackLimit: 5
-  healingValue: 10
+  healingValue: 25
   manaRestorationValue: 0
   hpRegenerationRate: 0
   manaRegenerationRate: 0

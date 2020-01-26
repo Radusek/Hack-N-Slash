@@ -85,7 +85,7 @@ public class StatsRegen : MonoBehaviour
 
     public void SetNewBaseRegeneration()
     {
-        baseHpRegenRateWithStats = baseHpRegenerationRate + playerStats.GetVitality() * 0.01f;
-        baseManaRegenRateWithStats = baseManaRegenerationRate + playerStats.GetEnergy()  * 0.02f;
+        baseHpRegenRateWithStats = baseHpRegenerationRate + playerStats.GetVitality() * 0.04f;
+        baseManaRegenRateWithStats = baseManaRegenerationRate + playerStats.GetEnergy()  * 0.03f;
     }
 }
