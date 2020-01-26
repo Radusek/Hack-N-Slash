@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Text;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -46,6 +47,12 @@ public class HUDManager : MonoBehaviour
     [SerializeField]
     private GameObject openStatsButton;
 
+    [SerializeField]
+    private GameObject[] statButtons;
+
+    [SerializeField]
+    private TextMeshProUGUI statsDescription;
+
     private PlayerSpawn playerSpawn;
 
     private bool inputEnabled = true;
@@ -69,13 +76,42 @@ public class HUDManager : MonoBehaviour
             return;
 
         if (Input.GetKeyDown(KeyCode.E))
-            inventoryUI.SetActive(!inventoryUI.activeSelf);
+            SetIntentoryUIActiveState(!inventoryUI.activeSelf);
 
         if (Input.GetKeyDown(KeyCode.C))
+            SetStatsUIActiveState(!statsUI.activeSelf);
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+            HandleEscPress();
+    }
+
+    public void SetIntentoryUIActiveState(bool newState)
+    {
+        inventoryUI.SetActive(newState);
+    }
+
+    public void SetStatsUIActiveState(bool newState)
+    {
+        SetNoStatDescription();
+        statsUI.SetActive(newState);
+        openStatsButton.SetActive(!statsUI.activeSelf && playerStats.GetAvailableStatsPoints() > 0);
+    }
+
+    private void HandleEscPress()
+    {
+        if (statsUI.activeSelf)
         {
-            statsUI.SetActive(!statsUI.activeSelf);
-            openStatsButton.SetActive(!statsUI.activeSelf && playerStats.GetAvailableStatsPoints() > 0);
+            SetStatsUIActiveState(false);
+            return;
         }
+
+        if (inventoryUI.activeSelf)
+        {
+            SetIntentoryUIActiveState(false);
+            return;
+        }
+
+        //pause screen later
     }
 
     public GameObject GetPlayer()
@@ -152,25 +188,73 @@ public class HUDManager : MonoBehaviour
         statsTexts[3].text = playerStats.GetEnergy().ToString();
 
         availablePointsText.text = playerStats.GetAvailableStatsPoints().ToString();
+        UpdateStatsButtons();
     }
 
     public void OnLevelUp()
     {
         availablePointsText.text = playerStats.GetAvailableStatsPoints().ToString();
+        UpdateStatsButtons();
         openStatsButton.SetActive(!statsUI.activeSelf);
     }
 
-    public void OpenStats()
+    private void UpdateStatsButtons()
     {
-        openStatsButton.SetActive(false);
-        statsUI.SetActive(true);
+        int availableStatPoints = playerStats.GetAvailableStatsPoints();
+
+        statButtons[0].SetActive(availableStatPoints > 0);
+        statButtons[1].SetActive(availableStatPoints > 0 && playerStats.GetStrength() < 200);
+        statButtons[2].SetActive(availableStatPoints > 0 && playerStats.GetDexterity() < 200);
+        statButtons[3].SetActive(availableStatPoints > 0);
     }
 
-    public void CloseStats()
+    public void SetNoStatDescription()
     {
-        statsUI.SetActive(false);
-        openStatsButton.SetActive(playerStats.GetAvailableStatsPoints() > 0);
+        statsDescription.text = string.Empty;
     }
+
+    public void SetVitalityDescription()
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.Append("<b>Vitality</b>");
+        sb.Append("\nIncreases total health and health regeneration");
+        sb.Append("\n\nCurrent bonuses:");
+        sb.Append($"\n{playerStats.GetVitality()*5} HP");
+        sb.Append($"\n{playerStats.GetVitality()*0.04f:n2} HP/s");
+        statsDescription.text = sb.ToString();
+    }
+
+    public void SetStrengthDescription()
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.Append("<b>Strength</b>");
+        sb.Append("\nIncreases melee damage");
+        sb.Append("\n\nCurrent bonus:");
+        sb.Append($"\n+{playerStats.GetStrength() * 1.25f:n2}% ");
+        statsDescription.text = sb.ToString();
+    }
+
+    public void SetDexterityDescription()
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.Append("<b>Dexterity</b>");
+        sb.Append("\nIncreases ranged weapons' fire rate");
+        sb.Append("\n\nCurrent fire rate:");
+        sb.Append($"\n{100f/Attack.GetRecastIntervalTimeMultiplier(playerStats.GetDexterity()):n2}% ");
+        statsDescription.text = sb.ToString();
+    }
+
+    public void SetEnergyDescription()
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.Append("<b>Energy</b>");
+        sb.Append("\nIncreases total mana and mana regeneration");
+        sb.Append("\n\nCurrent bonuses:");
+        sb.Append($"\n{playerStats.GetEnergy() * 3} Mana");
+        sb.Append($"\n{playerStats.GetEnergy() * 0.03f:n2} MP/s");
+        statsDescription.text = sb.ToString();
+    }
+
 
     public bool GetInputEnabled()
     {

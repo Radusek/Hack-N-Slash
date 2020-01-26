@@ -78,7 +78,7 @@ public class Attack : MonoBehaviour
         recastInterval = recastIntervalMultiplier * weapon.recastInterval;
     }
 
-    private float GetRecastIntervalTimeMultiplier(int dexterity)
+    public static float GetRecastIntervalTimeMultiplier(int dexterity)
     {
         float baseValue = -0.138f;
         float baseMultiplier = 1f - baseValue;
