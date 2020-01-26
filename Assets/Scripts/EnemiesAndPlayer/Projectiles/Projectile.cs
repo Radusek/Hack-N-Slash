@@ -21,6 +21,11 @@ public class Projectile : MonoBehaviour
     [Range(0f, 1f)]
     private float gravityScale = 0.5f;
 
+    private float firstDistanceTreshold = 1.75f;
+    private float secondDistanceTreshold = 5.5f;
+
+    private Vector3 startPosition;
+
     private Rigidbody rb;
 
     public UnityEvent OnHit;
@@ -37,6 +42,7 @@ public class Projectile : MonoBehaviour
         damage = dmg;
         targetLayers = layers;
         projectileCaster = caster;
+        startPosition = transform.position;
     }
 
     private void FixedUpdate()
@@ -61,6 +67,21 @@ public class Projectile : MonoBehaviour
 
     protected virtual void InteractWithTarget(Collider other)
     {
-        other.GetComponent<EntityStats>().TakeDamage(damage, attackType, projectileCaster, transform.position);
+        other.GetComponent<EntityStats>().TakeDamage(GetCurrentDamage(), attackType, projectileCaster, transform.position);
+    }
+
+    private int GetCurrentDamage()
+    {
+        float minDamageFraction = 0.5f;
+        float distance = (startPosition - transform.position).magnitude;
+
+        if (distance >= secondDistanceTreshold)
+            return damage;
+
+        if (distance <= firstDistanceTreshold)
+            return (int)(minDamageFraction * damage);
+
+        float damageMultiplier = minDamageFraction + (1f - minDamageFraction) * (distance - firstDistanceTreshold) / (secondDistanceTreshold - firstDistanceTreshold);
+        return (int)(damageMultiplier * damage);
     }
 }

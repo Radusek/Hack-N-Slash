@@ -90,8 +90,14 @@ public class RangedProjectileAttack : Attack
 
         IRecyclable projectile = ObjectPoolManager.Instance.DequeueObject(projectileType);
         Vector3 resultVelocity = (projectileSpeed + Vector3.Dot(transform.forward, rb.velocity)) * direction;
-        //modify damage basing on velocity for archer later
-        projectile.SetInitialProjectileValues(firePoint.position, resultVelocity, damage, targetLayers, gameObject);
+
+        int finalDamage = damage;
+        finalDamage = (int)(finalDamage * Random.Range(0.9f, 1.1f));
+
+        if (isPlayer)
+            finalDamage = (int)(finalDamage * resultVelocity.magnitude / projectileSpeed);
+
+        projectile.SetInitialProjectileValues(firePoint.position, resultVelocity, finalDamage, targetLayers, gameObject);
     }
 
     private Vector3 GetInterceptCourseDirection(Vector3 targetPos, Vector3 targetVelocity, Vector3 firePoint, float projectileSpeed)

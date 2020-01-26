@@ -12,7 +12,8 @@ public class CloseCombatAttack : Attack
             if (collider.gameObject == gameObject)
                 continue;
 
-            collider.GetComponent<EntityStats>().TakeDamage(damage, attackType, gameObject, transform.position);
+            int finalDamage = (int)(damage * Random.Range(0.9f, 1.1f));
+            collider.GetComponent<EntityStats>().TakeDamage(finalDamage, attackType, gameObject, transform.position);
             attacked = true;
         }
         return attacked;

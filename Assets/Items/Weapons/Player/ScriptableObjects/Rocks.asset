@@ -24,4 +24,4 @@ MonoBehaviour:
   damage: 21
   recastInterval: 3
   projectileType: 3
-  projectileSpeed: 12
+  projectileSpeed: 18
