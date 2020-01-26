@@ -8,7 +8,7 @@ public enum PoolType
     Archer,
     Arrow,
     Rock,
-    Spike,
+    Fireball,
     Bat,
     Count
 }
@@ -41,7 +41,7 @@ public class ObjectPoolManager : MonoBehaviour
             { PoolType.Archer, new Queue<IRecyclable>() },
             { PoolType.Arrow, new Queue<IRecyclable>() },
             { PoolType.Rock, new Queue<IRecyclable>() },
-            { PoolType.Spike, new Queue<IRecyclable>() },
+            { PoolType.Fireball, new Queue<IRecyclable>() },
             { PoolType.Bat, new Queue<IRecyclable>() },
         };
 

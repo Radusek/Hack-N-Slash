@@ -10,7 +10,7 @@ public class KnightStats : EntityStats
 
     private bool usesShield;
 
-    private float shieldUsageBlockTime = 0.6f;
+    private float shieldUsageBlockTime = 0.35f;
 
     private PlayerController playerController;
 
@@ -48,10 +48,17 @@ public class KnightStats : EntityStats
         }
     }
 
-    protected override void SubtractHp(int amount, AttackType attackType, Vector3 attackPosition)
+    protected override void SubtractHp(int amount, AttackType attackType, Vector3 attackPositionOrVelocity)
     {
-        Vector3 knightToAttackDirection = attackPosition - transform.position;
+        Vector3 knightToAttackDirection;
+
+        if (attackType == AttackType.Melee)
+            knightToAttackDirection = attackPositionOrVelocity - transform.position;
+        else
+            knightToAttackDirection = -attackPositionOrVelocity;
+
         bool attackedFromFront = knightToAttackDirection.AngleDegreesBetween(transform.forward) < 60f;
+
         if (attackedFromFront)
         {
             if (usesShield && Random.Range(0f, 1f) < 0.85f)
@@ -61,7 +68,7 @@ public class KnightStats : EntityStats
             }
         }
 
-        base.SubtractHp(amount, attackType, attackPosition);
+        base.SubtractHp(amount, attackType, attackPositionOrVelocity);
     }
 
     public override void EnablePlayer(bool enabled)

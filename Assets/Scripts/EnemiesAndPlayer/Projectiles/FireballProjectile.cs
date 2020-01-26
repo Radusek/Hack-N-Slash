@@ -19,7 +19,7 @@ public class FireballProjectile : Projectile
         foreach (var target in targets)
         {
             if (target.gameObject.layer.IsInLayerMask(targetLayers))
-                target.GetComponent<EntityStats>().TakeDamage(explosionDamage, attackType, projectileCaster, transform.position);
+                target.GetComponent<EntityStats>().TakeDamage(explosionDamage, attackType, projectileCaster, target.transform.position - transform.position);
         }
 
         Instantiate(explosionObject, transform.position, Quaternion.identity);
