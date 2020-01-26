@@ -62,6 +62,8 @@ public class EntityStats : MonoBehaviour
 
     public UnityEvent OnStatPointSpent;
 
+    public TransformEvent OnAttackedBy;
+
 
     private void Awake()
     {
@@ -161,6 +163,7 @@ public class EntityStats : MonoBehaviour
         {
             OnHpChanged?.Invoke();
             OnDamageAmountTaken?.Invoke(oldCurrentHp - currentHealth);
+            OnAttackedBy?.Invoke(attacker.transform);
         }
 
         if (currentHealth <= 0)

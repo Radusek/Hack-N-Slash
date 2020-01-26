@@ -189,8 +189,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 976c392a4485e294e95c22b731bae776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
-  maxMana: 100
+  hpAtLevelOne: 50
+  manaAtLevelOne: 10
+  vitality: 0
+  energy: 0
+  strength: 0
+  dexterity: 0
   baseExp: 50
   startingLevel: 1
   fadingDepth: 1.2
@@ -293,6 +297,23 @@ MonoBehaviour:
   OnLevelUp:
     m_PersistentCalls:
       m_Calls: []
+  OnStatPointSpent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAttackedBy:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3068324248208962941}
+        m_MethodName: DamageTaken
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1506279525681529671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,6 +348,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1280
   isPlayer: 0
+  holdingHand: {fileID: 0}
 --- !u!114 &4797944912686769341
 MonoBehaviour:
   m_ObjectHideFlags: 0

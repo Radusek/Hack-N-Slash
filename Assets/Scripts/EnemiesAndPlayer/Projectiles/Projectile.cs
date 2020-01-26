@@ -24,6 +24,8 @@ public class Projectile : MonoBehaviour
     private float firstDistanceTreshold = 1.75f;
     private float secondDistanceTreshold = 5.5f;
 
+    private float projectileDestructionSqrDistance = 15f * 15f;
+
     private Vector3 startPosition;
 
     private Rigidbody rb;
@@ -52,6 +54,9 @@ public class Projectile : MonoBehaviour
             rb.AddForce(-(1f - gravityScale) * Physics.gravity, ForceMode.Acceleration);
             transform.LookAt(transform.position + rb.velocity);
         }
+
+        if ((startPosition - transform.position).sqrMagnitude > projectileDestructionSqrDistance)
+            Hit(true);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -61,13 +66,18 @@ public class Projectile : MonoBehaviour
 
         if (other.gameObject.layer.IsInLayerMask(targetLayers))
             InteractWithTarget(other);
-        
-        OnHit?.Invoke();
+
+        Hit();
     }
 
     protected virtual void InteractWithTarget(Collider other)
     {
         other.GetComponent<EntityStats>().TakeDamage(GetCurrentDamage(), attackType, projectileCaster, transform.position);
+    }
+
+    protected void Hit(bool forceDestroy = false)
+    {
+        OnHit?.Invoke();
     }
 
     private int GetCurrentDamage()

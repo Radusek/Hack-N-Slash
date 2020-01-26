@@ -29,6 +29,8 @@ public class EnemyController : MonoBehaviour
     private Vector3 mobAreaPosition;
     private float mobAreaRadius;
 
+    private bool runningToAttacker;
+
     public TransformEvent onTargetChanged;
 
     private Coroutine lookForTargetCoroutine;
@@ -44,6 +46,8 @@ public class EnemyController : MonoBehaviour
     private void OnEnable()
     {
         lookForTargetCoroutine = StartCoroutine(LookForTargetCoroutine());
+        runningToAttacker = false;
+        target = null;
     }
 
     private void OnDisable()
@@ -108,6 +112,9 @@ public class EnemyController : MonoBehaviour
 
     private void CheckForTarget()
     {
+        if (runningToAttacker)
+            return;
+
         Transform oldTarget = target;
         if (target != null)
         {
@@ -174,6 +181,20 @@ public class EnemyController : MonoBehaviour
         float rotationSpeed = 5f;
         float rotation = rotationSpeed * Vector3.Cross(transform.forward, targetDirection).y * Time.deltaTime;
         transform.RotateAround(Vector3.up, rotation);
+    }
+
+    public void DamageTaken(Transform attacker)
+    {
+        if (target == null)
+            StartCoroutine(RunToAttackerCoroutine(attacker));
+    }
+
+    private IEnumerator RunToAttackerCoroutine(Transform newTarget)
+    {
+        target = newTarget;
+        runningToAttacker = true;
+        yield return new WaitForSeconds(10f);
+        runningToAttacker = false;
     }
 }
 

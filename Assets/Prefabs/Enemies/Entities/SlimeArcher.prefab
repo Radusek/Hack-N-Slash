@@ -221,6 +221,16 @@ PrefabInstance:
       propertyPath: hpAtLevelOne
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: OnAttackedBy.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7818143416737361284}
+    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: OnAttackedBy.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DamageTaken
+      objectReference: {fileID: 0}
     - target: {fileID: 811634569000421063, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
       propertyPath: audioClips.Array.size
