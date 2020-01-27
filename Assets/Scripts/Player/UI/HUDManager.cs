@@ -51,6 +51,8 @@ public class HUDManager : MonoBehaviour
     private GameObject[] statButtons;
 
     [SerializeField]
+    private GameObject statsDescriptionObject;
+    [SerializeField]
     private TextMeshProUGUI statsDescription;
 
     private PlayerSpawn playerSpawn;
@@ -210,11 +212,13 @@ public class HUDManager : MonoBehaviour
 
     public void SetNoStatDescription()
     {
+        statsDescriptionObject.SetActive(false);
         statsDescription.text = string.Empty;
     }
 
     public void SetVitalityDescription()
     {
+        statsDescriptionObject.SetActive(true);
         StringBuilder sb = new StringBuilder();
         sb.Append("<b>Vitality</b>");
         sb.Append("\nIncreases total health and health regeneration");
@@ -226,6 +230,7 @@ public class HUDManager : MonoBehaviour
 
     public void SetStrengthDescription()
     {
+        statsDescriptionObject.SetActive(true);
         StringBuilder sb = new StringBuilder();
         sb.Append("<b>Strength</b>");
         sb.Append("\nIncreases melee damage");
@@ -236,6 +241,7 @@ public class HUDManager : MonoBehaviour
 
     public void SetDexterityDescription()
     {
+        statsDescriptionObject.SetActive(true);
         StringBuilder sb = new StringBuilder();
         sb.Append("<b>Dexterity</b>");
         sb.Append("\nIncreases ranged weapons' fire rate");
@@ -246,6 +252,7 @@ public class HUDManager : MonoBehaviour
 
     public void SetEnergyDescription()
     {
+        statsDescriptionObject.SetActive(true);
         StringBuilder sb = new StringBuilder();
         sb.Append("<b>Energy</b>");
         sb.Append("\nIncreases total mana and mana regeneration");
