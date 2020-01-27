@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2024682343721641489}
   - component: {fileID: 3954091160506193444}
   m_Layer: 11
-  m_Name: SpikeProjectileExplosion
+  m_Name: FireballProjectileExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3865,8 +3865,8 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 0
-    ratio: 0
+    enabled: 1
+    ratio: 0.02
     light: {fileID: 0}
     randomDistribution: 1
     color: 1

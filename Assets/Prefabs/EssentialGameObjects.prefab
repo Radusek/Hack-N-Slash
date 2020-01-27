@@ -80,6 +80,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2995541496150454510}
   - component: {fileID: 2995541497085153396}
+  - component: {fileID: 2767545145775511126}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -161,6 +162,50 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &2767545145775511126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2995541496150455057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ede5f6ce2ed9fc438ef34842576903f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dayFractionElapsed: 0.15
+  dayDuration: 600
+  nightTimeScale: 4
+  colorGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 0.9946596, b: 0.6839622, a: 1}
+    key1: {r: 1, g: 0.89498526, b: 0.7311321, a: 1}
+    key2: {r: 1, g: 0.98098487, b: 0.9513158, a: 0}
+    key3: {r: 1, g: 0.7399583, b: 0.2688679, a: 0}
+    key4: {r: 1, g: 0.1745283, b: 0.24832729, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 18697
+    ctime2: 43754
+    ctime3: 56861
+    ctime4: 63415
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 5
+    m_NumAlphaKeys: 2
 --- !u!1 &2995541496521024125
 GameObject:
   m_ObjectHideFlags: 0
