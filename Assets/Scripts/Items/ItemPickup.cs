@@ -1,10 +1,10 @@
 ﻿using System.Collections;
+using System.Text;
 using UnityEngine;
 
 public class ItemPickup : Interactable
 {
-    [SerializeField]
-    private Item item;
+    public Item item;
 
 
     public override void Interact(GameObject interactor)
@@ -41,5 +41,12 @@ public class ItemPickup : Interactable
         item.owner = interactor;
         interactorInventory.AddItem(item);
         Destroy(gameObject);
+    }
+
+    public override string GetTooltipText()
+    {
+        StringBuilder sb = new StringBuilder(base.GetTooltipText());
+        sb.Append($"\nPick up {GetKeyName()}");
+        return sb.ToString();
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 
 public class TreasureChest : Interactable
@@ -16,7 +17,10 @@ public class TreasureChest : Interactable
         GetComponent<Animator>().SetTrigger("Open");
 
         foreach (var item in loot)
-            Instantiate(item, transform.position, Quaternion.identity);
+        {
+            ItemPickup ip = Instantiate(item, transform.position, Quaternion.identity);
+            ip.name = item.item.itemName;
+        }
     }
 
     private IEnumerator LightCoroutine()
@@ -36,5 +40,12 @@ public class TreasureChest : Interactable
         }
         
         light.enabled = false;
+    }
+
+    public override string GetTooltipText()
+    {
+        StringBuilder sb = new StringBuilder(base.GetTooltipText());
+        sb.Append($"\nOpen {GetKeyName()}");
+        return sb.ToString();
     }
 }
