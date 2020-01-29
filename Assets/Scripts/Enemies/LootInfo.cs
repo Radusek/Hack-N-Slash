@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Loot Info", menuName = "HackNSlash/Enemies/LootInfo")]
+[CreateAssetMenu(fileName = "New Loot Info", menuName = "HackNSlash/Enemies/Loot Info")]
 [Serializable]
 public class LootInfo : ScriptableObject
 {

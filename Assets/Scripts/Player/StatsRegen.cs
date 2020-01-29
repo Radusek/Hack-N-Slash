@@ -1,13 +1,18 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(EntityStats))]
 public class StatsRegen : MonoBehaviour
 {
     private EntityStats playerStats;
 
     [SerializeField]
-    private float baseHpRegenerationRate;
+    private RegenInfo regenInfo;
+
     [SerializeField]
+    private RegenInfo playerRegenInfo;
+
+    private float baseHpRegenerationRate;
     private float baseManaRegenerationRate;
 
     private float baseHpRegenRateWithStats;
@@ -19,11 +24,39 @@ public class StatsRegen : MonoBehaviour
     private float hpRegenerationRate;
     private float manaRegenerationRate;
 
+    private float hpRegenPerVitalityPoint;
+    private float manaRegenPerEnergyPoint;
+
     private bool healingEnabled = true;
+
 
     private void Awake()
     {
         playerStats = GetComponent<EntityStats>();
+        Initialize();
+        SetPlayerRegenerationValues();
+    }
+
+    private void SetPlayerRegenerationValues()
+    {
+        if (playerRegenInfo != null)
+        {
+            playerRegenInfo.baseHealthRegen = baseHpRegenerationRate;
+            playerRegenInfo.baseManaRegen = baseManaRegenerationRate;
+
+            playerRegenInfo.hpRegenPerVitality = hpRegenPerVitalityPoint;
+            playerRegenInfo.manaRegenPerEnergy = manaRegenPerEnergyPoint;
+        }
+    }
+
+    private void Initialize()
+    {
+        baseHpRegenerationRate = regenInfo.baseHealthRegen;
+        baseManaRegenerationRate = regenInfo.baseManaRegen;
+
+        hpRegenPerVitalityPoint = regenInfo.hpRegenPerVitality;
+        manaRegenPerEnergyPoint = regenInfo.manaRegenPerEnergy;
+
         SetNewBaseRegeneration();
     }
 
@@ -85,7 +118,7 @@ public class StatsRegen : MonoBehaviour
 
     public void SetNewBaseRegeneration()
     {
-        baseHpRegenRateWithStats = baseHpRegenerationRate + playerStats.GetVitality() * 0.04f;
-        baseManaRegenRateWithStats = baseManaRegenerationRate + playerStats.GetEnergy()  * 0.03f;
+        baseHpRegenRateWithStats = baseHpRegenerationRate + playerStats.GetVitality() * hpRegenPerVitalityPoint;
+        baseManaRegenRateWithStats = baseManaRegenerationRate + playerStats.GetEnergy()  * manaRegenPerEnergyPoint;
     }
 }

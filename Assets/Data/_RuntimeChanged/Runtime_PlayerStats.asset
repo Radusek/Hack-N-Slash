@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ef4406505d2c404aa03dbafb533d2ed, type: 3}
-  m_Name: Knight_Stats
+  m_Name: Runtime_PlayerStats
   m_EditorClassIdentifier: 
-  maxHealth: 200
-  maxMana: 40
-  level: 1
+  maxHealth: 0
+  maxMana: 0
+  level: 0
   experienceReward: 0

@@ -5440,6 +5440,7 @@ MonoBehaviour:
   - {fileID: 2363492712348285064}
   statsDescriptionObject: {fileID: 1343008946251642394}
   statsDescription: {fileID: 3363949922752380853}
+  playerRegenInfo: {fileID: 11400000, guid: d13af6786affd0344a4b787f4e9532a0, type: 2}
 --- !u!114 &8467076057115892707
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -240,6 +240,52 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: OnMovementDirectionChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5775410462634868208}
+    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: OnMovementDirectionChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetWalkDirection
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: movementSpeed
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5775410462634868208}
+    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetDeathTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 4969526370019623260, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: holdingHand
+      value: 
+      objectReference: {fileID: 7318183964679454046}
+    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5775410462634868208}
+    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetAttackTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: ce328d5868350d1429c744588b7850a3,
+        type: 2}
     - target: {fileID: 2565850295564168017, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
       propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.size
@@ -326,42 +372,18 @@ PrefabInstance:
       propertyPath: baseManaRegenerationRate
       value: 0.75
       objectReference: {fileID: 0}
-    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
+    - target: {fileID: 5942101657486821792, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
-      propertyPath: OnMovementDirectionChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: playerRegenInfo
       value: 
-      objectReference: {fileID: 5775410462634868208}
-    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: OnMovementDirectionChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetWalkDirection
-      objectReference: {fileID: 0}
-    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: movementSpeed
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 5775410462634868208}
-    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetAttackTrigger
-      objectReference: {fileID: 0}
-    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: weapon
-      value: 
-      objectReference: {fileID: 11400000, guid: ce328d5868350d1429c744588b7850a3,
+      objectReference: {fileID: 11400000, guid: d13af6786affd0344a4b787f4e9532a0,
         type: 2}
-    - target: {fileID: 4969526370019623260, guid: 14f786243b46ad349b4a89e09b355ae8,
+    - target: {fileID: 5942101657486821792, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
-      propertyPath: holdingHand
+      propertyPath: regenInfo
       value: 
-      objectReference: {fileID: 7318183964679454046}
+      objectReference: {fileID: 11400000, guid: 6660b4f662a2cbd46bee2a228becc880,
+        type: 2}
     - target: {fileID: 4385291968575179607, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -371,16 +393,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 5775410462634868208}
-    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetDeathTrigger
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8, type: 3}

@@ -55,6 +55,9 @@ public class HUDManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI statsDescription;
 
+    [SerializeField]
+    private RegenInfo playerRegenInfo;
+
     private PlayerSpawn playerSpawn;
 
     private bool inputEnabled = true;
@@ -224,7 +227,7 @@ public class HUDManager : MonoBehaviour
         sb.Append("\nIncreases total health and health regeneration");
         sb.Append("\n\nCurrent bonuses:");
         sb.Append($"\n{playerStats.GetVitality()*5} HP");
-        sb.Append($"\n{playerStats.GetVitality()*0.04f:n2} HP/s");
+        sb.Append($"\n{playerStats.GetVitality()*playerRegenInfo.hpRegenPerVitality:n2} HP/s");
         statsDescription.text = sb.ToString();
     }
 
@@ -258,7 +261,7 @@ public class HUDManager : MonoBehaviour
         sb.Append("\nIncreases total mana and mana regeneration");
         sb.Append("\n\nCurrent bonuses:");
         sb.Append($"\n{playerStats.GetEnergy() * 3} Mana");
-        sb.Append($"\n{playerStats.GetEnergy() * 0.03f:n2} MP/s");
+        sb.Append($"\n{playerStats.GetEnergy() * playerRegenInfo.manaRegenPerEnergy:n2} MP/s");
         statsDescription.text = sb.ToString();
     }
 

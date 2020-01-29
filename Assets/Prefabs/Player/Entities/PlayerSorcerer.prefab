@@ -86,21 +86,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerSorcerer
       objectReference: {fileID: 0}
-    - target: {fileID: 6770420881313104165, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4385291968575179607, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4385291968575179607, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3859773805247681150, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -156,26 +141,109 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4279073395854843008, guid: 14f786243b46ad349b4a89e09b355ae8,
+    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.343
+      propertyPath: movementSpeed
+      value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 4279073395854843008, guid: 14f786243b46ad349b4a89e09b355ae8,
+    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.098
+      propertyPath: OnMovementDirectionChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6842027100426814149}
+    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: OnMovementDirectionChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetWalkDirection
       objectReference: {fileID: 0}
-    - target: {fileID: 4279073395854843008, guid: 14f786243b46ad349b4a89e09b355ae8,
+    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.004
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6842027100426814149}
+    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetDeathTrigger
       objectReference: {fileID: 0}
-    - target: {fileID: 21319944087993425, guid: 14f786243b46ad349b4a89e09b355ae8,
+    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
-      propertyPath: m_RootOrder
+      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: MaxMana
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: hpAtLevelOne
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: manaAtLevelOne
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: statsInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: c3ab1e37be34f9c4f8a559a8388797c4,
+        type: 2}
+    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: characteristics
+      value: 
+      objectReference: {fileID: 11400000, guid: cc82b959dae4617468123fd2308cfdcd,
+        type: 2}
+    - target: {fileID: 4969526370019623260, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: holdingHand
+      value: 
+      objectReference: {fileID: 6462460553334383580}
+    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: damage
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: recastInterval
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 7734909928399147034}
+    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6842027100426814149}
+    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetAttackTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 6421885793645464268}
+    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlaySound
+      objectReference: {fileID: 0}
+    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 8afe2049c2e49bf46a903b884e0bb0d9,
+        type: 2}
     - target: {fileID: 2565850295564168017, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
       propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.size
@@ -247,11 +315,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: c7f02c784a2592d418f615c9be1b5161,
         type: 2}
-    - target: {fileID: 1120040289332253002, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: m_Name
-      value: FirePointRod
-      objectReference: {fileID: 0}
     - target: {fileID: 6385155246696668754, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
       propertyPath: audioClips.Array.size
@@ -277,109 +340,58 @@ PrefabInstance:
       propertyPath: baseManaRegenerationRate
       value: 2.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
+    - target: {fileID: 5942101657486821792, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
-      propertyPath: movementSpeed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: OnMovementDirectionChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: playerRegenInfo
       value: 
-      objectReference: {fileID: 6842027100426814149}
-    - target: {fileID: 6232663948843207398, guid: 14f786243b46ad349b4a89e09b355ae8,
+      objectReference: {fileID: 11400000, guid: d13af6786affd0344a4b787f4e9532a0,
+        type: 2}
+    - target: {fileID: 5942101657486821792, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
-      propertyPath: OnMovementDirectionChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetWalkDirection
+      propertyPath: regenInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: ec905615926dc39438fa47713ac86c56,
+        type: 2}
+    - target: {fileID: 4279073395854843008, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.343
       objectReference: {fileID: 0}
-    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
+    - target: {fileID: 4279073395854843008, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
-      propertyPath: damage
+      propertyPath: m_LocalPosition.y
+      value: 1.098
+      objectReference: {fileID: 0}
+    - target: {fileID: 4279073395854843008, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.004
+      objectReference: {fileID: 0}
+    - target: {fileID: 6770420881313104165, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 21319944087993425, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
+    - target: {fileID: 1120040289332253002, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
-      propertyPath: recastInterval
-      value: 0.8
+      propertyPath: m_Name
+      value: FirePointRod
       objectReference: {fileID: 0}
-    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
+    - target: {fileID: 4385291968575179607, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
-      propertyPath: firePoint
-      value: 
-      objectReference: {fileID: 7734909928399147034}
-    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 6842027100426814149}
-    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetAttackTrigger
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
+    - target: {fileID: 4385291968575179607, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
-      propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 6421885793645464268}
-    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: OnAttacked.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlaySound
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4698901947556332994, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: weapon
-      value: 
-      objectReference: {fileID: 11400000, guid: 8afe2049c2e49bf46a903b884e0bb0d9,
-        type: 2}
-    - target: {fileID: 4969526370019623260, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: holdingHand
-      value: 
-      objectReference: {fileID: 6462460553334383580}
-    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 6842027100426814149}
-    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetDeathTrigger
-      objectReference: {fileID: 0}
-    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: MaxMana
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: hpAtLevelOne
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: manaAtLevelOne
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: statsInfo
-      value: 
-      objectReference: {fileID: 11400000, guid: c3ab1e37be34f9c4f8a559a8388797c4,
-        type: 2}
-    - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: characteristics
-      value: 
-      objectReference: {fileID: 11400000, guid: cc82b959dae4617468123fd2308cfdcd,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14f786243b46ad349b4a89e09b355ae8, type: 3}
 --- !u!4 &3752364991910201056 stripped
