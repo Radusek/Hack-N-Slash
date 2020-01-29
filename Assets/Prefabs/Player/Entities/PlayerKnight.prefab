@@ -185,16 +185,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerKnight
       objectReference: {fileID: 0}
-    - target: {fileID: 4385291968575179607, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4385291968575179607, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3859773805247681150, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -372,6 +362,16 @@ PrefabInstance:
       propertyPath: holdingHand
       value: 
       objectReference: {fileID: 7318183964679454046}
+    - target: {fileID: 4385291968575179607, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385291968575179607, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -583,6 +583,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 473c286881f149149ad3927feadc425d, type: 2}
+    - target: {fileID: -8822504832033628785, guid: ad40fdebe2c8e0146a2f70300e515ec7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad40fdebe2c8e0146a2f70300e515ec7, type: 3}
 --- !u!1 &1386737075546831320 stripped
