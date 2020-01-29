@@ -56,6 +56,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fence1l (1)
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 20637d4a92fb9c348a729ab30e89daae,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 20637d4a92fb9c348a729ab30e89daae,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 20637d4a92fb9c348a729ab30e89daae,
         type: 3}
       propertyPath: m_LocalPosition.x

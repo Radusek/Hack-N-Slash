@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: 2aaa86ae39aed3b4a9439de36f94393b
+guid: e1998feaa7e957149be074b1ab06871c
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Map
-    second: {fileID: 2100000, guid: 5f6618b6db3525a4ab461555d5e39cbf, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Path.001
-    second: {fileID: 2100000, guid: 326ee0e3653f7ad4199ae63126f05621, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -54,7 +44,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1

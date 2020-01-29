@@ -56,6 +56,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Campfire
       objectReference: {fileID: 0}
+    - target: {fileID: -7217828390678641911, guid: 5648a20775b3e7f4d9502ae99995b9e1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -7217828390678641911, guid: 5648a20775b3e7f4d9502ae99995b9e1,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2560538380657328736, guid: 5648a20775b3e7f4d9502ae99995b9e1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2560538380657328736, guid: 5648a20775b3e7f4d9502ae99995b9e1,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511574674358843008, guid: 5648a20775b3e7f4d9502ae99995b9e1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511574674358843008, guid: 5648a20775b3e7f4d9502ae99995b9e1,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5648a20775b3e7f4d9502ae99995b9e1,
         type: 3}
       propertyPath: m_LocalPosition.x
