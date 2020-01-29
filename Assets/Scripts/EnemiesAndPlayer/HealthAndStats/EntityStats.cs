@@ -7,41 +7,31 @@ public class EntityStats : MonoBehaviour
     public readonly static int expPerLevel = 1000;
 
     [SerializeField]
-    private int hpAtLevelOne = 50;
+    private EntityStatsInfo statsInfo;
+    [SerializeField]
+    private EntityCharacteristicsInfo characteristics;
+
+    private int hpAtLevelOne;
 
     protected int maxHealth;
     protected int currentHealth;
 
-    [SerializeField]
-    private int manaAtLevelOne = 10;
+    private int manaAtLevelOne;
 
     protected int maxMana;
     protected int currentMana;
 
-    [Space]
-
-    [SerializeField]
     protected int vitality;
-    [SerializeField]
     protected int energy;
-    [SerializeField]
     protected int strength;
-    [SerializeField]
     protected int dexterity;
-
-    [Space]
 
     private int statPointsToDistribute;
 
+    private int experiencePoints;
+    private int level;
 
-    private int experiencePoints = 0;
-    private int level = 1;
-
-    [SerializeField]
-    private int baseExp = 105;
-
-    [SerializeField]
-    private int startingLevel = 1;
+    private int baseExp;
 
     // some resistances stats and other cool things to add
 
@@ -70,18 +60,36 @@ public class EntityStats : MonoBehaviour
         Initialize();
     }
 
-    private void Start()
-    {
-        InitializeStart();
-    }
-
     protected void Initialize()
     {
+        InitializeStats();
+        InitializeCharacteristics();
+
         maxHealth = GetMaxHp();
         currentHealth = maxHealth;
 
         maxMana = GetMaxMana();
         currentMana = maxMana;
+
+        statPointsToDistribute = 5 * (level - 1);
+    }
+
+    private void InitializeStats()
+    {
+        hpAtLevelOne = statsInfo.maxHealth;
+        manaAtLevelOne = statsInfo.maxMana;
+
+        baseExp = statsInfo.experienceReward;
+        level = statsInfo.level;
+        experiencePoints = (level - 1) * expPerLevel;
+    }
+
+    private void InitializeCharacteristics()
+    {
+        vitality = characteristics.vitality;
+        strength = characteristics.strength;
+        dexterity = characteristics.dexterity;
+        energy = characteristics.energy;
     }
 
     private int GetMaxHp()
@@ -92,17 +100,6 @@ public class EntityStats : MonoBehaviour
     private int GetMaxMana()
     {
         return manaAtLevelOne + 3 * energy;
-    }
-
-    protected void InitializeStart()
-    {
-        experiencePoints = (startingLevel - 1) * expPerLevel;
-        level = startingLevel;
-    }
-
-    public void SetStartingLevel(int number)
-    {
-        startingLevel = number;
     }
 
     public int GetLevel()
@@ -124,7 +121,7 @@ public class EntityStats : MonoBehaviour
             level = updatedLevel;
             OnLevelUp?.Invoke();
         }
-
+        
         OnExpGained?.Invoke();
     }
 

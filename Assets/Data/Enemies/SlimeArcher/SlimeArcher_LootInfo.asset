@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9107b6f75127b93449d881b02f4ee341, type: 3}
-  m_Name: SlimeWarriorLootInfo
+  m_Name: SlimeArcher_LootInfo
   m_EditorClassIdentifier: 
   possibleLoot:
-  - item: {fileID: 7083280485283223294, guid: 6636b241632081f4a9cc1f7f441fd922, type: 3}
+  - item: {fileID: 1837155381218177368, guid: 1ae37a098dc5f734d83a410feab4e993, type: 3}
     maxAmount: 1
     dropChance: 0.1
   - item: {fileID: 7910525599668519277, guid: 9dc3403ced712fa47bf433eca851376c, type: 3}
-    maxAmount: 3
-    dropChance: 0.2
+    maxAmount: 1
+    dropChance: 0.4

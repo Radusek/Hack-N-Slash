@@ -29,11 +29,6 @@ public class KnightStats : EntityStats
         playerController = GetComponent<PlayerController>();
     }
 
-    private void Start()
-    {
-        InitializeStart();
-    }
-
     void Update()
     {
         if (Input.GetButton("Fire2") != usesShield)

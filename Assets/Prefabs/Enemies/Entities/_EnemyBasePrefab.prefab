@@ -190,14 +190,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 976c392a4485e294e95c22b731bae776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpAtLevelOne: 50
-  manaAtLevelOne: 10
-  vitality: 0
-  energy: 0
-  strength: 0
-  dexterity: 0
-  baseExp: 50
-  startingLevel: 1
+  statsInfo: {fileID: 0}
+  characteristics: {fileID: 11400000, guid: 0a4afa9a6c530ec4bb181ec968c5f8b6, type: 2}
   fadingDepth: 1.2
   minimapMark: {fileID: 2031939018467669069}
   OnHpChanged:

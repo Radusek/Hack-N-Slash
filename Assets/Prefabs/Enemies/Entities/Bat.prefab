@@ -55,6 +55,12 @@ PrefabInstance:
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetDeathTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: statsInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: 3ff2ebc4d03f1fa48a6f0322e53c18cf,
+        type: 2}
     - target: {fileID: 8567821184091704485, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
       propertyPath: poolType

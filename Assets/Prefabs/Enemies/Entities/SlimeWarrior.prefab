@@ -130,6 +130,12 @@ PrefabInstance:
       propertyPath: hpAtLevelOne
       value: 75
       objectReference: {fileID: 0}
+    - target: {fileID: 445231393993457128, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: statsInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: 30264279a532cb44f916afee2c1adae1,
+        type: 2}
     - target: {fileID: 8595985637026579919, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
       propertyPath: m_LocalPosition.x

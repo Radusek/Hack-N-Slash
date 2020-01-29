@@ -12,14 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48683e94d42bcaa449c7e724711867e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpAtLevelOne: 200
-  manaAtLevelOne: 40
-  vitality: 0
-  energy: 0
-  strength: 0
-  dexterity: 0
-  baseExp: 0
-  startingLevel: 1
+  statsInfo: {fileID: 11400000, guid: 7f17b3d47682ffb4a8b943844b4d5aaa, type: 2}
+  characteristics: {fileID: 11400000, guid: 30c64349f5f11f348a95740d031b0279, type: 2}
   fadingDepth: 1.2
   minimapMark: {fileID: 4277247693263757460}
   OnHpChanged:
@@ -134,6 +128,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnAttackedBy:
+    m_PersistentCalls:
+      m_Calls: []
   OnShieldingStateChanged:
     m_PersistentCalls:
       m_Calls:
@@ -187,6 +184,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerKnight
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385291968575179607, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385291968575179607, guid: 14f786243b46ad349b4a89e09b355ae8,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3859773805247681150, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
@@ -365,16 +372,6 @@ PrefabInstance:
       propertyPath: holdingHand
       value: 
       objectReference: {fileID: 7318183964679454046}
-    - target: {fileID: 4385291968575179607, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4385291968575179607, guid: 14f786243b46ad349b4a89e09b355ae8,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8193647620379787235, guid: 14f786243b46ad349b4a89e09b355ae8,
         type: 3}
       propertyPath: OnDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -541,16 +538,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -8958823237397950257, guid: ad40fdebe2c8e0146a2f70300e515ec7,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 4.779646
-      objectReference: {fileID: 0}
     - target: {fileID: -6057140222963153312, guid: ad40fdebe2c8e0146a2f70300e515ec7,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: b1c744b6059af2a4397d3d8131746673, type: 2}
+    - target: {fileID: -8958823237397950257, guid: ad40fdebe2c8e0146a2f70300e515ec7,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.779646
+      objectReference: {fileID: 0}
     - target: {fileID: -706016250638397144, guid: ad40fdebe2c8e0146a2f70300e515ec7,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
