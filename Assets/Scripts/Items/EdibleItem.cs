@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New item", menuName = "HackNSlash/Edible item")]
+[CreateAssetMenu(fileName = "New item", menuName = "HackNSlash/Items/Edible item")]
 public class EdibleItem : Item
 {
     public int healingValue;

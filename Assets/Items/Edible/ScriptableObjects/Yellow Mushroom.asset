@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a6153d4a526ee1438884e7770be86c9, type: 3}
-  m_Name: MushroomYummy
+  m_Name: Yellow Mushroom
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
-  itemName: Yummy Mushroom
+  itemName: Yellow Mushroom
   itemDescription: Description
-  icon: {fileID: 21300000, guid: 861719d1e71eba64a8ce5cf5138e7420, type: 3}
+  icon: {fileID: 21300000, guid: 57ee7f43126fe4849ab53555903b9532, type: 3}
   stackLimit: 5
-  healingValue: 10
+  healingValue: 25
   manaRestorationValue: 0
-  hpRegenerationRate: 5
+  hpRegenerationRate: 0
   manaRegenerationRate: 0
-  effectDuration: 5
+  effectDuration: 0

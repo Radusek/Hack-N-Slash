@@ -80,6 +80,7 @@ GameObject:
   - component: {fileID: 8567821184091704485}
   - component: {fileID: 7905430528996981825}
   - component: {fileID: 811634569000421063}
+  - component: {fileID: 9071620422466200162}
   m_Layer: 9
   m_Name: _EnemyBasePrefab
   m_TagString: Untagged
@@ -268,6 +269,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 8567821184091704485}
         m_MethodName: StartDying
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 9071620422466200162}
+        m_MethodName: GenerateLoot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -504,6 +516,19 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fef32fb1ecd7ed24c898841fc18ab40a, type: 3}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &9071620422466200162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8595985637026579923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62bde7824d12451449e425191aa5917f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootInfo: {fileID: 11400000, guid: fc5c36699953b8446a7e18b0b0202915, type: 2}
 --- !u!1001 &7695619409280501491
 PrefabInstance:
   m_ObjectHideFlags: 0

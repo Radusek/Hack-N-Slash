@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New weapon", menuName = "HackNSlash/Weapon item")]
+[CreateAssetMenu(fileName = "New weapon", menuName = "HackNSlash/Items/Weapon item")]
 public class WeaponItem : Item
 {
     [Space]

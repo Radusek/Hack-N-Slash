@@ -261,6 +261,12 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9071620422466200162, guid: 624900fa670a52341aa083f337140c75,
+        type: 3}
+      propertyPath: lootInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: b74f1a57c2290ff47af1e7a5bb6cb447,
+        type: 2}
     - target: {fileID: 3690138853847431007, guid: 624900fa670a52341aa083f337140c75,
         type: 3}
       propertyPath: m_LocalRotation.y

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New item", menuName = "HackNSlash/Item")]
+[CreateAssetMenu(fileName = "New item", menuName = "HackNSlash/Items/Item")]
 public class Item : ScriptableObject
 {
     [HideInInspector]
