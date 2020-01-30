@@ -9,4 +9,7 @@ public class EntityCharacteristicsInfo : ScriptableObject
     public int strength;
     public int dexterity;
     public int energy;
+
+    [HideInInspector]
+    public int availablePoints;
 }

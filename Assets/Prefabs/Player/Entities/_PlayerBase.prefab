@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 7661918964736400952}
   - component: {fileID: 5942101657486821792}
   - component: {fileID: 2206057095170570310}
+  - component: {fileID: 6222329798929949346}
   m_Layer: 8
   m_Name: _PlayerBase
   m_TagString: Untagged
@@ -353,16 +354,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 976c392a4485e294e95c22b731bae776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpAtLevelOne: 50
-  manaAtLevelOne: 10
-  vitality: 0
-  energy: 0
-  strength: 0
-  dexterity: 0
-  baseExp: 0
-  startingLevel: 1
+  statsInfo: {fileID: 0}
+  characteristics: {fileID: 0}
+  playerStatsInfo: {fileID: 11400000, guid: 0769e550dce221041bf6634df1eb8c86, type: 2}
+  playerCharacteristics: {fileID: 11400000, guid: 6cdca5e7a05ea6e40977ec57451172d1,
+    type: 2}
   fadingDepth: 1.2
   minimapMark: {fileID: 250299316337714067}
+  OnPlayerHpChanged: {fileID: 11400000, guid: 2249bb8e64edcb243ac9cdafbc4d6988, type: 2}
+  OnPlayerManaChanged: {fileID: 11400000, guid: 982939e4925e9a04199fe410fc2f6c32,
+    type: 2}
+  OnPlayerLevelUp: {fileID: 11400000, guid: 9fcbe35c4c6a0bf4899d0dae40ce3f2a, type: 2}
+  OnPlayerStatPointSpent: {fileID: 11400000, guid: e89ff5f0684e9ca478a8ec80521e341b,
+    type: 2}
+  OnPlayerExpGained: {fileID: 11400000, guid: e3f498204bee3774b83c111180d93e09, type: 2}
+  OnPlayerDeath: {fileID: 11400000, guid: d47042d651b72cd4a8800929527d9eaa, type: 2}
   OnHpChanged:
     m_PersistentCalls:
       m_Calls:
@@ -377,9 +383,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnManaChanged:
-    m_PersistentCalls:
-      m_Calls: []
   OnDamageAmountTaken:
     m_PersistentCalls:
       m_Calls:
@@ -433,48 +436,6 @@ MonoBehaviour:
   OnDyingAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-  OnExpGained:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnLevelUp:
-    m_PersistentCalls:
-      m_Calls: []
-  OnStatPointSpent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5942101657486821792}
-        m_MethodName: SetNewBaseRegeneration
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 4969526370019623260}
-        m_MethodName: UpdateWeapons
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   OnAttackedBy:
     m_PersistentCalls:
       m_Calls: []
@@ -743,8 +704,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68348d0d695753645968322d4b71ff56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHpRegenerationRate: 0.2
-  baseManaRegenerationRate: 0.5
+  regenInfo: {fileID: 0}
+  playerRegenInfo: {fileID: 0}
 --- !u!114 &2206057095170570310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -760,6 +721,44 @@ MonoBehaviour:
   interactionRange: 1.5
   interactableTooltipObject: {fileID: 3998272949668935935}
   interactableDescription: {fileID: 390530582260354719}
+--- !u!114 &6222329798929949346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3859773805247681148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d20249cea86c2824487dd458d5c79362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: e89ff5f0684e9ca478a8ec80521e341b, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4969526370019623260}
+        m_MethodName: UpdateWeapons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5942101657486821792}
+        m_MethodName: SetNewBaseRegeneration
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3998272949668935935
 GameObject:
   m_ObjectHideFlags: 0

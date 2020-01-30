@@ -89,7 +89,6 @@ public class TooltipHandler : MonoBehaviour
             UpdateLevel();
 
             pointedEntityStats.OnHpChanged.AddListener(UpdateHpBar);
-            pointedEntityStats.OnLevelUp.AddListener(UpdateLevel);
         }
         else
             SetEnemyObjects(false);
@@ -98,7 +97,6 @@ public class TooltipHandler : MonoBehaviour
     private void RemoveEventListeners()
     {
         pointedEntityStats.OnHpChanged.RemoveListener(UpdateHpBar);
-        pointedEntityStats.OnLevelUp.RemoveListener(UpdateLevel);
     }
 
     private void UpdateHpBar()

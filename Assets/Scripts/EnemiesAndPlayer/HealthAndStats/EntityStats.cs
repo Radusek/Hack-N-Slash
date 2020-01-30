@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,6 +11,11 @@ public class EntityStats : MonoBehaviour
     private EntityStatsInfo statsInfo;
     [SerializeField]
     private EntityCharacteristicsInfo characteristics;
+
+    [SerializeField]
+    private EntityStatsInfo playerStatsInfo;
+    [SerializeField]
+    private EntityCharacteristicsInfo playerCharacteristics;
 
     private int hpAtLevelOne;
 
@@ -41,17 +47,23 @@ public class EntityStats : MonoBehaviour
     [SerializeField]
     private GameObject minimapMark;
 
+    [SerializeField]
+    private GameEvent OnPlayerHpChanged;
+    [SerializeField]
+    private GameEvent OnPlayerManaChanged;
+    [SerializeField]
+    private GameEvent OnPlayerLevelUp;
+    [SerializeField]
+    private GameEvent OnPlayerStatPointSpent;
+    [SerializeField]
+    private GameEvent OnPlayerExpGained;
+    [SerializeField]
+    private GameEvent OnPlayerDeath;
+
     public UnityEvent OnHpChanged;
-    public UnityEvent OnManaChanged;
     public IntEvent OnDamageAmountTaken;
     public UnityEvent OnDeath;
     public UnityEvent OnDyingAnimationEnd;
-
-    public UnityEvent OnExpGained;
-    public UnityEvent OnLevelUp;
-
-    public UnityEvent OnStatPointSpent;
-
     public TransformEvent OnAttackedBy;
 
 
@@ -72,6 +84,8 @@ public class EntityStats : MonoBehaviour
         currentMana = maxMana;
 
         statPointsToDistribute = 5 * (level - 1);
+
+        InitializePlayer();
     }
 
     private void InitializeStats()
@@ -90,6 +104,24 @@ public class EntityStats : MonoBehaviour
         strength = characteristics.strength;
         dexterity = characteristics.dexterity;
         energy = characteristics.energy;
+    }
+
+    private void InitializePlayer()
+    {
+        if (playerStatsInfo == null || playerCharacteristics == null)
+            return;
+
+        playerStatsInfo.maxHealth = maxHealth;
+        playerStatsInfo.maxMana = maxMana;
+        playerStatsInfo.level = level;
+        playerStatsInfo.experienceReward = baseExp;
+
+        playerCharacteristics.vitality = vitality;
+        playerCharacteristics.strength = strength;
+        playerCharacteristics.dexterity = dexterity;
+        playerCharacteristics.energy = energy;
+
+        playerCharacteristics.availablePoints = statPointsToDistribute;
     }
 
     private int GetMaxHp()
@@ -119,10 +151,10 @@ public class EntityStats : MonoBehaviour
         {
             statPointsToDistribute += 5 * (updatedLevel - level);
             level = updatedLevel;
-            OnLevelUp?.Invoke();
+            OnPlayerLevelUp?.Raise();
         }
-        
-        OnExpGained?.Invoke();
+
+        OnPlayerExpGained?.Raise();
     }
 
     public float GetHpFraction()
@@ -159,6 +191,7 @@ public class EntityStats : MonoBehaviour
         if (currentHealth != oldCurrentHp)
         {
             OnHpChanged?.Invoke();
+            OnPlayerHpChanged?.Raise();
             OnDamageAmountTaken?.Invoke(oldCurrentHp - currentHealth);
             OnAttackedBy?.Invoke(attacker.transform);
         }
@@ -179,7 +212,10 @@ public class EntityStats : MonoBehaviour
             currentHealth = maxHealth;
 
         if (currentHealth != oldCurrentHp)
+        {
             OnHpChanged?.Invoke();
+            OnPlayerHpChanged?.Raise();
+        }
 
         if (currentHealth <= 0)
             Die();
@@ -239,6 +275,7 @@ public class EntityStats : MonoBehaviour
     {
         currentHealth = maxHealth;
         OnHpChanged?.Invoke();
+        OnPlayerHpChanged?.Raise();
     }
 
     public void Regenerate(int hpToRegen, int manaToRegen)
@@ -255,7 +292,7 @@ public class EntityStats : MonoBehaviour
             currentMana = 0;
 
         if (currentMana != oldMana)
-            OnManaChanged?.Invoke();
+            OnPlayerManaChanged?.Raise();
     }
 
     public int GetVitality()
@@ -320,14 +357,14 @@ public class EntityStats : MonoBehaviour
         maxHealth = GetMaxHp();
         currentHealth += maxHealth - oldMaxHp;
         OnHpChanged?.Invoke();
-
+        OnPlayerHpChanged?.Raise();
 
         int oldMaxMana = maxMana;
         maxMana = GetMaxMana();
         currentMana += maxMana - oldMaxMana;
-        OnManaChanged?.Invoke();
+        OnPlayerManaChanged?.Raise();
 
-        OnStatPointSpent?.Invoke();
+        OnPlayerStatPointSpent?.Raise();
     }
 }
 

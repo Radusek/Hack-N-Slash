@@ -14,8 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statsInfo: {fileID: 11400000, guid: 7f17b3d47682ffb4a8b943844b4d5aaa, type: 2}
   characteristics: {fileID: 11400000, guid: 30c64349f5f11f348a95740d031b0279, type: 2}
+  playerStatsInfo: {fileID: 11400000, guid: 0769e550dce221041bf6634df1eb8c86, type: 2}
+  playerCharacteristics: {fileID: 11400000, guid: 6cdca5e7a05ea6e40977ec57451172d1,
+    type: 2}
   fadingDepth: 1.2
   minimapMark: {fileID: 4277247693263757460}
+  OnPlayerHpChanged: {fileID: 11400000, guid: 2249bb8e64edcb243ac9cdafbc4d6988, type: 2}
+  OnPlayerManaChanged: {fileID: 11400000, guid: 982939e4925e9a04199fe410fc2f6c32,
+    type: 2}
+  OnPlayerLevelUp: {fileID: 11400000, guid: 9fcbe35c4c6a0bf4899d0dae40ce3f2a, type: 2}
+  OnPlayerStatPointSpent: {fileID: 11400000, guid: e89ff5f0684e9ca478a8ec80521e341b,
+    type: 2}
+  OnPlayerExpGained: {fileID: 11400000, guid: e3f498204bee3774b83c111180d93e09, type: 2}
+  OnPlayerDeath: {fileID: 11400000, guid: d47042d651b72cd4a8800929527d9eaa, type: 2}
   OnHpChanged:
     m_PersistentCalls:
       m_Calls:
@@ -30,9 +41,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnManaChanged:
-    m_PersistentCalls:
-      m_Calls: []
   OnDamageAmountTaken:
     m_PersistentCalls:
       m_Calls:
@@ -86,48 +94,6 @@ MonoBehaviour:
   OnDyingAnimationEnd:
     m_PersistentCalls:
       m_Calls: []
-  OnExpGained:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnLevelUp:
-    m_PersistentCalls:
-      m_Calls: []
-  OnStatPointSpent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7661887413140998823}
-        m_MethodName: SetNewBaseRegeneration
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8995278473999778395}
-        m_MethodName: UpdateWeapons
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   OnAttackedBy:
     m_PersistentCalls:
       m_Calls: []
@@ -403,18 +369,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4045054881026622215}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8995278473999778395 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4969526370019623260, guid: 14f786243b46ad349b4a89e09b355ae8,
-    type: 3}
-  m_PrefabInstance: {fileID: 4045054881026622215}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 986921813179634043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aef312c2acedaa44ca6fcd6a1480fe5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6971091901870955861 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6385155246696668754, guid: 14f786243b46ad349b4a89e09b355ae8,
@@ -478,6 +432,11 @@ PrefabInstance:
     - target: {fileID: 2395823112672405650, guid: ad40fdebe2c8e0146a2f70300e515ec7,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8822504832033628785, guid: ad40fdebe2c8e0146a2f70300e515ec7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: ad40fdebe2c8e0146a2f70300e515ec7,
@@ -595,11 +554,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 473c286881f149149ad3927feadc425d, type: 2}
-    - target: {fileID: -8822504832033628785, guid: ad40fdebe2c8e0146a2f70300e515ec7,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad40fdebe2c8e0146a2f70300e515ec7, type: 3}
 --- !u!1 &1386737075546831320 stripped

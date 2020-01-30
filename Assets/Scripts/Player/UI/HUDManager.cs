@@ -56,6 +56,10 @@ public class HUDManager : MonoBehaviour
     private TextMeshProUGUI statsDescription;
 
     [SerializeField]
+    private EntityStatsInfo playerStatsInfo;
+    [SerializeField]
+    private EntityCharacteristicsInfo playerCharacteristics;
+    [SerializeField]
     private RegenInfo playerRegenInfo;
 
     private PlayerSpawn playerSpawn;
@@ -198,6 +202,7 @@ public class HUDManager : MonoBehaviour
 
     public void OnLevelUp()
     {
+        UpdateLevelText();
         availablePointsText.text = playerStats.GetAvailableStatsPoints().ToString();
         UpdateStatsButtons();
         openStatsButton.SetActive(!statsUI.activeSelf);
@@ -264,7 +269,6 @@ public class HUDManager : MonoBehaviour
         sb.Append($"\n{playerStats.GetEnergy() * playerRegenInfo.manaRegenPerEnergy:n2} MP/s");
         statsDescription.text = sb.ToString();
     }
-
 
     public bool GetInputEnabled()
     {
