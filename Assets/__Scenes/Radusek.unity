@@ -7104,6 +7104,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: AlwaysOnTopCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 5358736790242156864, guid: 5e2277932f47b0b4298d5b1ae61cf1e0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0011
+      objectReference: {fileID: 0}
+    - target: {fileID: 5358736790242156864, guid: 5e2277932f47b0b4298d5b1ae61cf1e0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0042
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e2277932f47b0b4298d5b1ae61cf1e0, type: 3}
 --- !u!1001 &3650927640101094332
