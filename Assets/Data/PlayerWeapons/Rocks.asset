@@ -15,7 +15,7 @@ MonoBehaviour:
   owner: {fileID: 0}
   itemName: Rocks
   itemDescription: Description
-  icon: {fileID: 21300000, guid: 045d73f1d4846af4a85dadaeb7c96949, type: 3}
+  icon: {fileID: 21300000, guid: 3c2a40d3064d0bf4999a0be239bbd61d, type: 3}
   stackLimit: 1
   weaponPrefab: {fileID: 3738149330756454228, guid: 77e3559d6acc4974a99ea270801edc55,
     type: 3}
