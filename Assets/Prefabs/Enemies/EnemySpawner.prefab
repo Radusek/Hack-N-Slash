@@ -43,9 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f8347848e3b8784b94664e8573768ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefabs:
-  - {fileID: 8595985637026579923, guid: 03ffa5d5835620f4fbec8e3245c7ee2e, type: 3}
-  - {fileID: 8595985637026579923, guid: 99658a91c1955eb47bbcbcf71afeb0d1, type: 3}
+  enemyTypes: 
   maxEnemiesSpawnedCount: 5
   areaRadius: 6
-  minPlayerDistance: 15
+  spawnOnce: 0
+  minPlayerDistance: 50
