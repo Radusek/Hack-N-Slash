@@ -1,47 +1,9 @@
 fileFormatVersion: 2
-guid: b04e0b5c9701e6f47aef9c53d7b20227
+guid: 77bda48d2df5e9f4e81060d448410573
 ModelImporter:
   serializedVersion: 26
-  internalIDToNameTable:
-  - first:
-      74: 5711565848735474752
-    second: Knight|All
-  - first:
-      74: 6347175548724681663
-    second: Knight|AttackLight
-  - first:
-      74: -8654431040094799845
-    second: Knight|Die
-  - first:
-      74: -8854432688198286241
-    second: Knight|IdleLow
-  - first:
-      74: -5331816515853751246
-    second: Knight|IdleStand
-  - first:
-      74: 5948472580384136593
-    second: Knight|Irritate
-  - first:
-      74: 8473428863838524003
-    second: Knight|ShieldUp
-  - first:
-      74: -6410908705568075252
-    second: Knight|StraightWalk
-  - first:
-      74: 1285531491782889363
-    second: Knight|WalkBackwards
-  - first:
-      74: -4307928868920728604
-    second: Knight|WalkLeft
-  - first:
-      74: -3038207576133907911
-    second: Knight|WalkRight
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Skin
-    second: {fileID: 2100000, guid: 41f056bce9e56cd4eadd5935c7434326, type: 2}
+  internalIDToNameTable: []
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -82,7 +44,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
@@ -125,7 +87,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
