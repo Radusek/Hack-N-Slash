@@ -7,11 +7,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 556585042103280721}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 38dcd86c44d28da47aed69825105e79f,
-        type: 3}
-      propertyPath: m_Name
-      value: Sword - DeathBringer
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 38dcd86c44d28da47aed69825105e79f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -82,6 +77,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: 38dcd86c44d28da47aed69825105e79f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5c0cef0379d935644810be6e3bff87ff, type: 2}
+    - target: {fileID: -927199367670048503, guid: 38dcd86c44d28da47aed69825105e79f,
+        type: 3}
+      propertyPath: m_Name
+      value: Sword - DeathBringer
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38dcd86c44d28da47aed69825105e79f, type: 3}
 --- !u!1001 &5738836413174191106
@@ -91,11 +96,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 9099043327459279424, guid: 78b1767a2a42377479161468e3fdd46b,
-        type: 3}
-      propertyPath: m_Name
-      value: DeathBringer Hand
-      objectReference: {fileID: 0}
     - target: {fileID: 5196329793654599763, guid: 78b1767a2a42377479161468e3fdd46b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -165,6 +165,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099043327459279424, guid: 78b1767a2a42377479161468e3fdd46b,
+        type: 3}
+      propertyPath: m_Name
+      value: DeathBringer Hand
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 965923872678746954, guid: 78b1767a2a42377479161468e3fdd46b, type: 3}

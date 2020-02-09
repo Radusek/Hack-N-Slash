@@ -7,11 +7,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 9099043327459279424, guid: 78b1767a2a42377479161468e3fdd46b,
+    - target: {fileID: 965923872678746955, guid: 78b1767a2a42377479161468e3fdd46b,
         type: 3}
-      propertyPath: m_Name
-      value: ThroatSeeker
-      objectReference: {fileID: 0}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: ce328d5868350d1429c744588b7850a3,
+        type: 2}
     - target: {fileID: 5196329793654599763, guid: 78b1767a2a42377479161468e3fdd46b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -67,12 +68,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 965923872678746955, guid: 78b1767a2a42377479161468e3fdd46b,
+    - target: {fileID: 9099043327459279424, guid: 78b1767a2a42377479161468e3fdd46b,
         type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: ce328d5868350d1429c744588b7850a3,
-        type: 2}
+      propertyPath: m_Name
+      value: ThroatSeeker
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b1767a2a42377479161468e3fdd46b, type: 3}
 --- !u!4 &6120651570680651810 stripped
@@ -88,11 +88,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6120651570680651810}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: ca532b3ffa9301648a2e10ce34c91b17,
-        type: 3}
-      propertyPath: m_Name
-      value: Sword - ThroatSeeker
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: ca532b3ffa9301648a2e10ce34c91b17,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -162,6 +157,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: ca532b3ffa9301648a2e10ce34c91b17,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5c0cef0379d935644810be6e3bff87ff, type: 2}
+    - target: {fileID: -927199367670048503, guid: ca532b3ffa9301648a2e10ce34c91b17,
+        type: 3}
+      propertyPath: m_Name
+      value: Sword - ThroatSeeker
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca532b3ffa9301648a2e10ce34c91b17, type: 3}

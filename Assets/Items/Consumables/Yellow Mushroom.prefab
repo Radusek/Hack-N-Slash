@@ -7,11 +7,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 9099043327459279424, guid: 78b1767a2a42377479161468e3fdd46b,
+    - target: {fileID: 965923872678746955, guid: 78b1767a2a42377479161468e3fdd46b,
         type: 3}
-      propertyPath: m_Name
-      value: MushroomYellow
-      objectReference: {fileID: 0}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 430564f1c35b60f42ac17f58e7a2207b,
+        type: 2}
     - target: {fileID: 5196329793654599763, guid: 78b1767a2a42377479161468e3fdd46b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -67,12 +68,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 965923872678746955, guid: 78b1767a2a42377479161468e3fdd46b,
+    - target: {fileID: 9099043327459279424, guid: 78b1767a2a42377479161468e3fdd46b,
         type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: 430564f1c35b60f42ac17f58e7a2207b,
-        type: 2}
+      propertyPath: m_Name
+      value: Yellow Mushroom
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78b1767a2a42377479161468e3fdd46b, type: 3}
 --- !u!4 &6601305944128664446 stripped
@@ -88,11 +88,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6601305944128664446}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 3f909d4f8484c6d4d921d92f32c8bb7e,
-        type: 3}
-      propertyPath: m_Name
-      value: Mushroom2
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 3f909d4f8484c6d4d921d92f32c8bb7e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -147,6 +142,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 3f909d4f8484c6d4d921d92f32c8bb7e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 3f909d4f8484c6d4d921d92f32c8bb7e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 3f909d4f8484c6d4d921d92f32c8bb7e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 3f909d4f8484c6d4d921d92f32c8bb7e,
+        type: 3}
+      propertyPath: m_Name
+      value: Mushroom2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f909d4f8484c6d4d921d92f32c8bb7e, type: 3}
